@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CTPresupMensualDataSet" targetNamespace="http://tempuri.org/CTPresupMensualDataSet.xsd" xmlns:mstns="http://tempuri.org/CTPresupMensualDataSet.xsd" xmlns="http://tempuri.org/CTPresupMensualDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTPresupuestoTableAdapter" GeneratorDataComponentClassName="CTPresupuestoTableAdapter" Name="CTPresupuesto" UserDataComponentName="CTPresupuestoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    CTPresupuesto.Id, CTPresupuesto.Año, CTPresupuesto.Cuenta, CTPresupuesto.CuentaCoop, CTPresupuesto.PresupuestoAnual, 
+                         CTPresupuesto.PresupAnualMonedaExtranjera, CTPresupuesto.Mes1, CTPresupuesto.Mes2, CTPresupuesto.Mes3, CTPresupuesto.Mes4, CTPresupuesto.Mes5, 
+                         CTPresupuesto.Mes6, CTPresupuesto.Mes7, CTPresupuesto.Mes8, CTPresupuesto.Mes9, CTPresupuesto.Mes10, CTPresupuesto.Mes11, CTPresupuesto.Mes12, 
+                         CTCatalogoCuentas.Descripcion,CTCatalogoCuentas.Posteable, SaldoMes1 ,SaldoMes2,SaldoMes3,SaldoMes4,SaldoMes5,SaldoMes6,SaldoMes7,SaldoMes8,SaldoMes9,SaldoMes10,SaldoMes11,SaldoMes12  
+FROM            CTPresupuesto INNER JOIN
+                         CTCatalogoCuentas ON CTPresupuesto.Cuenta = CTCatalogoCuentas.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes1 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=1 ) AS Saldos1 ON CTPresupuesto.Cuenta=Saldos1.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes2 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=2 ) AS Saldos2 ON CTPresupuesto.Cuenta=Saldos2.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes3 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=3 ) AS Saldos3 ON CTPresupuesto.Cuenta=Saldos3.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes4 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=4 ) AS Saldos4 ON CTPresupuesto.Cuenta=Saldos4.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes5 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=5 ) AS Saldos5 ON CTPresupuesto.Cuenta=Saldos5.Cuenta
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes6 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=6 ) AS Saldos6 ON CTPresupuesto.Cuenta=Saldos6.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes7 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=7 ) AS Saldos7 ON CTPresupuesto.Cuenta=Saldos7.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes8 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=8 ) AS Saldos8 ON CTPresupuesto.Cuenta=Saldos8.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes9 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=9 ) AS Saldos9 ON CTPresupuesto.Cuenta=Saldos9.Cuenta 
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes10 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=10 ) AS Saldos10 ON CTPresupuesto.Cuenta=Saldos10.Cuenta
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes11 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=11 ) AS Saldos11 ON CTPresupuesto.Cuenta=Saldos11.Cuenta
+	LEFT JOIN (SELECT CTSaldosMensuales.Cuenta, CASE WHEN CTSaldosMensuales.Naturaleza='D' THEN CTSaldosMensuales.DebitosMes-CTSaldosMensuales.CreditosMes ELSE CTSaldosMensuales.DebitosMes+CTSaldosMensuales.CreditosMes END AS SaldoMes12 
+                                    FROM CTSaldosMensuales WHERE CTSaldosMensuales.Año=@AñoPresup AND CTSaldosMensuales.Mes=12 ) AS Saldos12 ON CTPresupuesto.Cuenta=Saldos12.Cuenta 
+WHERE CTPResupuesto.Año=@AñoPresup AND CTCatalogoCuentas.Posteable=1 ORDER BY CTPResupuesto.Cuenta</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="AñoPresup" ColumnName="Año" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@AñoPresup" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       CTPresupuesto
+SET                Mes1 = @Mes1, Mes2 = @Mes2, Mes3 = @Mes3, Mes4 = @Mes4, Mes5 = @Mes5, Mes6 = @Mes6, Mes7 = @Mes7, Mes8 = @Mes8, Mes9 = @Mes9, 
+                         Mes10 = @Mes10, Mes11 = @Mes11, Mes12 = @Mes12, PresupuestoAnual = @PresupuestoAnual
+WHERE        (Año = @Año) AND (Cuenta = @Cuenta)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes1" ColumnName="Mes1" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes2" ColumnName="Mes2" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes3" ColumnName="Mes3" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes4" ColumnName="Mes4" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes5" ColumnName="Mes5" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes6" ColumnName="Mes6" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes6" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes7" ColumnName="Mes7" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes7" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes7" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes8" ColumnName="Mes8" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes8" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes9" ColumnName="Mes9" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes9" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes9" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes10" ColumnName="Mes10" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes10" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes11" ColumnName="Mes11" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes11" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes11" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes12" ColumnName="Mes12" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Mes12" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Mes12" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PresupuestoAnual" ColumnName="PresupuestoAnual" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@PresupuestoAnual" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="PresupuestoAnual" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Cuenta" ColumnName="Cuenta" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Cuenta" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Cuenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Cuenta" DataSetColumn="Cuenta" />
+              <Mapping SourceColumn="CuentaCoop" DataSetColumn="CuentaCoop" />
+              <Mapping SourceColumn="PresupuestoAnual" DataSetColumn="PresupuestoAnual" />
+              <Mapping SourceColumn="PresupAnualMonedaExtranjera" DataSetColumn="PresupAnualMonedaExtranjera" />
+              <Mapping SourceColumn="Mes1" DataSetColumn="Mes1" />
+              <Mapping SourceColumn="Mes2" DataSetColumn="Mes2" />
+              <Mapping SourceColumn="Mes3" DataSetColumn="Mes3" />
+              <Mapping SourceColumn="Mes4" DataSetColumn="Mes4" />
+              <Mapping SourceColumn="Mes5" DataSetColumn="Mes5" />
+              <Mapping SourceColumn="Mes6" DataSetColumn="Mes6" />
+              <Mapping SourceColumn="Mes7" DataSetColumn="Mes7" />
+              <Mapping SourceColumn="Mes8" DataSetColumn="Mes8" />
+              <Mapping SourceColumn="Mes9" DataSetColumn="Mes9" />
+              <Mapping SourceColumn="Mes10" DataSetColumn="Mes10" />
+              <Mapping SourceColumn="Mes11" DataSetColumn="Mes11" />
+              <Mapping SourceColumn="Mes12" DataSetColumn="Mes12" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="SaldoMes1" DataSetColumn="SaldoMes1" />
+              <Mapping SourceColumn="SaldoMes2" DataSetColumn="SaldoMes2" />
+              <Mapping SourceColumn="SaldoMes3" DataSetColumn="SaldoMes3" />
+              <Mapping SourceColumn="SaldoMes4" DataSetColumn="SaldoMes4" />
+              <Mapping SourceColumn="SaldoMes5" DataSetColumn="SaldoMes5" />
+              <Mapping SourceColumn="SaldoMes6" DataSetColumn="SaldoMes6" />
+              <Mapping SourceColumn="SaldoMes7" DataSetColumn="SaldoMes7" />
+              <Mapping SourceColumn="SaldoMes8" DataSetColumn="SaldoMes8" />
+              <Mapping SourceColumn="SaldoMes9" DataSetColumn="SaldoMes9" />
+              <Mapping SourceColumn="SaldoMes10" DataSetColumn="SaldoMes10" />
+              <Mapping SourceColumn="SaldoMes11" DataSetColumn="SaldoMes11" />
+              <Mapping SourceColumn="SaldoMes12" DataSetColumn="SaldoMes12" />
+              <Mapping SourceColumn="Posteable" DataSetColumn="Posteable" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTPresupuestoAnualTableAdapter" GeneratorDataComponentClassName="CTPresupuestoAnualTableAdapter" Name="CTPresupuestoAnual" UserDataComponentName="CTPresupuestoAnualTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CTPresupuesto.Id, CTPresupuesto.Año, CTPresupuesto.Cuenta, CTPresupuesto.Tipo, CTPresupuesto.CuentaCoop, CTPresupuesto.PresupuestoAnual, 
+                         CTPresupuesto.PresupAnualMonedaExtranjera, CTCatalogoCuentas.Descripcion, CTCatalogoCuentas.Posteable
+FROM            CTPresupuesto INNER JOIN
+                         CTCatalogoCuentas ON CTPresupuesto.Cuenta = CTCatalogoCuentas.Cuenta
+WHERE        (CTPresupuesto.Año = @Año) AND (CTCatalogoCuentas.Posteable = 1)
+ORDER BY CTPresupuesto.Cuenta</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       CTPresupuesto
+SET                Año =, Cuenta =, PresupuestoAnual = @PresupuestoAnual
+WHERE        (Año = @Año) AND (Cuenta = @Cuenta)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Cuenta" DataSetColumn="Cuenta" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="CuentaCoop" DataSetColumn="CuentaCoop" />
+              <Mapping SourceColumn="PresupuestoAnual" DataSetColumn="PresupuestoAnual" />
+              <Mapping SourceColumn="PresupAnualMonedaExtranjera" DataSetColumn="PresupAnualMonedaExtranjera" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Posteable" DataSetColumn="Posteable" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTPresupuestoTrimTableAdapter" GeneratorDataComponentClassName="CTPresupuestoTrimTableAdapter" Name="CTPresupuestoTrim" UserDataComponentName="CTPresupuestoTrimTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CTPresupuesto.Id, CTPresupuesto.Año, CTPresupuesto.Cuenta, CTPresupuesto.Tipo, CTPresupuesto.PresupuestoAnual, 
+                         CTPresupuesto.PresupAnualMonedaExtranjera, CTPresupuesto.Trimestre1, CTPresupuesto.Trimestre2, CTPresupuesto.Trimestre3, CTPresupuesto.Trimestre4, 
+                         CTCatalogoCuentas.Descripcion, CTCatalogoCuentas.Posteable
+FROM            CTPresupuesto INNER JOIN
+                         CTCatalogoCuentas ON CTPresupuesto.Cuenta = CTCatalogoCuentas.Cuenta
+WHERE        (CTPresupuesto.Año = @Año)
+ORDER BY CTPresupuesto.Cuenta</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       CTPresupuesto
+SET                Trimestre1 = @Trimestre1, Trimestre2 = @Trimestre2, Trimestre3 = @Trimestre3, Trimestre4 = @Trimestre4, PresupuestoAnual = @PresupuestoAnual
+WHERE        (Año = @Año) AND (Cuenta = @Cuenta)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Trimestre1" ColumnName="Trimestre1" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Trimestre1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Trimestre1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Trimestre2" ColumnName="Trimestre2" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Trimestre2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Trimestre2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Trimestre3" ColumnName="Trimestre3" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Trimestre3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Trimestre3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Trimestre4" ColumnName="Trimestre4" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Trimestre4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Trimestre4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PresupuestoAnual" ColumnName="PresupuestoAnual" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@PresupuestoAnual" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="PresupuestoAnual" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Cuenta" ColumnName="Cuenta" DataSourceName="RSISistema.dbo.CTPresupuesto" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Cuenta" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Cuenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Cuenta" DataSetColumn="Cuenta" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="PresupuestoAnual" DataSetColumn="PresupuestoAnual" />
+              <Mapping SourceColumn="PresupAnualMonedaExtranjera" DataSetColumn="PresupAnualMonedaExtranjera" />
+              <Mapping SourceColumn="Trimestre1" DataSetColumn="Trimestre1" />
+              <Mapping SourceColumn="Trimestre2" DataSetColumn="Trimestre2" />
+              <Mapping SourceColumn="Trimestre3" DataSetColumn="Trimestre3" />
+              <Mapping SourceColumn="Trimestre4" DataSetColumn="Trimestre4" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Posteable" DataSetColumn="Posteable" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CTPresupMensualDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CTPresupMensualDataSet" msprop:Generator_UserDSName="CTPresupMensualDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CTPresupuesto" msprop:Generator_TableClassName="CTPresupuestoDataTable" msprop:Generator_TableVarName="tableCTPresupuesto" msprop:Generator_TablePropName="CTPresupuesto" msprop:Generator_RowDeletingName="CTPresupuestoRowDeleting" msprop:Generator_RowChangingName="CTPresupuestoRowChanging" msprop:Generator_RowEvHandlerName="CTPresupuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="CTPresupuestoRowDeleted" msprop:Generator_UserTableName="CTPresupuesto" msprop:Generator_RowChangedName="CTPresupuestoRowChanged" msprop:Generator_RowEvArgName="CTPresupuestoRowChangeEvent" msprop:Generator_RowClassName="CTPresupuestoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnPropNameInTable="AñoColumn" msprop:Generator_UserColumnName="Año" type="xs:short" />
+              <xs:element name="Cuenta" msprop:Generator_ColumnVarNameInTable="columnCuenta" msprop:Generator_ColumnPropNameInRow="Cuenta" msprop:Generator_ColumnPropNameInTable="CuentaColumn" msprop:Generator_UserColumnName="Cuenta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuentaCoop" msprop:Generator_ColumnVarNameInTable="columnCuentaCoop" msprop:Generator_ColumnPropNameInRow="CuentaCoop" msprop:Generator_ColumnPropNameInTable="CuentaCoopColumn" msprop:Generator_UserColumnName="CuentaCoop" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PresupuestoAnual" msprop:Generator_ColumnVarNameInTable="columnPresupuestoAnual" msprop:Generator_ColumnPropNameInRow="PresupuestoAnual" msprop:Generator_ColumnPropNameInTable="PresupuestoAnualColumn" msprop:Generator_UserColumnName="PresupuestoAnual" type="xs:decimal" default="0" />
+              <xs:element name="PresupAnualMonedaExtranjera" msprop:Generator_ColumnVarNameInTable="columnPresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInRow="PresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInTable="PresupAnualMonedaExtranjeraColumn" msprop:Generator_UserColumnName="PresupAnualMonedaExtranjera" type="xs:decimal" default="0" />
+              <xs:element name="Mes1" msprop:Generator_ColumnVarNameInTable="columnMes1" msprop:Generator_ColumnPropNameInRow="Mes1" msprop:Generator_ColumnPropNameInTable="Mes1Column" msprop:Generator_UserColumnName="Mes1" type="xs:decimal" default="0" />
+              <xs:element name="Mes2" msprop:Generator_ColumnVarNameInTable="columnMes2" msprop:Generator_ColumnPropNameInRow="Mes2" msprop:Generator_ColumnPropNameInTable="Mes2Column" msprop:Generator_UserColumnName="Mes2" type="xs:decimal" default="0" />
+              <xs:element name="Mes3" msprop:Generator_ColumnVarNameInTable="columnMes3" msprop:Generator_ColumnPropNameInRow="Mes3" msprop:Generator_ColumnPropNameInTable="Mes3Column" msprop:Generator_UserColumnName="Mes3" type="xs:decimal" default="0" />
+              <xs:element name="Mes4" msprop:Generator_ColumnVarNameInTable="columnMes4" msprop:Generator_ColumnPropNameInRow="Mes4" msprop:Generator_ColumnPropNameInTable="Mes4Column" msprop:Generator_UserColumnName="Mes4" type="xs:decimal" default="0" />
+              <xs:element name="Mes5" msprop:Generator_ColumnVarNameInTable="columnMes5" msprop:Generator_ColumnPropNameInRow="Mes5" msprop:Generator_ColumnPropNameInTable="Mes5Column" msprop:Generator_UserColumnName="Mes5" type="xs:decimal" default="0" />
+              <xs:element name="Mes6" msprop:Generator_ColumnVarNameInTable="columnMes6" msprop:Generator_ColumnPropNameInRow="Mes6" msprop:Generator_ColumnPropNameInTable="Mes6Column" msprop:Generator_UserColumnName="Mes6" type="xs:decimal" default="0" />
+              <xs:element name="Mes7" msprop:Generator_ColumnVarNameInTable="columnMes7" msprop:Generator_ColumnPropNameInRow="Mes7" msprop:Generator_ColumnPropNameInTable="Mes7Column" msprop:Generator_UserColumnName="Mes7" type="xs:decimal" default="0" />
+              <xs:element name="Mes8" msprop:Generator_ColumnVarNameInTable="columnMes8" msprop:Generator_ColumnPropNameInRow="Mes8" msprop:Generator_ColumnPropNameInTable="Mes8Column" msprop:Generator_UserColumnName="Mes8" type="xs:decimal" default="0" />
+              <xs:element name="Mes9" msprop:Generator_ColumnVarNameInTable="columnMes9" msprop:Generator_ColumnPropNameInRow="Mes9" msprop:Generator_ColumnPropNameInTable="Mes9Column" msprop:Generator_UserColumnName="Mes9" type="xs:decimal" default="0" />
+              <xs:element name="Mes10" msprop:Generator_ColumnVarNameInTable="columnMes10" msprop:Generator_ColumnPropNameInRow="Mes10" msprop:Generator_ColumnPropNameInTable="Mes10Column" msprop:Generator_UserColumnName="Mes10" type="xs:decimal" default="0" />
+              <xs:element name="Mes11" msprop:Generator_ColumnVarNameInTable="columnMes11" msprop:Generator_ColumnPropNameInRow="Mes11" msprop:Generator_ColumnPropNameInTable="Mes11Column" msprop:Generator_UserColumnName="Mes11" type="xs:decimal" default="0" />
+              <xs:element name="Mes12" msprop:Generator_ColumnVarNameInTable="columnMes12" msprop:Generator_ColumnPropNameInRow="Mes12" msprop:Generator_ColumnPropNameInTable="Mes12Column" msprop:Generator_UserColumnName="Mes12" type="xs:decimal" default="0" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SaldoMes1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes1" msprop:Generator_ColumnPropNameInRow="SaldoMes1" msprop:Generator_ColumnPropNameInTable="SaldoMes1Column" msprop:Generator_UserColumnName="SaldoMes1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes2" msprop:Generator_ColumnPropNameInRow="SaldoMes2" msprop:Generator_ColumnPropNameInTable="SaldoMes2Column" msprop:Generator_UserColumnName="SaldoMes2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes3" msprop:Generator_ColumnPropNameInRow="SaldoMes3" msprop:Generator_ColumnPropNameInTable="SaldoMes3Column" msprop:Generator_UserColumnName="SaldoMes3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes4" msprop:Generator_ColumnPropNameInRow="SaldoMes4" msprop:Generator_ColumnPropNameInTable="SaldoMes4Column" msprop:Generator_UserColumnName="SaldoMes4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes5" msprop:Generator_ColumnPropNameInRow="SaldoMes5" msprop:Generator_ColumnPropNameInTable="SaldoMes5Column" msprop:Generator_UserColumnName="SaldoMes5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes6" msprop:Generator_ColumnPropNameInRow="SaldoMes6" msprop:Generator_ColumnPropNameInTable="SaldoMes6Column" msprop:Generator_UserColumnName="SaldoMes6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes7" msprop:Generator_ColumnPropNameInRow="SaldoMes7" msprop:Generator_ColumnPropNameInTable="SaldoMes7Column" msprop:Generator_UserColumnName="SaldoMes7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes8" msprop:Generator_ColumnPropNameInRow="SaldoMes8" msprop:Generator_ColumnPropNameInTable="SaldoMes8Column" msprop:Generator_UserColumnName="SaldoMes8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes9" msprop:Generator_ColumnPropNameInRow="SaldoMes9" msprop:Generator_ColumnPropNameInTable="SaldoMes9Column" msprop:Generator_UserColumnName="SaldoMes9" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes10" msprop:Generator_ColumnPropNameInRow="SaldoMes10" msprop:Generator_ColumnPropNameInTable="SaldoMes10Column" msprop:Generator_UserColumnName="SaldoMes10" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes11" msprop:Generator_ColumnPropNameInRow="SaldoMes11" msprop:Generator_ColumnPropNameInTable="SaldoMes11Column" msprop:Generator_UserColumnName="SaldoMes11" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoMes12" msprop:Generator_ColumnPropNameInRow="SaldoMes12" msprop:Generator_ColumnPropNameInTable="SaldoMes12Column" msprop:Generator_UserColumnName="SaldoMes12" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Posteable" msprop:Generator_ColumnVarNameInTable="columnPosteable" msprop:Generator_ColumnPropNameInRow="Posteable" msprop:Generator_ColumnPropNameInTable="PosteableColumn" msprop:Generator_UserColumnName="Posteable" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CTPresupuestoAnual" msprop:Generator_TableClassName="CTPresupuestoAnualDataTable" msprop:Generator_TableVarName="tableCTPresupuestoAnual" msprop:Generator_TablePropName="CTPresupuestoAnual" msprop:Generator_RowDeletingName="CTPresupuestoAnualRowDeleting" msprop:Generator_RowChangingName="CTPresupuestoAnualRowChanging" msprop:Generator_RowEvHandlerName="CTPresupuestoAnualRowChangeEventHandler" msprop:Generator_RowDeletedName="CTPresupuestoAnualRowDeleted" msprop:Generator_UserTableName="CTPresupuestoAnual" msprop:Generator_RowChangedName="CTPresupuestoAnualRowChanged" msprop:Generator_RowEvArgName="CTPresupuestoAnualRowChangeEvent" msprop:Generator_RowClassName="CTPresupuestoAnualRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnPropNameInTable="AñoColumn" msprop:Generator_UserColumnName="Año" type="xs:short" />
+              <xs:element name="Cuenta" msprop:Generator_ColumnVarNameInTable="columnCuenta" msprop:Generator_ColumnPropNameInRow="Cuenta" msprop:Generator_ColumnPropNameInTable="CuentaColumn" msprop:Generator_UserColumnName="Cuenta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuentaCoop" msprop:Generator_ColumnVarNameInTable="columnCuentaCoop" msprop:Generator_ColumnPropNameInRow="CuentaCoop" msprop:Generator_ColumnPropNameInTable="CuentaCoopColumn" msprop:Generator_UserColumnName="CuentaCoop" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PresupuestoAnual" msprop:Generator_ColumnVarNameInTable="columnPresupuestoAnual" msprop:Generator_ColumnPropNameInRow="PresupuestoAnual" msprop:Generator_ColumnPropNameInTable="PresupuestoAnualColumn" msprop:Generator_UserColumnName="PresupuestoAnual" type="xs:decimal" />
+              <xs:element name="PresupAnualMonedaExtranjera" msprop:Generator_ColumnVarNameInTable="columnPresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInRow="PresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInTable="PresupAnualMonedaExtranjeraColumn" msprop:Generator_UserColumnName="PresupAnualMonedaExtranjera" type="xs:decimal" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Posteable" msprop:Generator_ColumnVarNameInTable="columnPosteable" msprop:Generator_ColumnPropNameInRow="Posteable" msprop:Generator_ColumnPropNameInTable="PosteableColumn" msprop:Generator_UserColumnName="Posteable" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CTPresupuestoTrim" msprop:Generator_TableClassName="CTPresupuestoTrimDataTable" msprop:Generator_TableVarName="tableCTPresupuestoTrim" msprop:Generator_TablePropName="CTPresupuestoTrim" msprop:Generator_RowDeletingName="CTPresupuestoTrimRowDeleting" msprop:Generator_RowChangingName="CTPresupuestoTrimRowChanging" msprop:Generator_RowEvHandlerName="CTPresupuestoTrimRowChangeEventHandler" msprop:Generator_RowDeletedName="CTPresupuestoTrimRowDeleted" msprop:Generator_UserTableName="CTPresupuestoTrim" msprop:Generator_RowChangedName="CTPresupuestoTrimRowChanged" msprop:Generator_RowEvArgName="CTPresupuestoTrimRowChangeEvent" msprop:Generator_RowClassName="CTPresupuestoTrimRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnPropNameInTable="AñoColumn" msprop:Generator_UserColumnName="Año" type="xs:short" />
+              <xs:element name="Cuenta" msprop:Generator_ColumnVarNameInTable="columnCuenta" msprop:Generator_ColumnPropNameInRow="Cuenta" msprop:Generator_ColumnPropNameInTable="CuentaColumn" msprop:Generator_UserColumnName="Cuenta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PresupuestoAnual" msprop:Generator_ColumnVarNameInTable="columnPresupuestoAnual" msprop:Generator_ColumnPropNameInRow="PresupuestoAnual" msprop:Generator_ColumnPropNameInTable="PresupuestoAnualColumn" msprop:Generator_UserColumnName="PresupuestoAnual" type="xs:decimal" />
+              <xs:element name="PresupAnualMonedaExtranjera" msprop:Generator_ColumnVarNameInTable="columnPresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInRow="PresupAnualMonedaExtranjera" msprop:Generator_ColumnPropNameInTable="PresupAnualMonedaExtranjeraColumn" msprop:Generator_UserColumnName="PresupAnualMonedaExtranjera" type="xs:decimal" />
+              <xs:element name="Trimestre1" msprop:Generator_ColumnVarNameInTable="columnTrimestre1" msprop:Generator_ColumnPropNameInRow="Trimestre1" msprop:Generator_ColumnPropNameInTable="Trimestre1Column" msprop:Generator_UserColumnName="Trimestre1" type="xs:decimal" />
+              <xs:element name="Trimestre2" msprop:Generator_ColumnVarNameInTable="columnTrimestre2" msprop:Generator_ColumnPropNameInRow="Trimestre2" msprop:Generator_ColumnPropNameInTable="Trimestre2Column" msprop:Generator_UserColumnName="Trimestre2" type="xs:decimal" />
+              <xs:element name="Trimestre3" msprop:Generator_ColumnVarNameInTable="columnTrimestre3" msprop:Generator_ColumnPropNameInRow="Trimestre3" msprop:Generator_ColumnPropNameInTable="Trimestre3Column" msprop:Generator_UserColumnName="Trimestre3" type="xs:decimal" />
+              <xs:element name="Trimestre4" msprop:Generator_ColumnVarNameInTable="columnTrimestre4" msprop:Generator_ColumnPropNameInRow="Trimestre4" msprop:Generator_ColumnPropNameInTable="Trimestre4Column" msprop:Generator_UserColumnName="Trimestre4" type="xs:decimal" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Posteable" msprop:Generator_ColumnVarNameInTable="columnPosteable" msprop:Generator_ColumnPropNameInRow="Posteable" msprop:Generator_ColumnPropNameInTable="PosteableColumn" msprop:Generator_UserColumnName="Posteable" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CTPresupuesto" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="CTPresupuestoAnual_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CTPresupuestoAnual" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="CTPresupuestoTrim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CTPresupuestoTrim" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

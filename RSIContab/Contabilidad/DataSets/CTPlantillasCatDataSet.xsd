@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CTPlantillasCatDataSet" targetNamespace="http://tempuri.org/CTPlantillasCatDataSet.xsd" xmlns:mstns="http://tempuri.org/CTPlantillasCatDataSet.xsd" xmlns="http://tempuri.org/CTPlantillasCatDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSICNFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSICNFConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSICNFConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlantillasCatalogoEncTableAdapter" GeneratorDataComponentClassName="PlantillasCatalogoEncTableAdapter" Name="PlantillasCatalogoEnc" UserDataComponentName="PlantillasCatalogoEncTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSICNFConnectionString (MySettings)" DbObjectName="RSICNF.dbo.PlantillasCatalogoEnc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, Descripcion, FechaCreacion, Usuario, IndiceActivos, IndicePasivo, IndiceCapital, IndiceIngresos, IndiceCostos, IndiceGastos, IndiceOrden
+FROM            PlantillasCatalogoEnc
+ORDER BY Descripcion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="FechaCreacion" DataSetColumn="FechaCreacion" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="IndiceActivos" DataSetColumn="IndiceActivos" />
+              <Mapping SourceColumn="IndicePasivo" DataSetColumn="IndicePasivo" />
+              <Mapping SourceColumn="IndiceCapital" DataSetColumn="IndiceCapital" />
+              <Mapping SourceColumn="IndiceIngresos" DataSetColumn="IndiceIngresos" />
+              <Mapping SourceColumn="IndiceCostos" DataSetColumn="IndiceCostos" />
+              <Mapping SourceColumn="IndiceGastos" DataSetColumn="IndiceGastos" />
+              <Mapping SourceColumn="IndiceOrden" DataSetColumn="IndiceOrden" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CTPlantillasCatDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CTPlantillasCatDataSet" msprop:Generator_UserDSName="CTPlantillasCatDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PlantillasCatalogoEnc" msprop:Generator_TableClassName="PlantillasCatalogoEncDataTable" msprop:Generator_TableVarName="tablePlantillasCatalogoEnc" msprop:Generator_TablePropName="PlantillasCatalogoEnc" msprop:Generator_RowDeletingName="PlantillasCatalogoEncRowDeleting" msprop:Generator_RowChangingName="PlantillasCatalogoEncRowChanging" msprop:Generator_RowEvHandlerName="PlantillasCatalogoEncRowChangeEventHandler" msprop:Generator_RowDeletedName="PlantillasCatalogoEncRowDeleted" msprop:Generator_UserTableName="PlantillasCatalogoEnc" msprop:Generator_RowChangedName="PlantillasCatalogoEncRowChanged" msprop:Generator_RowEvArgName="PlantillasCatalogoEncRowChangeEvent" msprop:Generator_RowClassName="PlantillasCatalogoEncRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaCreacion" msprop:Generator_ColumnVarNameInTable="columnFechaCreacion" msprop:Generator_ColumnPropNameInRow="FechaCreacion" msprop:Generator_ColumnPropNameInTable="FechaCreacionColumn" msprop:Generator_UserColumnName="FechaCreacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceActivos" msprop:Generator_ColumnVarNameInTable="columnIndiceActivos" msprop:Generator_ColumnPropNameInRow="IndiceActivos" msprop:Generator_ColumnPropNameInTable="IndiceActivosColumn" msprop:Generator_UserColumnName="IndiceActivos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndicePasivo" msprop:Generator_ColumnVarNameInTable="columnIndicePasivo" msprop:Generator_ColumnPropNameInRow="IndicePasivo" msprop:Generator_ColumnPropNameInTable="IndicePasivoColumn" msprop:Generator_UserColumnName="IndicePasivo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceCapital" msprop:Generator_ColumnVarNameInTable="columnIndiceCapital" msprop:Generator_ColumnPropNameInRow="IndiceCapital" msprop:Generator_ColumnPropNameInTable="IndiceCapitalColumn" msprop:Generator_UserColumnName="IndiceCapital">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceIngresos" msprop:Generator_ColumnVarNameInTable="columnIndiceIngresos" msprop:Generator_ColumnPropNameInRow="IndiceIngresos" msprop:Generator_ColumnPropNameInTable="IndiceIngresosColumn" msprop:Generator_UserColumnName="IndiceIngresos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceCostos" msprop:Generator_ColumnVarNameInTable="columnIndiceCostos" msprop:Generator_ColumnPropNameInRow="IndiceCostos" msprop:Generator_ColumnPropNameInTable="IndiceCostosColumn" msprop:Generator_UserColumnName="IndiceCostos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceGastos" msprop:Generator_ColumnVarNameInTable="columnIndiceGastos" msprop:Generator_ColumnPropNameInRow="IndiceGastos" msprop:Generator_ColumnPropNameInTable="IndiceGastosColumn" msprop:Generator_UserColumnName="IndiceGastos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndiceOrden" msprop:Generator_ColumnVarNameInTable="columnIndiceOrden" msprop:Generator_ColumnPropNameInRow="IndiceOrden" msprop:Generator_ColumnPropNameInTable="IndiceOrdenColumn" msprop:Generator_UserColumnName="IndiceOrden">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlantillasCatalogoEnc" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

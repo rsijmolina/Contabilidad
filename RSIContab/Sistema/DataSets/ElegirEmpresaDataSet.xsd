@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ElegirEmpresaDataSet" targetNamespace="http://tempuri.org/ElegirEmpresaDataSet.xsd" xmlns:mstns="http://tempuri.org/ElegirEmpresaDataSet.xsd" xmlns="http://tempuri.org/ElegirEmpresaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSICNFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSICNFConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSICNFConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DBTableAdapter" GeneratorDataComponentClassName="DBTableAdapter" Name="DB" UserDataComponentName="DBTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSICNFConnectionString (MySettings)" DbObjectName="RSICNF.dbo.DB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     ID, NombreEmpresa, Servidor, Instancia, BaseDatos, WindowsAut, Usuario, Clave
+FROM         DB
+ORDER BY ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="NombreEmpresa" DataSetColumn="NombreEmpresa" />
+              <Mapping SourceColumn="Servidor" DataSetColumn="Servidor" />
+              <Mapping SourceColumn="Instancia" DataSetColumn="Instancia" />
+              <Mapping SourceColumn="BaseDatos" DataSetColumn="BaseDatos" />
+              <Mapping SourceColumn="WindowsAut" DataSetColumn="WindowsAut" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="Clave" DataSetColumn="Clave" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ElegirEmpresaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ElegirEmpresaDataSet" msprop:Generator_UserDSName="ElegirEmpresaDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DB" msprop:Generator_UserTableName="DB" msprop:Generator_RowDeletedName="DBRowDeleted" msprop:Generator_TableClassName="DBDataTable" msprop:Generator_RowChangedName="DBRowChanged" msprop:Generator_RowClassName="DBRow" msprop:Generator_RowChangingName="DBRowChanging" msprop:Generator_RowEvArgName="DBRowChangeEvent" msprop:Generator_RowEvHandlerName="DBRowChangeEventHandler" msprop:Generator_TablePropName="DB" msprop:Generator_TableVarName="tableDB" msprop:Generator_RowDeletingName="DBRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="NombreEmpresa" msprop:Generator_UserColumnName="NombreEmpresa" msprop:Generator_ColumnPropNameInRow="NombreEmpresa" msprop:Generator_ColumnVarNameInTable="columnNombreEmpresa" msprop:Generator_ColumnPropNameInTable="NombreEmpresaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Servidor" msprop:Generator_UserColumnName="Servidor" msprop:Generator_ColumnPropNameInRow="Servidor" msprop:Generator_ColumnVarNameInTable="columnServidor" msprop:Generator_ColumnPropNameInTable="ServidorColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Instancia" msprop:Generator_UserColumnName="Instancia" msprop:Generator_ColumnPropNameInRow="Instancia" msprop:Generator_ColumnVarNameInTable="columnInstancia" msprop:Generator_ColumnPropNameInTable="InstanciaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BaseDatos" msprop:Generator_UserColumnName="BaseDatos" msprop:Generator_ColumnPropNameInRow="BaseDatos" msprop:Generator_ColumnVarNameInTable="columnBaseDatos" msprop:Generator_ColumnPropNameInTable="BaseDatosColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WindowsAut" msprop:Generator_UserColumnName="WindowsAut" msprop:Generator_ColumnPropNameInRow="WindowsAut" msprop:Generator_ColumnVarNameInTable="columnWindowsAut" msprop:Generator_ColumnPropNameInTable="WindowsAutColumn" type="xs:boolean" />
+              <xs:element name="Usuario" msprop:Generator_UserColumnName="Usuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Clave" msprop:Generator_UserColumnName="Clave" msprop:Generator_ColumnPropNameInRow="Clave" msprop:Generator_ColumnVarNameInTable="columnClave" msprop:Generator_ColumnPropNameInTable="ClaveColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DB" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

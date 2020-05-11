@@ -1,0 +1,2532 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RSIContab
+</name>
+</assembly>
+<members>
+<member name="T:RSIContab.PLListaEmpleadosDataSet.PLEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSet.PLEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSet.PLEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSetTableAdapters.PLEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLListaEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLListaEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLListaEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLListaEmpleadosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLListaEmpleadosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet.PLPlanillasOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.PLPlanillasOTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLActualizarOtrasDedDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLActualizarOtrasDedDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLActualizarOtrasDedDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLActualizarOtrasDedDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLActualizarOtrasDedDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLConfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLCalculoDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLConfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLCalculoDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLConfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet.PLCalculoDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLConfDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSetTableAdapters.PLConfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSetTableAdapters.PLCalculoDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLConfDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLConfDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLConfDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLConfDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLConfDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSeccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLDepartamentosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSeccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLDepartamentosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSeccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet.PLDepartamentosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.PLSeccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.PLDepartamentosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLSeccionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLSeccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLSeccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLSeccionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLSeccionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLCargarDatosPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLCargarDatosPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLCargarDatosPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLCargarDatosPlanillaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLCargarDatosPlanillaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionISRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasCerradasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionISRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasCerradasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLDeduccionISRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet.PLPlanillasCerradasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.PLPlanillasOTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.PLDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.PLDeduccionISRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.PLPlanillasCerradasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLCierrePlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLCierrePlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLCierrePlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLCierrePlanillaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLCierrePlanillaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLDeduccionISRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLTablaISRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLDeduccionISRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLTablaISRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLDeduccionISRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet.PLTablaISRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSetTableAdapters.PLDeduccionISRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSetTableAdapters.PLTablaISRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLDeduccionISRDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLDeduccionISRDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLDeduccionISRDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLDeduccionISRDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLDeduccionISRDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet.PLPrestacionesDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.PLPrestacionesPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.PLPrestacionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.PLPrestacionesDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLPrestacionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLPrestacionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLVacacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLDiasVacacionesTomadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLTablaDiasVacacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLVacacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLDiasVacacionesTomadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLTablaDiasVacacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLVacacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLDiasVacacionesTomadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet.PLTablaDiasVacacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.PLVacacionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.PLDiasVacacionesTomadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.PLTablaDiasVacacionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLVacacionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLVacacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLVacacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLVacacionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLVacacionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSet.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSet.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSet.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSetTableAdapters.UsuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.UsuariosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.UsuariosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.UsuariosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.UsuariosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.UsuariosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSet.PLProfesionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSet.PLProfesionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSet.PLProfesionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSetTableAdapters.PLProfesionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLProfesionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLProfesionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLProfesionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLProfesionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLProfesionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSet.PLDefinicionDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSet.PLDefinicionDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSet.PLDefinicionDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSetTableAdapters.PLDefinicionDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLRepRecibosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLRepRecibosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLRepRecibosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLRepRecibosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLRepRecibosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSet.DBDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSet.DBRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSet.DBRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSetTableAdapters.DBTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.BaseDatosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.BaseDatosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.BaseDatosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.BaseDatosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.BaseDatosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLDepartamentosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSeccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLBancosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLDepartamentosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSeccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLBancosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLDepartamentosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLSeccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLBancosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet.PLPlanillasOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLDepartamentosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLSeccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLBancosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.PLPlanillasOTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.CapturaPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.CapturaPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.CapturaPlanillaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.CapturaPlanillaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.CapturaPlanillaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDefinicionDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDefinicionDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet.PLDefinicionDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.PLDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.PLDefinicionDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLEdicionDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLEdicionDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLEdicionDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLEdicionDeduccionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLEdicionDeduccionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLPlanillaBancosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLPlanillaBancosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLPlanillaBancosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLPlanillaBancosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLPlanillaBancosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaISRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaDiasVacacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLConfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaImpuestoVecinalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaISRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaDiasVacacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLConfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaImpuestoVecinalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaISRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaDiasVacacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLConfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet.PLTablaImpuestoVecinalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.PLTablaISRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.PLTablaDiasVacacionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.PLConfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.PLTablaImpuestoVecinalTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLTablasDedDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLTablasDedDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLTablasDedDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLTablasDedDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLTablasDedDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaPreavisoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaCesantiaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaVacacionesProporcionalesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaPreavisoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaCesantiaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaVacacionesProporcionalesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaPreavisoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaCesantiaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet.PLTablaVacacionesProporcionalesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.PLTablaPreavisoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.PLTablaCesantiaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.PLTablaVacacionesProporcionalesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLTablasPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLTablasPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLTablasPrestacionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLTablasPrestacionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLTablasPrestacionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSet.PLDefinicionDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSet.PLDefinicionDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSet.PLDefinicionDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSetTableAdapters.PLDefinicionDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLDefDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLDefDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLDefDeduccionesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLDefDeduccionesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLDefDeduccionesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDefinicionDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDefinicionDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDefinicionDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet.PLDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSetTableAdapters.PLDefinicionDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSetTableAdapters.PLDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLDeduccionesMesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLDeduccionesMesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLDeduccionesMesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLDeduccionesMesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLDeduccionesMesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLPuestosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLDepartamentosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSeccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLTiposEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLProfesionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLBancosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLPuestosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLDepartamentosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSeccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLTiposEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLProfesionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLBancosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLPuestosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLDepartamentosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLSeccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLTiposEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLProfesionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet.PLBancosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLPuestosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLDepartamentosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLSeccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLTiposEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLProfesionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.PLBancosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLEmpleadosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLPlaniActDatosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLPlaniActDatosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLPlaniActDatosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLPlaniActDatosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLPlaniActDatosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSet.NivelesContDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSet.NivelesContRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSet.NivelesContRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSetTableAdapters.NivelesContTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.UsrNivelesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.UsrNivelesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.UsrNivelesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.UsrNivelesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.UsrNivelesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLDepartamentosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSeccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLPuestosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLProfesionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLTiposEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLDepartamentosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSeccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLPuestosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLProfesionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLTiposEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLDepartamentosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLSeccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLPuestosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLProfesionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet.PLTiposEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLDepartamentosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLSeccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLPuestosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLProfesionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.PLTiposEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLEmpleadosExcelDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLEmpleadosExcelDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLEmpleadosExcelDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLEmpleadosExcelDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLEmpleadosExcelDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSet.DBDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSet.DBRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSet.DBRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSetTableAdapters.DBTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.ElegirEmpresaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.ElegirEmpresaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.ElegirEmpresaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.ElegirEmpresaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.ElegirEmpresaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSet.PLAseguradorasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSet.PLAseguradorasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSet.PLAseguradorasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSetTableAdapters.PLAseguradorasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLAseguradorasDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLAseguradorasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLAseguradorasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLAseguradorasDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLAseguradorasDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSet.PLBancosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSet.PLBancosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSet.PLBancosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSetTableAdapters.PLBancosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLBancosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLBancosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLBancosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLBancosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLBancosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSet.PLConstanciasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSet.PLConstanciasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSet.PLConstanciasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSetTableAdapters.PLConstanciasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLConstanciasDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLConstanciasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLConstanciasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLConstanciasDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLConstanciasDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSet.PLPuestosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSet.PLPuestosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSet.PLPuestosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSetTableAdapters.PLPuestosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLPuestosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLPuestosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLPuestosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLPuestosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLPuestosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLSedesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLSedesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLSedesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLSedesDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLSedesDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSet.PLDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSet.PLDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSet.PLDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSetTableAdapters.PLDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLListaDedEmpDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLListaDedEmpDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLListaDedEmpDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLListaDedEmpDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLListaDedEmpDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSet.PLTiposEmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSet.PLTiposEmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSet.PLTiposEmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSetTableAdapters.PLTiposEmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLTiposEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLTiposEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLTiposEmpleadosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLTiposEmpleadosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLTiposEmpleadosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:RSIContab.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:RSIContab.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:RSIContab.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet.PLPlanillasOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSetTableAdapters.PLPlanillasOTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLExportarHistorialDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLExportarHistorialDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLExportarHistorialDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLExportarHistorialDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLExportarHistorialDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasOTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDeduccionesDetDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDefinicionDeduccionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasOTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDeduccionesDetRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDefinicionDeduccionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLPlanillasOTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDeduccionesDetRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet.PLDefinicionDeduccionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.PLPlanillasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.PLPlanillasOTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.PLDeduccionesDetTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.PLDefinicionDeduccionesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLProcDeducDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLProcDeducDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLProcDeducDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLProcDeducDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLProcDeducDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLDepartamentosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLSedesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLDepartamentosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLSedesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLDepartamentosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet.PLSedesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSetTableAdapters.PLDepartamentosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSetTableAdapters.PLSedesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSIContab.PLDepartamentosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSIContab.PLDepartamentosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSIContab.PLDepartamentosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.UpdateAll(RSIContab.PLDepartamentosDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:RSIContab.PLDepartamentosDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

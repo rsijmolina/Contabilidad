@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PLPlanillaBancosDataSet" targetNamespace="http://tempuri.org/PLPlanillaBancosDataSet.xsd" xmlns:mstns="http://tempuri.org/PLPlanillaBancosDataSet.xsd" xmlns="http://tempuri.org/PLPlanillaBancosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLPlanillasTableAdapter" GeneratorDataComponentClassName="PLPlanillasTableAdapter" Name="PLPlanillas" UserDataComponentName="PLPlanillasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLPlanillas.CodigoSede, PLPlanillas.CodigoDepartamento, PLPlanillas.CodigoSeccion, 
+                      PLPlanillas.CodigoEmpleado, PLPlanillas.DiasTrabajados, PLPlanillas.SueldoNormal, PLPlanillas.DiasFeriados, PLPlanillas.SueldoAdicionalFeriados, 
+                      PLPlanillas.HorasTarde, PLPlanillas.ValorHorastarde, PLPlanillas.HorasExtras25, PLPlanillas.ValorHorasExtras25, PLPlanillas.HorasExtras50, 
+                      PLPlanillas.ValorHorasExtras50, PLPlanillas.HorasExtras75, PLPlanillas.ValorHorasExtras75, PLPlanillas.HorasExtrasDobles, 
+                      PLPlanillas.ValorHorasExtrasDobles, PLPlanillas.Comisiones, PLPlanillas.Bonificaciones, PLPlanillas.Transporte, PLPlanillas.Combustible, 
+                      PLPlanillas.DepreciacionVehiculo, PLPlanillas.Vacaciones, PLPlanillas.IngresosAdicionales1, PLPlanillas.IngresosAdicionales2, 
+                      PLPlanillas.IngresosAdicionales3, PLPlanillas.IngresosAdicionales4, PLPlanillas.IngresosAdicionales5, PLPlanillas.SeguroSocial, PLPlanillas.RAP, 
+                      PLPlanillas.ImpuestoVecinal, PLPlanillas.ImpuestoSobreRenta, PLPlanillas.INJUPEMP, PLPlanillas.INPREMA, PLPlanillas.DeduccionFija1, 
+                      PLPlanillas.DeduccionFija2, PLPlanillas.DeduccionFija3, PLPlanillas.DeduccionFija4, PLPlanillas.DeduccionFija5, PLPlanillas.OtrasDeducciones, 
+                      PLPlanillas.Banco, PLPlanillas.Cerrado, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, PLEmpleados.Apellido2, 
+                      PLEmpleados.Identificacion1, PLEmpleados.NoCuentaBancaria, PLDeduccionesDet.RAP AS DedDetRAP, PLDeduccionesDet.Seguro, 
+                      PLDeduccionesDet.Deduccion1, PLDeduccionesDet.Deduccion2, PLDeduccionesDet.Deduccion3, PLDeduccionesDet.Deduccion4, 
+                      PLDeduccionesDet.Deduccion5, PLDeduccionesDet.Deduccion6, PLDeduccionesDet.Deduccion7, PLDeduccionesDet.Deduccion8, 
+                      PLDeduccionesDet.Deduccion9, PLDeduccionesDet.Deduccion10, PLDeduccionesDet.Deduccion11, PLDeduccionesDet.Deduccion12, 
+                      PLDeduccionesDet.Deduccion13, PLDeduccionesDet.Deduccion14, PLDeduccionesDet.Deduccion15, PLDeduccionesDet.Deduccion16, 
+                      PLDeduccionesDet.Deduccion17, PLDeduccionesDet.Deduccion18, PLDeduccionesDet.Deduccion19, PLDeduccionesDet.Deduccion20, 
+                      PLDeduccionesDet.Deduccion21, PLDeduccionesDet.Deduccion22, PLDeduccionesDet.Deduccion23, PLDeduccionesDet.Deduccion24, 
+                      PLDeduccionesDet.Deduccion25, PLDeduccionesDet.Deduccion26, PLDeduccionesDet.Deduccion27, PLDeduccionesDet.Deduccion28, 
+                      PLDeduccionesDet.Deduccion29, PLDeduccionesDet.Deduccion30
+FROM         PLPlanillas INNER JOIN
+                      PLEmpleados ON PLPlanillas.CodigoEmpleado = PLEmpleados.CodigoEmpleado LEFT OUTER JOIN
+                      PLDeduccionesDet ON PLPlanillas.CodigoEmpleado = PLDeduccionesDet.CodigoEmpleado
+WHERE     (PLPlanillas.Año = @Año) AND (PLPlanillas.Mes = @Mes) AND (PLPlanillas.NoPlanilla = @NoPlanilla) AND (PLPlanillas.Banco = @Banco)
+ORDER BY PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLPlanillas.Banco, PLEmpleados.Nombre1, PLEmpleados.Nombre2, 
+                      PLEmpleados.Apellido1, PLEmpleados.Apellido2</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Banco" ColumnName="Banco" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Banco" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Banco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="NoPlanilla" DataSetColumn="NoPlanilla" />
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="CodigoDepartamento" DataSetColumn="CodigoDepartamento" />
+              <Mapping SourceColumn="CodigoSeccion" DataSetColumn="CodigoSeccion" />
+              <Mapping SourceColumn="CodigoEmpleado" DataSetColumn="CodigoEmpleado" />
+              <Mapping SourceColumn="DiasTrabajados" DataSetColumn="DiasTrabajados" />
+              <Mapping SourceColumn="SueldoNormal" DataSetColumn="SueldoNormal" />
+              <Mapping SourceColumn="DiasFeriados" DataSetColumn="DiasFeriados" />
+              <Mapping SourceColumn="SueldoAdicionalFeriados" DataSetColumn="SueldoAdicionalFeriados" />
+              <Mapping SourceColumn="HorasTarde" DataSetColumn="HorasTarde" />
+              <Mapping SourceColumn="ValorHorastarde" DataSetColumn="ValorHorastarde" />
+              <Mapping SourceColumn="HorasExtras25" DataSetColumn="HorasExtras25" />
+              <Mapping SourceColumn="ValorHorasExtras25" DataSetColumn="ValorHorasExtras25" />
+              <Mapping SourceColumn="HorasExtras50" DataSetColumn="HorasExtras50" />
+              <Mapping SourceColumn="ValorHorasExtras50" DataSetColumn="ValorHorasExtras50" />
+              <Mapping SourceColumn="HorasExtras75" DataSetColumn="HorasExtras75" />
+              <Mapping SourceColumn="ValorHorasExtras75" DataSetColumn="ValorHorasExtras75" />
+              <Mapping SourceColumn="HorasExtrasDobles" DataSetColumn="HorasExtrasDobles" />
+              <Mapping SourceColumn="ValorHorasExtrasDobles" DataSetColumn="ValorHorasExtrasDobles" />
+              <Mapping SourceColumn="Comisiones" DataSetColumn="Comisiones" />
+              <Mapping SourceColumn="Bonificaciones" DataSetColumn="Bonificaciones" />
+              <Mapping SourceColumn="Transporte" DataSetColumn="Transporte" />
+              <Mapping SourceColumn="Combustible" DataSetColumn="Combustible" />
+              <Mapping SourceColumn="DepreciacionVehiculo" DataSetColumn="DepreciacionVehiculo" />
+              <Mapping SourceColumn="Vacaciones" DataSetColumn="Vacaciones" />
+              <Mapping SourceColumn="IngresosAdicionales1" DataSetColumn="IngresosAdicionales1" />
+              <Mapping SourceColumn="IngresosAdicionales2" DataSetColumn="IngresosAdicionales2" />
+              <Mapping SourceColumn="IngresosAdicionales3" DataSetColumn="IngresosAdicionales3" />
+              <Mapping SourceColumn="IngresosAdicionales4" DataSetColumn="IngresosAdicionales4" />
+              <Mapping SourceColumn="IngresosAdicionales5" DataSetColumn="IngresosAdicionales5" />
+              <Mapping SourceColumn="SeguroSocial" DataSetColumn="SeguroSocial" />
+              <Mapping SourceColumn="RAP" DataSetColumn="RAP" />
+              <Mapping SourceColumn="ImpuestoVecinal" DataSetColumn="ImpuestoVecinal" />
+              <Mapping SourceColumn="ImpuestoSobreRenta" DataSetColumn="ImpuestoSobreRenta" />
+              <Mapping SourceColumn="INJUPEMP" DataSetColumn="INJUPEMP" />
+              <Mapping SourceColumn="INPREMA" DataSetColumn="INPREMA" />
+              <Mapping SourceColumn="DeduccionFija1" DataSetColumn="DeduccionFija1" />
+              <Mapping SourceColumn="DeduccionFija2" DataSetColumn="DeduccionFija2" />
+              <Mapping SourceColumn="DeduccionFija3" DataSetColumn="DeduccionFija3" />
+              <Mapping SourceColumn="DeduccionFija4" DataSetColumn="DeduccionFija4" />
+              <Mapping SourceColumn="DeduccionFija5" DataSetColumn="DeduccionFija5" />
+              <Mapping SourceColumn="OtrasDeducciones" DataSetColumn="OtrasDeducciones" />
+              <Mapping SourceColumn="Banco" DataSetColumn="Banco" />
+              <Mapping SourceColumn="Cerrado" DataSetColumn="Cerrado" />
+              <Mapping SourceColumn="Nombre1" DataSetColumn="Nombre1" />
+              <Mapping SourceColumn="Nombre2" DataSetColumn="Nombre2" />
+              <Mapping SourceColumn="Apellido1" DataSetColumn="Apellido1" />
+              <Mapping SourceColumn="Apellido2" DataSetColumn="Apellido2" />
+              <Mapping SourceColumn="Identificacion1" DataSetColumn="Identificacion1" />
+              <Mapping SourceColumn="NoCuentaBancaria" DataSetColumn="NoCuentaBancaria" />
+              <Mapping SourceColumn="DedDetRAP" DataSetColumn="DedDetRAP" />
+              <Mapping SourceColumn="Seguro" DataSetColumn="Seguro" />
+              <Mapping SourceColumn="Deduccion1" DataSetColumn="Deduccion1" />
+              <Mapping SourceColumn="Deduccion2" DataSetColumn="Deduccion2" />
+              <Mapping SourceColumn="Deduccion3" DataSetColumn="Deduccion3" />
+              <Mapping SourceColumn="Deduccion4" DataSetColumn="Deduccion4" />
+              <Mapping SourceColumn="Deduccion5" DataSetColumn="Deduccion5" />
+              <Mapping SourceColumn="Deduccion6" DataSetColumn="Deduccion6" />
+              <Mapping SourceColumn="Deduccion7" DataSetColumn="Deduccion7" />
+              <Mapping SourceColumn="Deduccion8" DataSetColumn="Deduccion8" />
+              <Mapping SourceColumn="Deduccion9" DataSetColumn="Deduccion9" />
+              <Mapping SourceColumn="Deduccion10" DataSetColumn="Deduccion10" />
+              <Mapping SourceColumn="Deduccion11" DataSetColumn="Deduccion11" />
+              <Mapping SourceColumn="Deduccion12" DataSetColumn="Deduccion12" />
+              <Mapping SourceColumn="Deduccion13" DataSetColumn="Deduccion13" />
+              <Mapping SourceColumn="Deduccion14" DataSetColumn="Deduccion14" />
+              <Mapping SourceColumn="Deduccion15" DataSetColumn="Deduccion15" />
+              <Mapping SourceColumn="Deduccion16" DataSetColumn="Deduccion16" />
+              <Mapping SourceColumn="Deduccion17" DataSetColumn="Deduccion17" />
+              <Mapping SourceColumn="Deduccion18" DataSetColumn="Deduccion18" />
+              <Mapping SourceColumn="Deduccion19" DataSetColumn="Deduccion19" />
+              <Mapping SourceColumn="Deduccion20" DataSetColumn="Deduccion20" />
+              <Mapping SourceColumn="Deduccion21" DataSetColumn="Deduccion21" />
+              <Mapping SourceColumn="Deduccion22" DataSetColumn="Deduccion22" />
+              <Mapping SourceColumn="Deduccion23" DataSetColumn="Deduccion23" />
+              <Mapping SourceColumn="Deduccion24" DataSetColumn="Deduccion24" />
+              <Mapping SourceColumn="Deduccion25" DataSetColumn="Deduccion25" />
+              <Mapping SourceColumn="Deduccion26" DataSetColumn="Deduccion26" />
+              <Mapping SourceColumn="Deduccion27" DataSetColumn="Deduccion27" />
+              <Mapping SourceColumn="Deduccion28" DataSetColumn="Deduccion28" />
+              <Mapping SourceColumn="Deduccion29" DataSetColumn="Deduccion29" />
+              <Mapping SourceColumn="Deduccion30" DataSetColumn="Deduccion30" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PLPlanillaBancosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PLPlanillaBancosDataSet" msprop:Generator_DataSetName="PLPlanillaBancosDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PLPlanillas" msprop:Generator_UserTableName="PLPlanillas" msprop:Generator_RowDeletedName="PLPlanillasRowDeleted" msprop:Generator_RowChangedName="PLPlanillasRowChanged" msprop:Generator_RowClassName="PLPlanillasRow" msprop:Generator_RowChangingName="PLPlanillasRowChanging" msprop:Generator_RowEvArgName="PLPlanillasRowChangeEvent" msprop:Generator_RowEvHandlerName="PLPlanillasRowChangeEventHandler" msprop:Generator_TableClassName="PLPlanillasDataTable" msprop:Generator_TableVarName="tablePLPlanillas" msprop:Generator_RowDeletingName="PLPlanillasRowDeleting" msprop:Generator_TablePropName="PLPlanillas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Año" msprop:Generator_UserColumnName="Año" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInTable="AñoColumn" type="xs:short" />
+              <xs:element name="Mes" msprop:Generator_UserColumnName="Mes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInTable="MesColumn" type="xs:short" />
+              <xs:element name="NoPlanilla" msprop:Generator_UserColumnName="NoPlanilla" msprop:Generator_ColumnPropNameInRow="NoPlanilla" msprop:Generator_ColumnVarNameInTable="columnNoPlanilla" msprop:Generator_ColumnPropNameInTable="NoPlanillaColumn" type="xs:short" />
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDepartamento" msprop:Generator_UserColumnName="CodigoDepartamento" msprop:Generator_ColumnPropNameInRow="CodigoDepartamento" msprop:Generator_ColumnVarNameInTable="columnCodigoDepartamento" msprop:Generator_ColumnPropNameInTable="CodigoDepartamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoSeccion" msprop:Generator_UserColumnName="CodigoSeccion" msprop:Generator_ColumnPropNameInRow="CodigoSeccion" msprop:Generator_ColumnVarNameInTable="columnCodigoSeccion" msprop:Generator_ColumnPropNameInTable="CodigoSeccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoEmpleado" msprop:Generator_UserColumnName="CodigoEmpleado" msprop:Generator_ColumnPropNameInRow="CodigoEmpleado" msprop:Generator_ColumnVarNameInTable="columnCodigoEmpleado" msprop:Generator_ColumnPropNameInTable="CodigoEmpleadoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiasTrabajados" msprop:Generator_UserColumnName="DiasTrabajados" msprop:Generator_ColumnPropNameInRow="DiasTrabajados" msprop:Generator_ColumnVarNameInTable="columnDiasTrabajados" msprop:Generator_ColumnPropNameInTable="DiasTrabajadosColumn" type="xs:decimal" />
+              <xs:element name="SueldoNormal" msprop:Generator_UserColumnName="SueldoNormal" msprop:Generator_ColumnPropNameInRow="SueldoNormal" msprop:Generator_ColumnVarNameInTable="columnSueldoNormal" msprop:Generator_ColumnPropNameInTable="SueldoNormalColumn" type="xs:decimal" />
+              <xs:element name="DiasFeriados" msprop:Generator_UserColumnName="DiasFeriados" msprop:Generator_ColumnPropNameInRow="DiasFeriados" msprop:Generator_ColumnVarNameInTable="columnDiasFeriados" msprop:Generator_ColumnPropNameInTable="DiasFeriadosColumn" type="xs:decimal" />
+              <xs:element name="SueldoAdicionalFeriados" msprop:Generator_UserColumnName="SueldoAdicionalFeriados" msprop:Generator_ColumnPropNameInRow="SueldoAdicionalFeriados" msprop:Generator_ColumnVarNameInTable="columnSueldoAdicionalFeriados" msprop:Generator_ColumnPropNameInTable="SueldoAdicionalFeriadosColumn" type="xs:decimal" />
+              <xs:element name="HorasTarde" msprop:Generator_UserColumnName="HorasTarde" msprop:Generator_ColumnPropNameInRow="HorasTarde" msprop:Generator_ColumnVarNameInTable="columnHorasTarde" msprop:Generator_ColumnPropNameInTable="HorasTardeColumn" type="xs:decimal" />
+              <xs:element name="ValorHorastarde" msprop:Generator_UserColumnName="ValorHorastarde" msprop:Generator_ColumnPropNameInRow="ValorHorastarde" msprop:Generator_ColumnVarNameInTable="columnValorHorastarde" msprop:Generator_ColumnPropNameInTable="ValorHorastardeColumn" type="xs:decimal" />
+              <xs:element name="HorasExtras25" msprop:Generator_UserColumnName="HorasExtras25" msprop:Generator_ColumnPropNameInRow="HorasExtras25" msprop:Generator_ColumnVarNameInTable="columnHorasExtras25" msprop:Generator_ColumnPropNameInTable="HorasExtras25Column" type="xs:decimal" />
+              <xs:element name="ValorHorasExtras25" msprop:Generator_UserColumnName="ValorHorasExtras25" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras25" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras25" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras25Column" type="xs:decimal" />
+              <xs:element name="HorasExtras50" msprop:Generator_UserColumnName="HorasExtras50" msprop:Generator_ColumnPropNameInRow="HorasExtras50" msprop:Generator_ColumnVarNameInTable="columnHorasExtras50" msprop:Generator_ColumnPropNameInTable="HorasExtras50Column" type="xs:decimal" />
+              <xs:element name="ValorHorasExtras50" msprop:Generator_UserColumnName="ValorHorasExtras50" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras50" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras50" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras50Column" type="xs:decimal" />
+              <xs:element name="HorasExtras75" msprop:Generator_UserColumnName="HorasExtras75" msprop:Generator_ColumnPropNameInRow="HorasExtras75" msprop:Generator_ColumnVarNameInTable="columnHorasExtras75" msprop:Generator_ColumnPropNameInTable="HorasExtras75Column" type="xs:decimal" />
+              <xs:element name="ValorHorasExtras75" msprop:Generator_UserColumnName="ValorHorasExtras75" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras75" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras75" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras75Column" type="xs:decimal" />
+              <xs:element name="HorasExtrasDobles" msprop:Generator_UserColumnName="HorasExtrasDobles" msprop:Generator_ColumnPropNameInRow="HorasExtrasDobles" msprop:Generator_ColumnVarNameInTable="columnHorasExtrasDobles" msprop:Generator_ColumnPropNameInTable="HorasExtrasDoblesColumn" type="xs:decimal" />
+              <xs:element name="ValorHorasExtrasDobles" msprop:Generator_UserColumnName="ValorHorasExtrasDobles" msprop:Generator_ColumnPropNameInRow="ValorHorasExtrasDobles" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtrasDobles" msprop:Generator_ColumnPropNameInTable="ValorHorasExtrasDoblesColumn" type="xs:decimal" />
+              <xs:element name="Comisiones" msprop:Generator_UserColumnName="Comisiones" msprop:Generator_ColumnPropNameInRow="Comisiones" msprop:Generator_ColumnVarNameInTable="columnComisiones" msprop:Generator_ColumnPropNameInTable="ComisionesColumn" type="xs:decimal" />
+              <xs:element name="Bonificaciones" msprop:Generator_UserColumnName="Bonificaciones" msprop:Generator_ColumnPropNameInRow="Bonificaciones" msprop:Generator_ColumnVarNameInTable="columnBonificaciones" msprop:Generator_ColumnPropNameInTable="BonificacionesColumn" type="xs:decimal" />
+              <xs:element name="Transporte" msprop:Generator_UserColumnName="Transporte" msprop:Generator_ColumnPropNameInRow="Transporte" msprop:Generator_ColumnVarNameInTable="columnTransporte" msprop:Generator_ColumnPropNameInTable="TransporteColumn" type="xs:decimal" />
+              <xs:element name="Combustible" msprop:Generator_UserColumnName="Combustible" msprop:Generator_ColumnPropNameInRow="Combustible" msprop:Generator_ColumnVarNameInTable="columnCombustible" msprop:Generator_ColumnPropNameInTable="CombustibleColumn" type="xs:decimal" />
+              <xs:element name="DepreciacionVehiculo" msprop:Generator_UserColumnName="DepreciacionVehiculo" msprop:Generator_ColumnPropNameInRow="DepreciacionVehiculo" msprop:Generator_ColumnVarNameInTable="columnDepreciacionVehiculo" msprop:Generator_ColumnPropNameInTable="DepreciacionVehiculoColumn" type="xs:decimal" />
+              <xs:element name="Vacaciones" msprop:Generator_UserColumnName="Vacaciones" msprop:Generator_ColumnPropNameInRow="Vacaciones" msprop:Generator_ColumnVarNameInTable="columnVacaciones" msprop:Generator_ColumnPropNameInTable="VacacionesColumn" type="xs:decimal" />
+              <xs:element name="IngresosAdicionales1" msprop:Generator_UserColumnName="IngresosAdicionales1" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales1" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales1" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales1Column" type="xs:decimal" />
+              <xs:element name="IngresosAdicionales2" msprop:Generator_UserColumnName="IngresosAdicionales2" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales2" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales2" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales2Column" type="xs:decimal" />
+              <xs:element name="IngresosAdicionales3" msprop:Generator_UserColumnName="IngresosAdicionales3" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales3" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales3" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales3Column" type="xs:decimal" />
+              <xs:element name="IngresosAdicionales4" msprop:Generator_UserColumnName="IngresosAdicionales4" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales4" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales4" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales4Column" type="xs:decimal" />
+              <xs:element name="IngresosAdicionales5" msprop:Generator_UserColumnName="IngresosAdicionales5" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales5" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales5" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales5Column" type="xs:decimal" />
+              <xs:element name="SeguroSocial" msprop:Generator_UserColumnName="SeguroSocial" msprop:Generator_ColumnPropNameInRow="SeguroSocial" msprop:Generator_ColumnVarNameInTable="columnSeguroSocial" msprop:Generator_ColumnPropNameInTable="SeguroSocialColumn" type="xs:decimal" />
+              <xs:element name="RAP" msprop:Generator_UserColumnName="RAP" msprop:Generator_ColumnPropNameInRow="RAP" msprop:Generator_ColumnVarNameInTable="columnRAP" msprop:Generator_ColumnPropNameInTable="RAPColumn" type="xs:decimal" />
+              <xs:element name="ImpuestoVecinal" msprop:Generator_UserColumnName="ImpuestoVecinal" msprop:Generator_ColumnPropNameInRow="ImpuestoVecinal" msprop:Generator_ColumnVarNameInTable="columnImpuestoVecinal" msprop:Generator_ColumnPropNameInTable="ImpuestoVecinalColumn" type="xs:decimal" />
+              <xs:element name="ImpuestoSobreRenta" msprop:Generator_UserColumnName="ImpuestoSobreRenta" msprop:Generator_ColumnPropNameInRow="ImpuestoSobreRenta" msprop:Generator_ColumnVarNameInTable="columnImpuestoSobreRenta" msprop:Generator_ColumnPropNameInTable="ImpuestoSobreRentaColumn" type="xs:decimal" />
+              <xs:element name="INJUPEMP" msprop:Generator_UserColumnName="INJUPEMP" msprop:Generator_ColumnPropNameInRow="INJUPEMP" msprop:Generator_ColumnVarNameInTable="columnINJUPEMP" msprop:Generator_ColumnPropNameInTable="INJUPEMPColumn" type="xs:decimal" />
+              <xs:element name="INPREMA" msprop:Generator_UserColumnName="INPREMA" msprop:Generator_ColumnPropNameInRow="INPREMA" msprop:Generator_ColumnVarNameInTable="columnINPREMA" msprop:Generator_ColumnPropNameInTable="INPREMAColumn" type="xs:decimal" />
+              <xs:element name="DeduccionFija1" msprop:Generator_UserColumnName="DeduccionFija1" msprop:Generator_ColumnPropNameInRow="DeduccionFija1" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija1" msprop:Generator_ColumnPropNameInTable="DeduccionFija1Column" type="xs:decimal" />
+              <xs:element name="DeduccionFija2" msprop:Generator_UserColumnName="DeduccionFija2" msprop:Generator_ColumnPropNameInRow="DeduccionFija2" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija2" msprop:Generator_ColumnPropNameInTable="DeduccionFija2Column" type="xs:decimal" />
+              <xs:element name="DeduccionFija3" msprop:Generator_UserColumnName="DeduccionFija3" msprop:Generator_ColumnPropNameInRow="DeduccionFija3" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija3" msprop:Generator_ColumnPropNameInTable="DeduccionFija3Column" type="xs:decimal" />
+              <xs:element name="DeduccionFija4" msprop:Generator_UserColumnName="DeduccionFija4" msprop:Generator_ColumnPropNameInRow="DeduccionFija4" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija4" msprop:Generator_ColumnPropNameInTable="DeduccionFija4Column" type="xs:decimal" />
+              <xs:element name="DeduccionFija5" msprop:Generator_UserColumnName="DeduccionFija5" msprop:Generator_ColumnPropNameInRow="DeduccionFija5" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija5" msprop:Generator_ColumnPropNameInTable="DeduccionFija5Column" type="xs:decimal" />
+              <xs:element name="OtrasDeducciones" msprop:Generator_UserColumnName="OtrasDeducciones" msprop:Generator_ColumnPropNameInRow="OtrasDeducciones" msprop:Generator_ColumnVarNameInTable="columnOtrasDeducciones" msprop:Generator_ColumnPropNameInTable="OtrasDeduccionesColumn" type="xs:decimal" />
+              <xs:element name="Banco" msprop:Generator_UserColumnName="Banco" msprop:Generator_ColumnPropNameInRow="Banco" msprop:Generator_ColumnVarNameInTable="columnBanco" msprop:Generator_ColumnPropNameInTable="BancoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cerrado" msprop:Generator_UserColumnName="Cerrado" msprop:Generator_ColumnPropNameInRow="Cerrado" msprop:Generator_ColumnVarNameInTable="columnCerrado" msprop:Generator_ColumnPropNameInTable="CerradoColumn" type="xs:boolean" />
+              <xs:element name="Nombre1" msprop:Generator_UserColumnName="Nombre1" msprop:Generator_ColumnPropNameInRow="Nombre1" msprop:Generator_ColumnVarNameInTable="columnNombre1" msprop:Generator_ColumnPropNameInTable="Nombre1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre2" msprop:Generator_UserColumnName="Nombre2" msprop:Generator_ColumnPropNameInRow="Nombre2" msprop:Generator_ColumnVarNameInTable="columnNombre2" msprop:Generator_ColumnPropNameInTable="Nombre2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido1" msprop:Generator_UserColumnName="Apellido1" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido2" msprop:Generator_UserColumnName="Apellido2" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Identificacion1" msprop:Generator_UserColumnName="Identificacion1" msprop:Generator_ColumnPropNameInRow="Identificacion1" msprop:Generator_ColumnVarNameInTable="columnIdentificacion1" msprop:Generator_ColumnPropNameInTable="Identificacion1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoCuentaBancaria" msprop:Generator_UserColumnName="NoCuentaBancaria" msprop:Generator_ColumnPropNameInRow="NoCuentaBancaria" msprop:Generator_ColumnVarNameInTable="columnNoCuentaBancaria" msprop:Generator_ColumnPropNameInTable="NoCuentaBancariaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DedDetRAP" msprop:Generator_UserColumnName="DedDetRAP" msprop:Generator_ColumnPropNameInRow="DedDetRAP" msprop:Generator_ColumnVarNameInTable="columnDedDetRAP" msprop:Generator_ColumnPropNameInTable="DedDetRAPColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Seguro" msprop:Generator_UserColumnName="Seguro" msprop:Generator_ColumnPropNameInRow="Seguro" msprop:Generator_ColumnVarNameInTable="columnSeguro" msprop:Generator_ColumnPropNameInTable="SeguroColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion1" msprop:Generator_UserColumnName="Deduccion1" msprop:Generator_ColumnPropNameInRow="Deduccion1" msprop:Generator_ColumnVarNameInTable="columnDeduccion1" msprop:Generator_ColumnPropNameInTable="Deduccion1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion2" msprop:Generator_UserColumnName="Deduccion2" msprop:Generator_ColumnPropNameInRow="Deduccion2" msprop:Generator_ColumnVarNameInTable="columnDeduccion2" msprop:Generator_ColumnPropNameInTable="Deduccion2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion3" msprop:Generator_UserColumnName="Deduccion3" msprop:Generator_ColumnPropNameInRow="Deduccion3" msprop:Generator_ColumnVarNameInTable="columnDeduccion3" msprop:Generator_ColumnPropNameInTable="Deduccion3Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion4" msprop:Generator_UserColumnName="Deduccion4" msprop:Generator_ColumnPropNameInRow="Deduccion4" msprop:Generator_ColumnVarNameInTable="columnDeduccion4" msprop:Generator_ColumnPropNameInTable="Deduccion4Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion5" msprop:Generator_UserColumnName="Deduccion5" msprop:Generator_ColumnPropNameInRow="Deduccion5" msprop:Generator_ColumnVarNameInTable="columnDeduccion5" msprop:Generator_ColumnPropNameInTable="Deduccion5Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion6" msprop:Generator_UserColumnName="Deduccion6" msprop:Generator_ColumnPropNameInRow="Deduccion6" msprop:Generator_ColumnVarNameInTable="columnDeduccion6" msprop:Generator_ColumnPropNameInTable="Deduccion6Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion7" msprop:Generator_UserColumnName="Deduccion7" msprop:Generator_ColumnPropNameInRow="Deduccion7" msprop:Generator_ColumnVarNameInTable="columnDeduccion7" msprop:Generator_ColumnPropNameInTable="Deduccion7Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion8" msprop:Generator_UserColumnName="Deduccion8" msprop:Generator_ColumnPropNameInRow="Deduccion8" msprop:Generator_ColumnVarNameInTable="columnDeduccion8" msprop:Generator_ColumnPropNameInTable="Deduccion8Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion9" msprop:Generator_UserColumnName="Deduccion9" msprop:Generator_ColumnPropNameInRow="Deduccion9" msprop:Generator_ColumnVarNameInTable="columnDeduccion9" msprop:Generator_ColumnPropNameInTable="Deduccion9Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion10" msprop:Generator_UserColumnName="Deduccion10" msprop:Generator_ColumnPropNameInRow="Deduccion10" msprop:Generator_ColumnVarNameInTable="columnDeduccion10" msprop:Generator_ColumnPropNameInTable="Deduccion10Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion11" msprop:Generator_UserColumnName="Deduccion11" msprop:Generator_ColumnPropNameInRow="Deduccion11" msprop:Generator_ColumnVarNameInTable="columnDeduccion11" msprop:Generator_ColumnPropNameInTable="Deduccion11Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion12" msprop:Generator_UserColumnName="Deduccion12" msprop:Generator_ColumnPropNameInRow="Deduccion12" msprop:Generator_ColumnVarNameInTable="columnDeduccion12" msprop:Generator_ColumnPropNameInTable="Deduccion12Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion13" msprop:Generator_UserColumnName="Deduccion13" msprop:Generator_ColumnPropNameInRow="Deduccion13" msprop:Generator_ColumnVarNameInTable="columnDeduccion13" msprop:Generator_ColumnPropNameInTable="Deduccion13Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion14" msprop:Generator_UserColumnName="Deduccion14" msprop:Generator_ColumnPropNameInRow="Deduccion14" msprop:Generator_ColumnVarNameInTable="columnDeduccion14" msprop:Generator_ColumnPropNameInTable="Deduccion14Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion15" msprop:Generator_UserColumnName="Deduccion15" msprop:Generator_ColumnPropNameInRow="Deduccion15" msprop:Generator_ColumnVarNameInTable="columnDeduccion15" msprop:Generator_ColumnPropNameInTable="Deduccion15Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion16" msprop:Generator_UserColumnName="Deduccion16" msprop:Generator_ColumnPropNameInRow="Deduccion16" msprop:Generator_ColumnVarNameInTable="columnDeduccion16" msprop:Generator_ColumnPropNameInTable="Deduccion16Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion17" msprop:Generator_UserColumnName="Deduccion17" msprop:Generator_ColumnPropNameInRow="Deduccion17" msprop:Generator_ColumnVarNameInTable="columnDeduccion17" msprop:Generator_ColumnPropNameInTable="Deduccion17Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion18" msprop:Generator_UserColumnName="Deduccion18" msprop:Generator_ColumnPropNameInRow="Deduccion18" msprop:Generator_ColumnVarNameInTable="columnDeduccion18" msprop:Generator_ColumnPropNameInTable="Deduccion18Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion19" msprop:Generator_UserColumnName="Deduccion19" msprop:Generator_ColumnPropNameInRow="Deduccion19" msprop:Generator_ColumnVarNameInTable="columnDeduccion19" msprop:Generator_ColumnPropNameInTable="Deduccion19Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion20" msprop:Generator_UserColumnName="Deduccion20" msprop:Generator_ColumnPropNameInRow="Deduccion20" msprop:Generator_ColumnVarNameInTable="columnDeduccion20" msprop:Generator_ColumnPropNameInTable="Deduccion20Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion21" msprop:Generator_UserColumnName="Deduccion21" msprop:Generator_ColumnPropNameInRow="Deduccion21" msprop:Generator_ColumnVarNameInTable="columnDeduccion21" msprop:Generator_ColumnPropNameInTable="Deduccion21Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion22" msprop:Generator_UserColumnName="Deduccion22" msprop:Generator_ColumnPropNameInRow="Deduccion22" msprop:Generator_ColumnVarNameInTable="columnDeduccion22" msprop:Generator_ColumnPropNameInTable="Deduccion22Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion23" msprop:Generator_UserColumnName="Deduccion23" msprop:Generator_ColumnPropNameInRow="Deduccion23" msprop:Generator_ColumnVarNameInTable="columnDeduccion23" msprop:Generator_ColumnPropNameInTable="Deduccion23Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion24" msprop:Generator_UserColumnName="Deduccion24" msprop:Generator_ColumnPropNameInRow="Deduccion24" msprop:Generator_ColumnVarNameInTable="columnDeduccion24" msprop:Generator_ColumnPropNameInTable="Deduccion24Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion25" msprop:Generator_UserColumnName="Deduccion25" msprop:Generator_ColumnPropNameInRow="Deduccion25" msprop:Generator_ColumnVarNameInTable="columnDeduccion25" msprop:Generator_ColumnPropNameInTable="Deduccion25Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion26" msprop:Generator_UserColumnName="Deduccion26" msprop:Generator_ColumnPropNameInRow="Deduccion26" msprop:Generator_ColumnVarNameInTable="columnDeduccion26" msprop:Generator_ColumnPropNameInTable="Deduccion26Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion27" msprop:Generator_UserColumnName="Deduccion27" msprop:Generator_ColumnPropNameInRow="Deduccion27" msprop:Generator_ColumnVarNameInTable="columnDeduccion27" msprop:Generator_ColumnPropNameInTable="Deduccion27Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion28" msprop:Generator_UserColumnName="Deduccion28" msprop:Generator_ColumnPropNameInRow="Deduccion28" msprop:Generator_ColumnVarNameInTable="columnDeduccion28" msprop:Generator_ColumnPropNameInTable="Deduccion28Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion29" msprop:Generator_UserColumnName="Deduccion29" msprop:Generator_ColumnPropNameInRow="Deduccion29" msprop:Generator_ColumnVarNameInTable="columnDeduccion29" msprop:Generator_ColumnPropNameInTable="Deduccion29Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Deduccion30" msprop:Generator_UserColumnName="Deduccion30" msprop:Generator_ColumnPropNameInRow="Deduccion30" msprop:Generator_ColumnVarNameInTable="columnDeduccion30" msprop:Generator_ColumnPropNameInTable="Deduccion30Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLPlanillas" />
+      <xs:field xpath="mstns:Año" />
+      <xs:field xpath="mstns:Mes" />
+      <xs:field xpath="mstns:NoPlanilla" />
+      <xs:field xpath="mstns:CodigoEmpleado" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

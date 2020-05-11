@@ -1,0 +1,10 @@
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\bin\Debug\RSIRPTCLS.dll
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\bin\Debug\RSIRPTCLS.pdb
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\bin\Debug\RSIRPTCLS.xml
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\ResolveAssemblyReference.cache
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.Resources.resources
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.VisorRepFrm.resources
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.vbproj.GenerateResource.Cache
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.dll
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.xml
+D:\ColiNET2008\Contab\RSRPTCLS\RSIRPTCLS\obj\Debug\RSIRPTCLS.pdb

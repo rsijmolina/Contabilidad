@@ -1,0 +1,12 @@
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\PLClassLib.dll
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\PLClassLib.pdb
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\PLClassLib.xml
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\ResolveAssemblyReference.cache
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\PLClassLib.Resources.resources
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\PLClassLib.vbproj.GenerateResource.Cache
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\PLClassLib.dll
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\PLClassLib.xml
+D:\ColiNET2008\Contab\Plani\PLClassLib\obj\Debug\PLClassLib.pdb
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\Rsierpgencl.dll
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\Rsierpgencl.pdb
+D:\ColiNET2008\Contab\Plani\PLClassLib\bin\Debug\Rsierpgencl.xml

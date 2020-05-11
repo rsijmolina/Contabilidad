@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BABancosTablaSelDataSet" targetNamespace="http://tempuri.org/BABancosTablaSelDataSet.xsd" xmlns:mstns="http://tempuri.org/BABancosTablaSelDataSet.xsd" xmlns="http://tempuri.org/BABancosTablaSelDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BABancosTableAdapter" GeneratorDataComponentClassName="BABancosTableAdapter" Name="BABancos" UserDataComponentName="BABancosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.BABancos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CodigoBanco, DescripcionBanco, CuentaContable, CuentaBancaria
+FROM            BABancos
+ORDER BY CodigoBanco</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoBanco" DataSetColumn="CodigoBanco" />
+              <Mapping SourceColumn="DescripcionBanco" DataSetColumn="DescripcionBanco" />
+              <Mapping SourceColumn="CuentaContable" DataSetColumn="CuentaContable" />
+              <Mapping SourceColumn="CuentaBancaria" DataSetColumn="CuentaBancaria" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BABancosTablaSelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BABancosTablaSelDataSet" msprop:Generator_UserDSName="BABancosTablaSelDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BABancos" msprop:Generator_TableClassName="BABancosDataTable" msprop:Generator_TableVarName="tableBABancos" msprop:Generator_RowChangedName="BABancosRowChanged" msprop:Generator_TablePropName="BABancos" msprop:Generator_RowDeletingName="BABancosRowDeleting" msprop:Generator_RowChangingName="BABancosRowChanging" msprop:Generator_RowEvHandlerName="BABancosRowChangeEventHandler" msprop:Generator_RowDeletedName="BABancosRowDeleted" msprop:Generator_RowClassName="BABancosRow" msprop:Generator_UserTableName="BABancos" msprop:Generator_RowEvArgName="BABancosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoBanco" msprop:Generator_ColumnVarNameInTable="columnCodigoBanco" msprop:Generator_ColumnPropNameInRow="CodigoBanco" msprop:Generator_ColumnPropNameInTable="CodigoBancoColumn" msprop:Generator_UserColumnName="CodigoBanco" type="xs:short" />
+              <xs:element name="DescripcionBanco" msprop:Generator_ColumnVarNameInTable="columnDescripcionBanco" msprop:Generator_ColumnPropNameInRow="DescripcionBanco" msprop:Generator_ColumnPropNameInTable="DescripcionBancoColumn" msprop:Generator_UserColumnName="DescripcionBanco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuentaContable" msprop:Generator_ColumnVarNameInTable="columnCuentaContable" msprop:Generator_ColumnPropNameInRow="CuentaContable" msprop:Generator_ColumnPropNameInTable="CuentaContableColumn" msprop:Generator_UserColumnName="CuentaContable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuentaBancaria" msprop:Generator_ColumnVarNameInTable="columnCuentaBancaria" msprop:Generator_ColumnPropNameInRow="CuentaBancaria" msprop:Generator_ColumnPropNameInTable="CuentaBancariaColumn" msprop:Generator_UserColumnName="CuentaBancaria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BABancos" />
+      <xs:field xpath="mstns:CodigoBanco" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

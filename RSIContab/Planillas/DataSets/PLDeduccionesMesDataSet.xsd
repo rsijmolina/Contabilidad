@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PLDeduccionesMesDataSet" targetNamespace="http://tempuri.org/PLDeduccionesMesDataSet.xsd" xmlns:mstns="http://tempuri.org/PLDeduccionesMesDataSet.xsd" xmlns="http://tempuri.org/PLDeduccionesMesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLDefinicionDeduccionesTableAdapter" GeneratorDataComponentClassName="PLDefinicionDeduccionesTableAdapter" Name="PLDefinicionDeducciones" UserDataComponentName="PLDefinicionDeduccionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.PLDefinicionDeducciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CodigoDeduccion, DescripcionDeduccion
+FROM         PLDefinicionDeducciones
+WHERE     (Desactivada = 0)
+ORDER BY DescripcionDeduccion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoDeduccion" DataSetColumn="CodigoDeduccion" />
+              <Mapping SourceColumn="DescripcionDeduccion" DataSetColumn="DescripcionDeduccion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLDeduccionesTableAdapter" GeneratorDataComponentClassName="PLDeduccionesTableAdapter" Name="PLDeducciones" UserDataComponentName="PLDeduccionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     PLDeducciones.NoDocumento, PLDeducciones.Fecha, PLDeducciones.CodigoDeduccion, PLDeducciones.CodigoEmpleado, PLDeducciones.Valor, 
+                      PLDeducciones.NoMesesDeducir, PLDeducciones.DeduccionMensual, PLDeducciones.MontoDeducido, PLDeducciones.NoPlanillasDeducidas, 
+                      PLDeducciones.UltimaDeduccion, PLDeducciones.Referencia, PLDeducciones.OtrosCreditos, PLDeducciones.DeduccionPlanilla1, 
+                      PLDeducciones.DeduccionPlanilla2, PLDeducciones.DeduccionPlanilla3, PLDeducciones.DeduccionPlanilla4, PLDeducciones.Año, 
+                      PLDeducciones.Mes, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, PLEmpleados.Apellido2, PLDeducciones.PlanillaNo, 
+                      PLDeducciones.DeduccionPermanente
+FROM         PLDeducciones INNER JOIN
+                      PLEmpleados ON PLDeducciones.CodigoEmpleado = PLEmpleados.CodigoEmpleado
+WHERE     (PLDeducciones.Año = @Año) AND (PLDeducciones.Mes = @Mes) AND (PLDeducciones.CodigoDeduccion = @CodigoDeduccion) AND 
+                      (PLDeducciones.PlanillaNo = @PlanillaNo)
+ORDER BY PLDeducciones.CodigoDeduccion, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, PLEmpleados.Apellido2</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLDeducciones" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLDeducciones" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoDeduccion" ColumnName="CodigoDeduccion" DataSourceName="RSISistema.dbo.PLDeducciones" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoDeduccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDeduccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PlanillaNo" ColumnName="PlanillaNo" DataSourceName="RSISistema.dbo.PLDeducciones" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@PlanillaNo" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="PlanillaNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NoDocumento" DataSetColumn="NoDocumento" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="CodigoDeduccion" DataSetColumn="CodigoDeduccion" />
+              <Mapping SourceColumn="CodigoEmpleado" DataSetColumn="CodigoEmpleado" />
+              <Mapping SourceColumn="Valor" DataSetColumn="Valor" />
+              <Mapping SourceColumn="NoMesesDeducir" DataSetColumn="NoMesesDeducir" />
+              <Mapping SourceColumn="DeduccionMensual" DataSetColumn="DeduccionMensual" />
+              <Mapping SourceColumn="MontoDeducido" DataSetColumn="MontoDeducido" />
+              <Mapping SourceColumn="NoPlanillasDeducidas" DataSetColumn="NoPlanillasDeducidas" />
+              <Mapping SourceColumn="UltimaDeduccion" DataSetColumn="UltimaDeduccion" />
+              <Mapping SourceColumn="Referencia" DataSetColumn="Referencia" />
+              <Mapping SourceColumn="OtrosCreditos" DataSetColumn="OtrosCreditos" />
+              <Mapping SourceColumn="DeduccionPlanilla1" DataSetColumn="DeduccionPlanilla1" />
+              <Mapping SourceColumn="DeduccionPlanilla2" DataSetColumn="DeduccionPlanilla2" />
+              <Mapping SourceColumn="DeduccionPlanilla3" DataSetColumn="DeduccionPlanilla3" />
+              <Mapping SourceColumn="DeduccionPlanilla4" DataSetColumn="DeduccionPlanilla4" />
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="Nombre1" DataSetColumn="Nombre1" />
+              <Mapping SourceColumn="Nombre2" DataSetColumn="Nombre2" />
+              <Mapping SourceColumn="Apellido1" DataSetColumn="Apellido1" />
+              <Mapping SourceColumn="Apellido2" DataSetColumn="Apellido2" />
+              <Mapping SourceColumn="PlanillaNo" DataSetColumn="PlanillaNo" />
+              <Mapping SourceColumn="DeduccionPermanente" DataSetColumn="DeduccionPermanente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PLDeduccionesMesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PLDeduccionesMesDataSet" msprop:Generator_DataSetName="PLDeduccionesMesDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PLDefinicionDeducciones" msprop:Generator_UserTableName="PLDefinicionDeducciones" msprop:Generator_RowDeletedName="PLDefinicionDeduccionesRowDeleted" msprop:Generator_RowChangedName="PLDefinicionDeduccionesRowChanged" msprop:Generator_RowClassName="PLDefinicionDeduccionesRow" msprop:Generator_RowChangingName="PLDefinicionDeduccionesRowChanging" msprop:Generator_RowEvArgName="PLDefinicionDeduccionesRowChangeEvent" msprop:Generator_RowEvHandlerName="PLDefinicionDeduccionesRowChangeEventHandler" msprop:Generator_TableClassName="PLDefinicionDeduccionesDataTable" msprop:Generator_TableVarName="tablePLDefinicionDeducciones" msprop:Generator_RowDeletingName="PLDefinicionDeduccionesRowDeleting" msprop:Generator_TablePropName="PLDefinicionDeducciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoDeduccion" msprop:Generator_UserColumnName="CodigoDeduccion" msprop:Generator_ColumnPropNameInRow="CodigoDeduccion" msprop:Generator_ColumnVarNameInTable="columnCodigoDeduccion" msprop:Generator_ColumnPropNameInTable="CodigoDeduccionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescripcionDeduccion" msprop:Generator_UserColumnName="DescripcionDeduccion" msprop:Generator_ColumnPropNameInRow="DescripcionDeduccion" msprop:Generator_ColumnVarNameInTable="columnDescripcionDeduccion" msprop:Generator_ColumnPropNameInTable="DescripcionDeduccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLDeducciones" msprop:Generator_UserTableName="PLDeducciones" msprop:Generator_RowDeletedName="PLDeduccionesRowDeleted" msprop:Generator_RowChangedName="PLDeduccionesRowChanged" msprop:Generator_RowClassName="PLDeduccionesRow" msprop:Generator_RowChangingName="PLDeduccionesRowChanging" msprop:Generator_RowEvArgName="PLDeduccionesRowChangeEvent" msprop:Generator_RowEvHandlerName="PLDeduccionesRowChangeEventHandler" msprop:Generator_TableClassName="PLDeduccionesDataTable" msprop:Generator_TableVarName="tablePLDeducciones" msprop:Generator_RowDeletingName="PLDeduccionesRowDeleting" msprop:Generator_TablePropName="PLDeducciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NoDocumento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="NoDocumento" msprop:Generator_ColumnPropNameInRow="NoDocumento" msprop:Generator_ColumnVarNameInTable="columnNoDocumento" msprop:Generator_ColumnPropNameInTable="NoDocumentoColumn" type="xs:long" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CodigoDeduccion" msprop:Generator_UserColumnName="CodigoDeduccion" msprop:Generator_ColumnPropNameInRow="CodigoDeduccion" msprop:Generator_ColumnVarNameInTable="columnCodigoDeduccion" msprop:Generator_ColumnPropNameInTable="CodigoDeduccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoEmpleado" msprop:Generator_UserColumnName="CodigoEmpleado" msprop:Generator_ColumnPropNameInRow="CodigoEmpleado" msprop:Generator_ColumnVarNameInTable="columnCodigoEmpleado" msprop:Generator_ColumnPropNameInTable="CodigoEmpleadoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor" msprop:Generator_UserColumnName="Valor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInTable="ValorColumn" type="xs:decimal" default="0" />
+              <xs:element name="NoMesesDeducir" msprop:Generator_UserColumnName="NoMesesDeducir" msprop:Generator_ColumnPropNameInRow="NoMesesDeducir" msprop:Generator_ColumnVarNameInTable="columnNoMesesDeducir" msprop:Generator_ColumnPropNameInTable="NoMesesDeducirColumn" type="xs:unsignedByte" default="0" />
+              <xs:element name="DeduccionMensual" msprop:Generator_UserColumnName="DeduccionMensual" msprop:Generator_ColumnPropNameInRow="DeduccionMensual" msprop:Generator_ColumnVarNameInTable="columnDeduccionMensual" msprop:Generator_ColumnPropNameInTable="DeduccionMensualColumn" type="xs:decimal" default="0" />
+              <xs:element name="MontoDeducido" msprop:Generator_UserColumnName="MontoDeducido" msprop:Generator_ColumnPropNameInRow="MontoDeducido" msprop:Generator_ColumnVarNameInTable="columnMontoDeducido" msprop:Generator_ColumnPropNameInTable="MontoDeducidoColumn" type="xs:decimal" default="0" />
+              <xs:element name="NoPlanillasDeducidas" msprop:Generator_UserColumnName="NoPlanillasDeducidas" msprop:Generator_ColumnPropNameInRow="NoPlanillasDeducidas" msprop:Generator_ColumnVarNameInTable="columnNoPlanillasDeducidas" msprop:Generator_ColumnPropNameInTable="NoPlanillasDeducidasColumn" type="xs:unsignedByte" default="0" />
+              <xs:element name="UltimaDeduccion" msprop:Generator_UserColumnName="UltimaDeduccion" msprop:Generator_ColumnPropNameInRow="UltimaDeduccion" msprop:Generator_ColumnVarNameInTable="columnUltimaDeduccion" msprop:Generator_ColumnPropNameInTable="UltimaDeduccionColumn" type="xs:long" default="0" />
+              <xs:element name="Referencia" msprop:Generator_UserColumnName="Referencia" msprop:Generator_ColumnPropNameInRow="Referencia" msprop:Generator_ColumnVarNameInTable="columnReferencia" msprop:Generator_ColumnPropNameInTable="ReferenciaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtrosCreditos" msprop:Generator_UserColumnName="OtrosCreditos" msprop:Generator_ColumnPropNameInRow="OtrosCreditos" msprop:Generator_ColumnVarNameInTable="columnOtrosCreditos" msprop:Generator_ColumnPropNameInTable="OtrosCreditosColumn" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionPlanilla1" msprop:Generator_UserColumnName="DeduccionPlanilla1" msprop:Generator_ColumnPropNameInRow="DeduccionPlanilla1" msprop:Generator_ColumnVarNameInTable="columnDeduccionPlanilla1" msprop:Generator_ColumnPropNameInTable="DeduccionPlanilla1Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionPlanilla2" msprop:Generator_UserColumnName="DeduccionPlanilla2" msprop:Generator_ColumnPropNameInRow="DeduccionPlanilla2" msprop:Generator_ColumnVarNameInTable="columnDeduccionPlanilla2" msprop:Generator_ColumnPropNameInTable="DeduccionPlanilla2Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionPlanilla3" msprop:Generator_UserColumnName="DeduccionPlanilla3" msprop:Generator_ColumnPropNameInRow="DeduccionPlanilla3" msprop:Generator_ColumnVarNameInTable="columnDeduccionPlanilla3" msprop:Generator_ColumnPropNameInTable="DeduccionPlanilla3Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionPlanilla4" msprop:Generator_UserColumnName="DeduccionPlanilla4" msprop:Generator_ColumnPropNameInRow="DeduccionPlanilla4" msprop:Generator_ColumnVarNameInTable="columnDeduccionPlanilla4" msprop:Generator_ColumnPropNameInTable="DeduccionPlanilla4Column" type="xs:decimal" default="0" />
+              <xs:element name="Año" msprop:Generator_UserColumnName="Año" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInTable="AñoColumn" type="xs:short" default="0" />
+              <xs:element name="Mes" msprop:Generator_UserColumnName="Mes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInTable="MesColumn" type="xs:short" default="0" />
+              <xs:element name="Nombre1" msprop:Generator_UserColumnName="Nombre1" msprop:Generator_ColumnPropNameInRow="Nombre1" msprop:Generator_ColumnVarNameInTable="columnNombre1" msprop:Generator_ColumnPropNameInTable="Nombre1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre2" msprop:Generator_UserColumnName="Nombre2" msprop:Generator_ColumnPropNameInRow="Nombre2" msprop:Generator_ColumnVarNameInTable="columnNombre2" msprop:Generator_ColumnPropNameInTable="Nombre2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido1" msprop:Generator_UserColumnName="Apellido1" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido2" msprop:Generator_UserColumnName="Apellido2" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PlanillaNo" msprop:Generator_UserColumnName="PlanillaNo" msprop:Generator_ColumnVarNameInTable="columnPlanillaNo" msprop:Generator_ColumnPropNameInRow="PlanillaNo" msprop:Generator_ColumnPropNameInTable="PlanillaNoColumn" type="xs:unsignedByte" default="0" />
+              <xs:element name="DeduccionPermanente" msprop:Generator_UserColumnName="DeduccionPermanente" msprop:Generator_ColumnPropNameInRow="DeduccionPermanente" msprop:Generator_ColumnVarNameInTable="columnDeduccionPermanente" msprop:Generator_ColumnPropNameInTable="DeduccionPermanenteColumn" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLDefinicionDeducciones" />
+      <xs:field xpath="mstns:CodigoDeduccion" />
+    </xs:unique>
+    <xs:unique name="PLDeducciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLDeducciones" />
+      <xs:field xpath="mstns:NoDocumento" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

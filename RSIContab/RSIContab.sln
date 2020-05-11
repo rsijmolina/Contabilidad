@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RSIContab", "RSIContab.vbproj", "{6588878B-7778-4BB0-921A-DCD6C2E5C239}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PLClassLib", "..\Plani\PLClassLib\PLClassLib.vbproj", "{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RSIRPTCLS", "..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj", "{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CTClassLib", "..\Cont\CTClassLib\CTClassLib.vbproj", "{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Rsierpcl", "..\..\Coliseum\RSIERPClassGen\Rsierpgencl\Rsierpcl.vbproj", "{60DDCB92-F4AE-448F-AA08-3753EB39ACE9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BAClassLib", "..\Bancos\BAClassLib\BAClassLib.vbproj", "{86782B9B-E63F-4560-8B9E-6B7DA6A7CDAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6588878B-7778-4BB0-921A-DCD6C2E5C239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6588878B-7778-4BB0-921A-DCD6C2E5C239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6588878B-7778-4BB0-921A-DCD6C2E5C239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6588878B-7778-4BB0-921A-DCD6C2E5C239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DDCB92-F4AE-448F-AA08-3753EB39ACE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DDCB92-F4AE-448F-AA08-3753EB39ACE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DDCB92-F4AE-448F-AA08-3753EB39ACE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DDCB92-F4AE-448F-AA08-3753EB39ACE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86782B9B-E63F-4560-8B9E-6B7DA6A7CDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86782B9B-E63F-4560-8B9E-6B7DA6A7CDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86782B9B-E63F-4560-8B9E-6B7DA6A7CDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86782B9B-E63F-4560-8B9E-6B7DA6A7CDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE0F1F2F-1A7C-4465-B469-C7C98B93B4BE}
+	EndGlobalSection
+EndGlobal

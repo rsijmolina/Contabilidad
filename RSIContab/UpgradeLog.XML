@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RSIContab">
+</Property><Property Name="Archivo de la solución" Value="C:\Desarrollo\ColiNET2010\Contab\RSIContab\RSIContab.sln">
+</Property><Property Name="Date" Value="jueves, 13 de diciembre de 2012">
+</Property><Property Name="Time" Value="15:19 p.m.">
+</Property></Properties><Event ErrorLevel="1" Project="RSIContab" Source="RSIContab.vbproj" Description="La versión de destino de su proyecto es .NET Framework 2.0 ó 3.0. Si el proyecto utiliza ensamblados que requieren una versión más reciente de .NET Framework, no se podrá compilar. Puede cambiar la versión de .NET Framework haciendo clic en Propiedades en el menú del proyecto y seleccionando una nueva versión en el cuadro desplegable '.NET Framework'. (En Visual Basic, haga clic en el botón 'Opciones avanzadas del compilador...' en la pestaña Compilar).">
+</Event><Event ErrorLevel="0" Project="RSIContab" Source="RSIContab.vbproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="RSIContab" Source="RSIContab.vbproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="PLClassLib" Source="..\Plani\PLClassLib\PLClassLib.vbproj" Description="La versión de destino de su proyecto es .NET Framework 2.0 ó 3.0. Si el proyecto utiliza ensamblados que requieren una versión más reciente de .NET Framework, no se podrá compilar. Puede cambiar la versión de .NET Framework haciendo clic en Propiedades en el menú del proyecto y seleccionando una nueva versión en el cuadro desplegable '.NET Framework'. (En Visual Basic, haga clic en el botón 'Opciones avanzadas del compilador...' en la pestaña Compilar).">
+</Event><Event ErrorLevel="0" Project="PLClassLib" Source="..\Plani\PLClassLib\PLClassLib.vbproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="PLClassLib" Source="..\Plani\PLClassLib\PLClassLib.vbproj" Description="Converted">
+</Event><Event ErrorLevel="4" Project="RSIRPTCLS" Source="http://go.microsoft.com/fwlink/?LinkId=159919" Description="Advertencia: este proyecto requiere Crystal Reports, que ya no se incluye con Visual Studio. Haga clic aquí para obtener más información.">
+</Event><Event ErrorLevel="1" Project="RSIRPTCLS" Source="..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj" Description="La versión de destino de su proyecto es .NET Framework 2.0 ó 3.0. Si el proyecto utiliza ensamblados que requieren una versión más reciente de .NET Framework, no se podrá compilar. Puede cambiar la versión de .NET Framework haciendo clic en Propiedades en el menú del proyecto y seleccionando una nueva versión en el cuadro desplegable '.NET Framework'. (En Visual Basic, haga clic en el botón 'Opciones avanzadas del compilador...' en la pestaña Compilar).">
+</Event><Event ErrorLevel="0" Project="RSIRPTCLS" Source="..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="RSIRPTCLS" Source="..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RSIContab.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="RSIContab.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RSIContab" Source="RSIContab.vbproj" Description="Examen completo: no es necesario actualizar los archivos de proyecto.">
+</Event><Event ErrorLevel="0" Project="RSIContab" Source="RSIContab.vbproj" Description="Las referencias a Microsoft.VisualBasic.PowerPacks.Vs se actualizaron a Microsoft.VisualBasic.PowerPacks.Vs 10.0.">
+</Event><Event ErrorLevel="0" Project="PLClassLib" Source="..\Plani\PLClassLib\PLClassLib.vbproj" Description="Examen completo: no es necesario actualizar los archivos de proyecto.">
+</Event><Event ErrorLevel="0" Project="RSIRPTCLS" Source="..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj" Description="Examen completo: no es necesario actualizar los archivos de proyecto.">
+</Event></UpgradeLog>

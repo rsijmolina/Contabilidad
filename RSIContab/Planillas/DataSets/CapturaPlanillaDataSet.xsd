@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CapturaPlanillaDataSet" targetNamespace="http://tempuri.org/CapturaPlanillaDataSet.xsd" xmlns:mstns="http://tempuri.org/CapturaPlanillaDataSet.xsd" xmlns="http://tempuri.org/CapturaPlanillaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLPlanillasTableAdapter" GeneratorDataComponentClassName="PLPlanillasTableAdapter" Name="PLPlanillas" UserDataComponentName="PLPlanillasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM PLPlanillas
+WHERE     (Año = @Original_Año) AND (Mes = @Original_Mes) AND (NoPlanilla = @Original_NoPlanilla) AND (@IsNull_CodigoSede = 1 AND 
+                      CodigoSede IS NULL OR
+                      CodigoSede = @Original_CodigoSede) AND (@IsNull_CodigoDepartamento = 1 AND CodigoDepartamento IS NULL OR
+                      CodigoDepartamento = @Original_CodigoDepartamento) AND (@IsNull_CodigoSeccion = 1 AND CodigoSeccion IS NULL OR
+                      CodigoSeccion = @Original_CodigoSeccion) AND (CodigoEmpleado = @Original_CodigoEmpleado) AND (DiasTrabajados = @Original_DiasTrabajados) 
+                      AND (SueldoNormal = @Original_SueldoNormal) AND (DiasFeriados = @Original_DiasFeriados) AND 
+                      (SueldoAdicionalFeriados = @Original_SueldoAdicionalFeriados) AND (HorasTarde = @Original_HorasTarde) AND 
+                      (ValorHorastarde = @Original_ValorHorastarde) AND (HorasExtras25 = @Original_HorasExtras25) AND 
+                      (ValorHorasExtras25 = @Original_ValorHorasExtras25) AND (HorasExtras50 = @Original_HorasExtras50) AND 
+                      (ValorHorasExtras50 = @Original_ValorHorasExtras50) AND (HorasExtras75 = @Original_HorasExtras75) AND 
+                      (ValorHorasExtras75 = @Original_ValorHorasExtras75) AND (HorasExtrasDobles = @Original_HorasExtrasDobles) AND 
+                      (ValorHorasExtrasDobles = @Original_ValorHorasExtrasDobles) AND (Comisiones = @Original_Comisiones) AND 
+                      (Bonificaciones = @Original_Bonificaciones) AND (Transporte = @Original_Transporte) AND (Combustible = @Original_Combustible) AND 
+                      (DepreciacionVehiculo = @Original_DepreciacionVehiculo) AND (Vacaciones = @Original_Vacaciones) AND 
+                      (IngresosAdicionales1 = @Original_IngresosAdicionales1) AND (IngresosAdicionales2 = @Original_IngresosAdicionales2) AND 
+                      (IngresosAdicionales3 = @Original_IngresosAdicionales3) AND (IngresosAdicionales4 = @Original_IngresosAdicionales4) AND 
+                      (IngresosAdicionales5 = @Original_IngresosAdicionales5) AND (SeguroSocial = @Original_SeguroSocial) AND (RAP = @Original_RAP) AND 
+                      (ImpuestoVecinal = @Original_ImpuestoVecinal) AND (ImpuestoSobreRenta = @Original_ImpuestoSobreRenta) AND 
+                      (INJUPEMP = @Original_INJUPEMP) AND (INPREMA = @Original_INPREMA) AND (DeduccionFija1 = @Original_DeduccionFija1) AND 
+                      (DeduccionFija2 = @Original_DeduccionFija2) AND (DeduccionFija3 = @Original_DeduccionFija3) AND (DeduccionFija4 = @Original_DeduccionFija4) 
+                      AND (DeduccionFija5 = @Original_DeduccionFija5) AND (OtrasDeducciones = @Original_OtrasDeducciones) AND (Banco = @Original_Banco) AND 
+                      (Cerrado = @Original_Cerrado) AND (DatosRevisados = @Original_DatosRevisados)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoSede" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoSede" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoSede" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoSede" ColumnName="CodigoSede" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoSede" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSede" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoDepartamento" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoDepartamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoDepartamento" ColumnName="CodigoDepartamento" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoDepartamento" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoSeccion" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoSeccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoSeccion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoSeccion" ColumnName="CodigoSeccion" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoSeccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSeccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DiasTrabajados" ColumnName="DiasTrabajados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DiasTrabajados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasTrabajados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SueldoNormal" ColumnName="SueldoNormal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SueldoNormal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoNormal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DiasFeriados" ColumnName="DiasFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DiasFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasFeriados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SueldoAdicionalFeriados" ColumnName="SueldoAdicionalFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SueldoAdicionalFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoAdicionalFeriados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasTarde" ColumnName="HorasTarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasTarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasTarde" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorastarde" ColumnName="ValorHorastarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorastarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorastarde" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras25" ColumnName="HorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras25" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras25" ColumnName="ValorHorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras25" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras50" ColumnName="HorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras50" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras50" ColumnName="ValorHorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras50" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras75" ColumnName="HorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras75" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras75" ColumnName="ValorHorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras75" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtrasDobles" ColumnName="HorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtrasDobles" ColumnName="ValorHorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Comisiones" ColumnName="Comisiones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Comisiones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Comisiones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Bonificaciones" ColumnName="Bonificaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Bonificaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Bonificaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Transporte" ColumnName="Transporte" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Transporte" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Transporte" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Combustible" ColumnName="Combustible" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Combustible" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Combustible" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DepreciacionVehiculo" ColumnName="DepreciacionVehiculo" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DepreciacionVehiculo" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DepreciacionVehiculo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Vacaciones" ColumnName="Vacaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Vacaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Vacaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales1" ColumnName="IngresosAdicionales1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales2" ColumnName="IngresosAdicionales2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales3" ColumnName="IngresosAdicionales3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales4" ColumnName="IngresosAdicionales4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales5" ColumnName="IngresosAdicionales5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SeguroSocial" ColumnName="SeguroSocial" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SeguroSocial" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SeguroSocial" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_RAP" ColumnName="RAP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_RAP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="RAP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ImpuestoVecinal" ColumnName="ImpuestoVecinal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ImpuestoVecinal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoVecinal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ImpuestoSobreRenta" ColumnName="ImpuestoSobreRenta" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ImpuestoSobreRenta" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoSobreRenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_INJUPEMP" ColumnName="INJUPEMP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_INJUPEMP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INJUPEMP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_INPREMA" ColumnName="INPREMA" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_INPREMA" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INPREMA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija1" ColumnName="DeduccionFija1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija2" ColumnName="DeduccionFija2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija3" ColumnName="DeduccionFija3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija4" ColumnName="DeduccionFija4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija5" ColumnName="DeduccionFija5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_OtrasDeducciones" ColumnName="OtrasDeducciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_OtrasDeducciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="OtrasDeducciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Banco" ColumnName="Banco" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Original_Banco" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Banco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Cerrado" ColumnName="Cerrado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Original_Cerrado" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Cerrado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DatosRevisados" ColumnName="DatosRevisados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Original_DatosRevisados" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="DatosRevisados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO PLPlanillas
+                      (Año, Mes, NoPlanilla, CodigoSede, CodigoDepartamento, CodigoSeccion, CodigoEmpleado, DiasTrabajados, SueldoNormal, DiasFeriados, 
+                      SueldoAdicionalFeriados, HorasTarde, ValorHorastarde, HorasExtras25, ValorHorasExtras25, HorasExtras50, ValorHorasExtras50, HorasExtras75, 
+                      ValorHorasExtras75, HorasExtrasDobles, ValorHorasExtrasDobles, Comisiones, Bonificaciones, Transporte, Combustible, DepreciacionVehiculo, 
+                      Vacaciones, IngresosAdicionales1, IngresosAdicionales2, IngresosAdicionales3, IngresosAdicionales4, IngresosAdicionales5, SeguroSocial, RAP, 
+                      ImpuestoVecinal, ImpuestoSobreRenta, INJUPEMP, INPREMA, DeduccionFija1, DeduccionFija2, DeduccionFija3, DeduccionFija4, DeduccionFija5, 
+                      OtrasDeducciones, Banco, Cerrado, DatosRevisados)
+VALUES     (@Año,@Mes,@NoPlanilla,@CodigoSede,@CodigoDepartamento,@CodigoSeccion,@CodigoEmpleado,@DiasTrabajados,@SueldoNormal,@DiasFeriados,@SueldoAdicionalFeriados,@HorasTarde,@ValorHorastarde,@HorasExtras25,@ValorHorasExtras25,@HorasExtras50,@ValorHorasExtras50,@HorasExtras75,@ValorHorasExtras75,@HorasExtrasDobles,@ValorHorasExtrasDobles,@Comisiones,@Bonificaciones,@Transporte,@Combustible,@DepreciacionVehiculo,@Vacaciones,@IngresosAdicionales1,@IngresosAdicionales2,@IngresosAdicionales3,@IngresosAdicionales4,@IngresosAdicionales5,@SeguroSocial,@RAP,@ImpuestoVecinal,@ImpuestoSobreRenta,@INJUPEMP,@INPREMA,@DeduccionFija1,@DeduccionFija2,@DeduccionFija3,@DeduccionFija4,@DeduccionFija5,@OtrasDeducciones,@Banco,@Cerrado,@DatosRevisados)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSede" ColumnName="CodigoSede" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSede" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSede" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoDepartamento" ColumnName="CodigoDepartamento" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoDepartamento" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSeccion" ColumnName="CodigoSeccion" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSeccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSeccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DiasTrabajados" ColumnName="DiasTrabajados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DiasTrabajados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasTrabajados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SueldoNormal" ColumnName="SueldoNormal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SueldoNormal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoNormal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DiasFeriados" ColumnName="DiasFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DiasFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasFeriados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SueldoAdicionalFeriados" ColumnName="SueldoAdicionalFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SueldoAdicionalFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoAdicionalFeriados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasTarde" ColumnName="HorasTarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasTarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasTarde" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorastarde" ColumnName="ValorHorastarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorastarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorastarde" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras25" ColumnName="HorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras25" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras25" ColumnName="ValorHorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras25" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras50" ColumnName="HorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras50" ColumnName="ValorHorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras75" ColumnName="HorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras75" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras75" ColumnName="ValorHorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras75" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtrasDobles" ColumnName="HorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtrasDobles" ColumnName="ValorHorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Comisiones" ColumnName="Comisiones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Comisiones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Comisiones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Bonificaciones" ColumnName="Bonificaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Bonificaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Bonificaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Transporte" ColumnName="Transporte" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Transporte" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Transporte" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Combustible" ColumnName="Combustible" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Combustible" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Combustible" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepreciacionVehiculo" ColumnName="DepreciacionVehiculo" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DepreciacionVehiculo" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DepreciacionVehiculo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Vacaciones" ColumnName="Vacaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Vacaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Vacaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales1" ColumnName="IngresosAdicionales1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales2" ColumnName="IngresosAdicionales2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales3" ColumnName="IngresosAdicionales3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales4" ColumnName="IngresosAdicionales4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales5" ColumnName="IngresosAdicionales5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SeguroSocial" ColumnName="SeguroSocial" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SeguroSocial" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SeguroSocial" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="RAP" ColumnName="RAP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@RAP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="RAP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ImpuestoVecinal" ColumnName="ImpuestoVecinal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ImpuestoVecinal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoVecinal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ImpuestoSobreRenta" ColumnName="ImpuestoSobreRenta" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ImpuestoSobreRenta" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoSobreRenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="INJUPEMP" ColumnName="INJUPEMP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@INJUPEMP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INJUPEMP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="INPREMA" ColumnName="INPREMA" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@INPREMA" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INPREMA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija1" ColumnName="DeduccionFija1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija2" ColumnName="DeduccionFija2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija3" ColumnName="DeduccionFija3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija4" ColumnName="DeduccionFija4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija5" ColumnName="DeduccionFija5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="OtrasDeducciones" ColumnName="OtrasDeducciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@OtrasDeducciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="OtrasDeducciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Banco" ColumnName="Banco" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Banco" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Banco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Cerrado" ColumnName="Cerrado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Cerrado" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Cerrado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DatosRevisados" ColumnName="DatosRevisados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@DatosRevisados" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="DatosRevisados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLPlanillas.CodigoSede, PLPlanillas.CodigoDepartamento, PLPlanillas.CodigoSeccion, 
+                      PLPlanillas.CodigoEmpleado, PLPlanillas.DiasTrabajados, PLPlanillas.SueldoNormal, PLPlanillas.DiasFeriados, PLPlanillas.SueldoAdicionalFeriados, 
+                      PLPlanillas.HorasTarde, PLPlanillas.ValorHorastarde, PLPlanillas.HorasExtras25, PLPlanillas.ValorHorasExtras25, PLPlanillas.HorasExtras50, 
+                      PLPlanillas.ValorHorasExtras50, PLPlanillas.HorasExtras75, PLPlanillas.ValorHorasExtras75, PLPlanillas.HorasExtrasDobles, 
+                      PLPlanillas.ValorHorasExtrasDobles, PLPlanillas.Comisiones, PLPlanillas.Bonificaciones, PLPlanillas.Transporte, PLPlanillas.Combustible, 
+                      PLPlanillas.DepreciacionVehiculo, PLPlanillas.Vacaciones, PLPlanillas.IngresosAdicionales1, PLPlanillas.IngresosAdicionales2, 
+                      PLPlanillas.IngresosAdicionales3, PLPlanillas.IngresosAdicionales4, PLPlanillas.IngresosAdicionales5, PLPlanillas.SeguroSocial, PLPlanillas.RAP, 
+                      PLPlanillas.ImpuestoVecinal, PLPlanillas.ImpuestoSobreRenta, PLPlanillas.INJUPEMP, PLPlanillas.INPREMA, PLPlanillas.DeduccionFija1, 
+                      PLPlanillas.DeduccionFija2, PLPlanillas.DeduccionFija3, PLPlanillas.DeduccionFija4, PLPlanillas.DeduccionFija5, PLPlanillas.OtrasDeducciones, 
+                      PLPlanillas.Banco, PLPlanillas.Cerrado, PLPlanillas.DatosRevisados, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, 
+                      PLEmpleados.Apellido2
+FROM         PLPlanillas INNER JOIN
+                      PLEmpleados ON PLPlanillas.CodigoEmpleado = PLEmpleados.CodigoEmpleado
+WHERE     (PLPlanillas.Año = @Año) AND (PLPlanillas.Mes = @Mes) AND (PLPlanillas.NoPlanilla = @NoPlanilla)
+ORDER BY PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, 
+                      PLEmpleados.Apellido2</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE    PLPlanillas
+SET              Año = @Año, Mes = @Mes, NoPlanilla = @NoPlanilla, CodigoSede = @CodigoSede, CodigoDepartamento = @CodigoDepartamento, 
+                      CodigoSeccion = @CodigoSeccion, CodigoEmpleado = @CodigoEmpleado, DiasTrabajados = @DiasTrabajados, SueldoNormal = @SueldoNormal, 
+                      DiasFeriados = @DiasFeriados, SueldoAdicionalFeriados = @SueldoAdicionalFeriados, HorasTarde = @HorasTarde, 
+                      ValorHorastarde = @ValorHorastarde, HorasExtras25 = @HorasExtras25, ValorHorasExtras25 = @ValorHorasExtras25, 
+                      HorasExtras50 = @HorasExtras50, ValorHorasExtras50 = @ValorHorasExtras50, HorasExtras75 = @HorasExtras75, 
+                      ValorHorasExtras75 = @ValorHorasExtras75, HorasExtrasDobles = @HorasExtrasDobles, ValorHorasExtrasDobles = @ValorHorasExtrasDobles, 
+                      Comisiones = @Comisiones, Bonificaciones = @Bonificaciones, Transporte = @Transporte, Combustible = @Combustible, 
+                      DepreciacionVehiculo = @DepreciacionVehiculo, Vacaciones = @Vacaciones, IngresosAdicionales1 = @IngresosAdicionales1, 
+                      IngresosAdicionales2 = @IngresosAdicionales2, IngresosAdicionales3 = @IngresosAdicionales3, IngresosAdicionales4 = @IngresosAdicionales4, 
+                      IngresosAdicionales5 = @IngresosAdicionales5, SeguroSocial = @SeguroSocial, RAP = @RAP, ImpuestoVecinal = @ImpuestoVecinal, 
+                      ImpuestoSobreRenta = @ImpuestoSobreRenta, INJUPEMP = @INJUPEMP, INPREMA = @INPREMA, DeduccionFija1 = @DeduccionFija1, 
+                      DeduccionFija2 = @DeduccionFija2, DeduccionFija3 = @DeduccionFija3, DeduccionFija4 = @DeduccionFija4, DeduccionFija5 = @DeduccionFija5, 
+                      OtrasDeducciones = @OtrasDeducciones, Banco = @Banco, Cerrado = @Cerrado, DatosRevisados = @DatosRevisados
+WHERE     (Año = @Original_Año) AND (Mes = @Original_Mes) AND (NoPlanilla = @Original_NoPlanilla) AND (@IsNull_CodigoSede = 1 AND 
+                      CodigoSede IS NULL OR
+                      CodigoSede = @Original_CodigoSede) AND (@IsNull_CodigoDepartamento = 1 AND CodigoDepartamento IS NULL OR
+                      CodigoDepartamento = @Original_CodigoDepartamento) AND (@IsNull_CodigoSeccion = 1 AND CodigoSeccion IS NULL OR
+                      CodigoSeccion = @Original_CodigoSeccion) AND (CodigoEmpleado = @Original_CodigoEmpleado) AND (DiasTrabajados = @Original_DiasTrabajados) 
+                      AND (SueldoNormal = @Original_SueldoNormal) AND (DiasFeriados = @Original_DiasFeriados) AND 
+                      (SueldoAdicionalFeriados = @Original_SueldoAdicionalFeriados) AND (HorasTarde = @Original_HorasTarde) AND 
+                      (ValorHorastarde = @Original_ValorHorastarde) AND (HorasExtras25 = @Original_HorasExtras25) AND 
+                      (ValorHorasExtras25 = @Original_ValorHorasExtras25) AND (HorasExtras50 = @Original_HorasExtras50) AND 
+                      (ValorHorasExtras50 = @Original_ValorHorasExtras50) AND (HorasExtras75 = @Original_HorasExtras75) AND 
+                      (ValorHorasExtras75 = @Original_ValorHorasExtras75) AND (HorasExtrasDobles = @Original_HorasExtrasDobles) AND 
+                      (ValorHorasExtrasDobles = @Original_ValorHorasExtrasDobles) AND (Comisiones = @Original_Comisiones) AND 
+                      (Bonificaciones = @Original_Bonificaciones) AND (Transporte = @Original_Transporte) AND (Combustible = @Original_Combustible) AND 
+                      (DepreciacionVehiculo = @Original_DepreciacionVehiculo) AND (Vacaciones = @Original_Vacaciones) AND 
+                      (IngresosAdicionales1 = @Original_IngresosAdicionales1) AND (IngresosAdicionales2 = @Original_IngresosAdicionales2) AND 
+                      (IngresosAdicionales3 = @Original_IngresosAdicionales3) AND (IngresosAdicionales4 = @Original_IngresosAdicionales4) AND 
+                      (IngresosAdicionales5 = @Original_IngresosAdicionales5) AND (SeguroSocial = @Original_SeguroSocial) AND (RAP = @Original_RAP) AND 
+                      (ImpuestoVecinal = @Original_ImpuestoVecinal) AND (ImpuestoSobreRenta = @Original_ImpuestoSobreRenta) AND 
+                      (INJUPEMP = @Original_INJUPEMP) AND (INPREMA = @Original_INPREMA) AND (DeduccionFija1 = @Original_DeduccionFija1) AND 
+                      (DeduccionFija2 = @Original_DeduccionFija2) AND (DeduccionFija3 = @Original_DeduccionFija3) AND (DeduccionFija4 = @Original_DeduccionFija4) 
+                      AND (DeduccionFija5 = @Original_DeduccionFija5) AND (OtrasDeducciones = @Original_OtrasDeducciones) AND (Banco = @Original_Banco) AND 
+                      (Cerrado = @Original_Cerrado) AND (DatosRevisados = @Original_DatosRevisados)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSede" ColumnName="CodigoSede" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSede" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSede" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoDepartamento" ColumnName="CodigoDepartamento" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoDepartamento" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSeccion" ColumnName="CodigoSeccion" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSeccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSeccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DiasTrabajados" ColumnName="DiasTrabajados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DiasTrabajados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasTrabajados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SueldoNormal" ColumnName="SueldoNormal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SueldoNormal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoNormal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DiasFeriados" ColumnName="DiasFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DiasFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasFeriados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SueldoAdicionalFeriados" ColumnName="SueldoAdicionalFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SueldoAdicionalFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoAdicionalFeriados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasTarde" ColumnName="HorasTarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasTarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasTarde" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorastarde" ColumnName="ValorHorastarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorastarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorastarde" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras25" ColumnName="HorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras25" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras25" ColumnName="ValorHorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras25" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras50" ColumnName="HorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras50" ColumnName="ValorHorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtras75" ColumnName="HorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras75" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtras75" ColumnName="ValorHorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras75" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="HorasExtrasDobles" ColumnName="HorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@HorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValorHorasExtrasDobles" ColumnName="ValorHorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ValorHorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Comisiones" ColumnName="Comisiones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Comisiones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Comisiones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Bonificaciones" ColumnName="Bonificaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Bonificaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Bonificaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Transporte" ColumnName="Transporte" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Transporte" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Transporte" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Combustible" ColumnName="Combustible" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Combustible" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Combustible" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepreciacionVehiculo" ColumnName="DepreciacionVehiculo" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DepreciacionVehiculo" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DepreciacionVehiculo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Vacaciones" ColumnName="Vacaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Vacaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Vacaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales1" ColumnName="IngresosAdicionales1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales2" ColumnName="IngresosAdicionales2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales3" ColumnName="IngresosAdicionales3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales4" ColumnName="IngresosAdicionales4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IngresosAdicionales5" ColumnName="IngresosAdicionales5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@IngresosAdicionales5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="SeguroSocial" ColumnName="SeguroSocial" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@SeguroSocial" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SeguroSocial" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="RAP" ColumnName="RAP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@RAP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="RAP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ImpuestoVecinal" ColumnName="ImpuestoVecinal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ImpuestoVecinal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoVecinal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ImpuestoSobreRenta" ColumnName="ImpuestoSobreRenta" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@ImpuestoSobreRenta" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoSobreRenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="INJUPEMP" ColumnName="INJUPEMP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@INJUPEMP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INJUPEMP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="INPREMA" ColumnName="INPREMA" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@INPREMA" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INPREMA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija1" ColumnName="DeduccionFija1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija2" ColumnName="DeduccionFija2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija3" ColumnName="DeduccionFija3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija4" ColumnName="DeduccionFija4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DeduccionFija5" ColumnName="DeduccionFija5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@DeduccionFija5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="OtrasDeducciones" ColumnName="OtrasDeducciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@OtrasDeducciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="OtrasDeducciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Banco" ColumnName="Banco" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Banco" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Banco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Cerrado" ColumnName="Cerrado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Cerrado" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Cerrado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DatosRevisados" ColumnName="DatosRevisados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@DatosRevisados" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="DatosRevisados" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Original_NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoSede" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoSede" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoSede" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoSede" ColumnName="CodigoSede" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoSede" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSede" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoDepartamento" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoDepartamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoDepartamento" ColumnName="CodigoDepartamento" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoDepartamento" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsNull_CodigoSeccion" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IsNull_CodigoSeccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodigoSeccion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Original_CodigoSeccion" ColumnName="CodigoSeccion" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoSeccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSeccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@Original_CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DiasTrabajados" ColumnName="DiasTrabajados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DiasTrabajados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasTrabajados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SueldoNormal" ColumnName="SueldoNormal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SueldoNormal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoNormal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DiasFeriados" ColumnName="DiasFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DiasFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DiasFeriados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SueldoAdicionalFeriados" ColumnName="SueldoAdicionalFeriados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SueldoAdicionalFeriados" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SueldoAdicionalFeriados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasTarde" ColumnName="HorasTarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasTarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasTarde" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorastarde" ColumnName="ValorHorastarde" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorastarde" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorastarde" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras25" ColumnName="HorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras25" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras25" ColumnName="ValorHorasExtras25" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras25" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras25" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras50" ColumnName="HorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras50" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras50" ColumnName="ValorHorasExtras50" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras50" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras50" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtras75" ColumnName="HorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtras75" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtras75" ColumnName="ValorHorasExtras75" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtras75" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtras75" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_HorasExtrasDobles" ColumnName="HorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_HorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="HorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ValorHorasExtrasDobles" ColumnName="ValorHorasExtrasDobles" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ValorHorasExtrasDobles" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ValorHorasExtrasDobles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Comisiones" ColumnName="Comisiones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Comisiones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Comisiones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Bonificaciones" ColumnName="Bonificaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Bonificaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Bonificaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Transporte" ColumnName="Transporte" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Transporte" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Transporte" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Combustible" ColumnName="Combustible" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Combustible" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Combustible" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DepreciacionVehiculo" ColumnName="DepreciacionVehiculo" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DepreciacionVehiculo" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DepreciacionVehiculo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Vacaciones" ColumnName="Vacaciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_Vacaciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Vacaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales1" ColumnName="IngresosAdicionales1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales2" ColumnName="IngresosAdicionales2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales3" ColumnName="IngresosAdicionales3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales4" ColumnName="IngresosAdicionales4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IngresosAdicionales5" ColumnName="IngresosAdicionales5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_IngresosAdicionales5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="IngresosAdicionales5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_SeguroSocial" ColumnName="SeguroSocial" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_SeguroSocial" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="SeguroSocial" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_RAP" ColumnName="RAP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_RAP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="RAP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ImpuestoVecinal" ColumnName="ImpuestoVecinal" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ImpuestoVecinal" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoVecinal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_ImpuestoSobreRenta" ColumnName="ImpuestoSobreRenta" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_ImpuestoSobreRenta" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="ImpuestoSobreRenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_INJUPEMP" ColumnName="INJUPEMP" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_INJUPEMP" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INJUPEMP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_INPREMA" ColumnName="INPREMA" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_INPREMA" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="INPREMA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija1" ColumnName="DeduccionFija1" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija1" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija2" ColumnName="DeduccionFija2" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija2" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija3" ColumnName="DeduccionFija3" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija3" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija4" ColumnName="DeduccionFija4" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija4" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DeduccionFija5" ColumnName="DeduccionFija5" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_DeduccionFija5" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="DeduccionFija5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_OtrasDeducciones" ColumnName="OtrasDeducciones" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Original_OtrasDeducciones" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="OtrasDeducciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Banco" ColumnName="Banco" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Original_Banco" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="Banco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Cerrado" ColumnName="Cerrado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Original_Cerrado" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Cerrado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_DatosRevisados" ColumnName="DatosRevisados" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Original_DatosRevisados" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="DatosRevisados" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="NoPlanilla" DataSetColumn="NoPlanilla" />
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="CodigoDepartamento" DataSetColumn="CodigoDepartamento" />
+              <Mapping SourceColumn="CodigoSeccion" DataSetColumn="CodigoSeccion" />
+              <Mapping SourceColumn="CodigoEmpleado" DataSetColumn="CodigoEmpleado" />
+              <Mapping SourceColumn="DiasTrabajados" DataSetColumn="DiasTrabajados" />
+              <Mapping SourceColumn="SueldoNormal" DataSetColumn="SueldoNormal" />
+              <Mapping SourceColumn="DiasFeriados" DataSetColumn="DiasFeriados" />
+              <Mapping SourceColumn="SueldoAdicionalFeriados" DataSetColumn="SueldoAdicionalFeriados" />
+              <Mapping SourceColumn="HorasTarde" DataSetColumn="HorasTarde" />
+              <Mapping SourceColumn="ValorHorastarde" DataSetColumn="ValorHorastarde" />
+              <Mapping SourceColumn="HorasExtras25" DataSetColumn="HorasExtras25" />
+              <Mapping SourceColumn="ValorHorasExtras25" DataSetColumn="ValorHorasExtras25" />
+              <Mapping SourceColumn="HorasExtras50" DataSetColumn="HorasExtras50" />
+              <Mapping SourceColumn="ValorHorasExtras50" DataSetColumn="ValorHorasExtras50" />
+              <Mapping SourceColumn="HorasExtras75" DataSetColumn="HorasExtras75" />
+              <Mapping SourceColumn="ValorHorasExtras75" DataSetColumn="ValorHorasExtras75" />
+              <Mapping SourceColumn="HorasExtrasDobles" DataSetColumn="HorasExtrasDobles" />
+              <Mapping SourceColumn="ValorHorasExtrasDobles" DataSetColumn="ValorHorasExtrasDobles" />
+              <Mapping SourceColumn="Comisiones" DataSetColumn="Comisiones" />
+              <Mapping SourceColumn="Bonificaciones" DataSetColumn="Bonificaciones" />
+              <Mapping SourceColumn="Transporte" DataSetColumn="Transporte" />
+              <Mapping SourceColumn="Combustible" DataSetColumn="Combustible" />
+              <Mapping SourceColumn="DepreciacionVehiculo" DataSetColumn="DepreciacionVehiculo" />
+              <Mapping SourceColumn="Vacaciones" DataSetColumn="Vacaciones" />
+              <Mapping SourceColumn="IngresosAdicionales1" DataSetColumn="IngresosAdicionales1" />
+              <Mapping SourceColumn="IngresosAdicionales2" DataSetColumn="IngresosAdicionales2" />
+              <Mapping SourceColumn="IngresosAdicionales3" DataSetColumn="IngresosAdicionales3" />
+              <Mapping SourceColumn="IngresosAdicionales4" DataSetColumn="IngresosAdicionales4" />
+              <Mapping SourceColumn="IngresosAdicionales5" DataSetColumn="IngresosAdicionales5" />
+              <Mapping SourceColumn="SeguroSocial" DataSetColumn="SeguroSocial" />
+              <Mapping SourceColumn="RAP" DataSetColumn="RAP" />
+              <Mapping SourceColumn="ImpuestoVecinal" DataSetColumn="ImpuestoVecinal" />
+              <Mapping SourceColumn="ImpuestoSobreRenta" DataSetColumn="ImpuestoSobreRenta" />
+              <Mapping SourceColumn="INJUPEMP" DataSetColumn="INJUPEMP" />
+              <Mapping SourceColumn="INPREMA" DataSetColumn="INPREMA" />
+              <Mapping SourceColumn="DeduccionFija1" DataSetColumn="DeduccionFija1" />
+              <Mapping SourceColumn="DeduccionFija2" DataSetColumn="DeduccionFija2" />
+              <Mapping SourceColumn="DeduccionFija3" DataSetColumn="DeduccionFija3" />
+              <Mapping SourceColumn="DeduccionFija4" DataSetColumn="DeduccionFija4" />
+              <Mapping SourceColumn="DeduccionFija5" DataSetColumn="DeduccionFija5" />
+              <Mapping SourceColumn="OtrasDeducciones" DataSetColumn="OtrasDeducciones" />
+              <Mapping SourceColumn="Banco" DataSetColumn="Banco" />
+              <Mapping SourceColumn="Cerrado" DataSetColumn="Cerrado" />
+              <Mapping SourceColumn="DatosRevisados" DataSetColumn="DatosRevisados" />
+              <Mapping SourceColumn="Nombre1" DataSetColumn="Nombre1" />
+              <Mapping SourceColumn="Nombre2" DataSetColumn="Nombre2" />
+              <Mapping SourceColumn="Apellido1" DataSetColumn="Apellido1" />
+              <Mapping SourceColumn="Apellido2" DataSetColumn="Apellido2" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCodigoEmpleado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByCodigoEmpleado" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByCodigoEmpleado">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLPlanillas.CodigoSede, PLPlanillas.CodigoDepartamento, PLPlanillas.CodigoSeccion, 
+                      PLPlanillas.CodigoEmpleado, PLPlanillas.DiasTrabajados, PLPlanillas.SueldoNormal, PLPlanillas.DiasFeriados, PLPlanillas.SueldoAdicionalFeriados, 
+                      PLPlanillas.HorasTarde, PLPlanillas.ValorHorastarde, PLPlanillas.HorasExtras25, PLPlanillas.ValorHorasExtras25, PLPlanillas.HorasExtras50, 
+                      PLPlanillas.ValorHorasExtras50, PLPlanillas.HorasExtras75, PLPlanillas.ValorHorasExtras75, PLPlanillas.HorasExtrasDobles, 
+                      PLPlanillas.ValorHorasExtrasDobles, PLPlanillas.Comisiones, PLPlanillas.Bonificaciones, PLPlanillas.Transporte, PLPlanillas.Combustible, 
+                      PLPlanillas.DepreciacionVehiculo, PLPlanillas.Vacaciones, PLPlanillas.IngresosAdicionales1, PLPlanillas.IngresosAdicionales2, 
+                      PLPlanillas.IngresosAdicionales3, PLPlanillas.IngresosAdicionales4, PLPlanillas.IngresosAdicionales5, PLPlanillas.SeguroSocial, PLPlanillas.RAP, 
+                      PLPlanillas.ImpuestoVecinal, PLPlanillas.ImpuestoSobreRenta, PLPlanillas.INJUPEMP, PLPlanillas.INPREMA, PLPlanillas.DeduccionFija1, 
+                      PLPlanillas.DeduccionFija2, PLPlanillas.DeduccionFija3, PLPlanillas.DeduccionFija4, PLPlanillas.DeduccionFija5, PLPlanillas.OtrasDeducciones, 
+                      PLPlanillas.Banco, PLPlanillas.Cerrado, PLPlanillas.DatosRevisados, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, 
+                      PLEmpleados.Apellido2
+FROM         PLPlanillas INNER JOIN
+                      PLEmpleados ON PLPlanillas.CodigoEmpleado = PLEmpleados.CodigoEmpleado
+WHERE     (PLPlanillas.Año = @Año) AND (PLPlanillas.Mes = @Mes) AND (PLPlanillas.NoPlanilla = @NoPlanilla) AND (PLPlanillas.CodigoEmpleado=@CodigoEmpleado)
+ORDER BY PLPlanillas.Año, PLPlanillas.Mes, PLPlanillas.NoPlanilla, PLEmpleados.Nombre1, PLEmpleados.Nombre2, PLEmpleados.Apellido1, 
+                      PLEmpleados.Apellido2</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillas" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLSedesTableAdapter" GeneratorDataComponentClassName="PLSedesTableAdapter" Name="PLSedes" UserDataComponentName="PLSedesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.PLSedes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CodigoSede, DescripcionSede
+FROM         PLSedes
+ORDER BY CodigoSede</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="DescripcionSede" DataSetColumn="DescripcionSede" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLDepartamentosTableAdapter" GeneratorDataComponentClassName="PLDepartamentosTableAdapter" Name="PLDepartamentos" UserDataComponentName="PLDepartamentosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.PLDepartamentos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CodigoSede, CodigoDepartamento, DescripcionDepartamento
+FROM         PLDepartamentos
+ORDER BY CodigoSede, CodigoDepartamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="CodigoDepartamento" DataSetColumn="CodigoDepartamento" />
+              <Mapping SourceColumn="DescripcionDepartamento" DataSetColumn="DescripcionDepartamento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLSeccionesTableAdapter" GeneratorDataComponentClassName="PLSeccionesTableAdapter" Name="PLSecciones" UserDataComponentName="PLSeccionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.PLSecciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CodigoSede, CodigoDepartamento, CodigoSeccion, DescripcionSeccion
+FROM         PLSecciones
+ORDER BY CodigoSede, CodigoDepartamento, CodigoSeccion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="CodigoDepartamento" DataSetColumn="CodigoDepartamento" />
+              <Mapping SourceColumn="CodigoSeccion" DataSetColumn="CodigoSeccion" />
+              <Mapping SourceColumn="DescripcionSeccion" DataSetColumn="DescripcionSeccion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLBancosTableAdapter" GeneratorDataComponentClassName="PLBancosTableAdapter" Name="PLBancos" UserDataComponentName="PLBancosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectName="RSISistema.dbo.PLBancos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     Banco
+FROM         PLBancos
+ORDER BY Banco</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Banco" DataSetColumn="Banco" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLPlanillasOTTableAdapter" GeneratorDataComponentClassName="PLPlanillasOTTableAdapter" Name="PLPlanillasOT" UserDataComponentName="PLPlanillasOTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIERP_Conexion (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM PLPlanillasOT
+WHERE     (Correlativo = @Correlativo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Correlativo" ColumnName="Correlativo" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Correlativo" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Correlativo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO PLPlanillasOT
+                      (Año, Mes, NoPlanilla, CodigoSede, CodigoDepartamento, CodigoSeccion, CodigoEmpleado, CodigoDeduccion, Fecha, NoDocumento, Valor, Aplicada, 
+                      Referencia)
+VALUES     (@Año,@Mes,@NoPlanilla,@CodigoSede,@CodigoDepartamento,@CodigoSeccion,@CodigoEmpleado,@CodigoDeduccion,@Fecha,@NoDocumento,@Valor,@Aplicada,@Referencia)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSede" ColumnName="CodigoSede" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSede" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSede" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoDepartamento" ColumnName="CodigoDepartamento" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoDepartamento" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDepartamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoSeccion" ColumnName="CodigoSeccion" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoSeccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoSeccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodigoDeduccion" ColumnName="CodigoDeduccion" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoDeduccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoDeduccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fecha" ColumnName="Fecha" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoDocumento" ColumnName="NoDocumento" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@NoDocumento" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="NoDocumento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Valor" ColumnName="Valor" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Valor" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Valor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Aplicada" ColumnName="Aplicada" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Aplicada" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Aplicada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Referencia" ColumnName="Referencia" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Referencia" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="Referencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     PLPlanillasOT.Año, PLPlanillasOT.Mes, PLPlanillasOT.NoPlanilla, PLPlanillasOT.CodigoSede, PLPlanillasOT.CodigoDepartamento, 
+                      PLPlanillasOT.CodigoSeccion, PLPlanillasOT.CodigoEmpleado, PLPlanillasOT.CodigoDeduccion, PLPlanillasOT.Correlativo, PLPlanillasOT.Fecha, 
+                      PLPlanillasOT.TipoDeduccion, PLPlanillasOT.NoDocumento, PLPlanillasOT.Valor, PLPlanillasOT.Aplicada, PLPlanillasOT.Referencia, 
+                      PLDefinicionDeducciones.DescripcionDeduccion
+FROM         PLPlanillasOT INNER JOIN
+                      PLDefinicionDeducciones ON PLPlanillasOT.CodigoDeduccion = PLDefinicionDeducciones.CodigoDeduccion
+WHERE     (PLPlanillasOT.Año = @Año) AND (PLPlanillasOT.Mes = @Mes) AND (PLPlanillasOT.NoPlanilla = @NoPlanilla) AND 
+                      (PLPlanillasOT.CodigoEmpleado = @CodigoEmpleado)
+ORDER BY PLPlanillasOT.CodigoDeduccion</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Año" ColumnName="Año" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Año" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Año" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Mes" ColumnName="Mes" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@Mes" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="Mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NoPlanilla" ColumnName="NoPlanilla" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@NoPlanilla" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="NoPlanilla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodigoEmpleado" ColumnName="CodigoEmpleado" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@CodigoEmpleado" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="CodigoEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE    PLPlanillasOT
+SET              Valor = @Valor, Aplicada = @Aplicada
+WHERE     (Correlativo = @Correlativo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Valor" ColumnName="Valor" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="decimal(10, 2)" DbType="Decimal" Direction="Input" ParameterName="@Valor" Precision="10" ProviderType="Decimal" Scale="2" Size="9" SourceColumn="Valor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Aplicada" ColumnName="Aplicada" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Aplicada" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Aplicada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Correlativo" ColumnName="Correlativo" DataSourceName="RSISistema.dbo.PLPlanillasOT" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Correlativo" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Correlativo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="NoPlanilla" DataSetColumn="NoPlanilla" />
+              <Mapping SourceColumn="CodigoSede" DataSetColumn="CodigoSede" />
+              <Mapping SourceColumn="CodigoDepartamento" DataSetColumn="CodigoDepartamento" />
+              <Mapping SourceColumn="CodigoSeccion" DataSetColumn="CodigoSeccion" />
+              <Mapping SourceColumn="CodigoEmpleado" DataSetColumn="CodigoEmpleado" />
+              <Mapping SourceColumn="CodigoDeduccion" DataSetColumn="CodigoDeduccion" />
+              <Mapping SourceColumn="Correlativo" DataSetColumn="Correlativo" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="TipoDeduccion" DataSetColumn="TipoDeduccion" />
+              <Mapping SourceColumn="NoDocumento" DataSetColumn="NoDocumento" />
+              <Mapping SourceColumn="Valor" DataSetColumn="Valor" />
+              <Mapping SourceColumn="Aplicada" DataSetColumn="Aplicada" />
+              <Mapping SourceColumn="Referencia" DataSetColumn="Referencia" />
+              <Mapping SourceColumn="DescripcionDeduccion" DataSetColumn="DescripcionDeduccion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CapturaPlanillaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CapturaPlanillaDataSet" msprop:Generator_DataSetName="CapturaPlanillaDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PLPlanillas" msprop:Generator_UserTableName="PLPlanillas" msprop:Generator_RowDeletedName="PLPlanillasRowDeleted" msprop:Generator_RowChangedName="PLPlanillasRowChanged" msprop:Generator_RowClassName="PLPlanillasRow" msprop:Generator_RowChangingName="PLPlanillasRowChanging" msprop:Generator_RowEvArgName="PLPlanillasRowChangeEvent" msprop:Generator_RowEvHandlerName="PLPlanillasRowChangeEventHandler" msprop:Generator_TableClassName="PLPlanillasDataTable" msprop:Generator_TableVarName="tablePLPlanillas" msprop:Generator_RowDeletingName="PLPlanillasRowDeleting" msprop:Generator_TablePropName="PLPlanillas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Año" msprop:Generator_UserColumnName="Año" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInTable="AñoColumn" type="xs:short" />
+              <xs:element name="Mes" msprop:Generator_UserColumnName="Mes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInTable="MesColumn" type="xs:short" />
+              <xs:element name="NoPlanilla" msprop:Generator_UserColumnName="NoPlanilla" msprop:Generator_ColumnPropNameInRow="NoPlanilla" msprop:Generator_ColumnVarNameInTable="columnNoPlanilla" msprop:Generator_ColumnPropNameInTable="NoPlanillaColumn" type="xs:short" />
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDepartamento" msprop:Generator_UserColumnName="CodigoDepartamento" msprop:Generator_ColumnPropNameInRow="CodigoDepartamento" msprop:Generator_ColumnVarNameInTable="columnCodigoDepartamento" msprop:Generator_ColumnPropNameInTable="CodigoDepartamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoSeccion" msprop:Generator_UserColumnName="CodigoSeccion" msprop:Generator_ColumnPropNameInRow="CodigoSeccion" msprop:Generator_ColumnVarNameInTable="columnCodigoSeccion" msprop:Generator_ColumnPropNameInTable="CodigoSeccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoEmpleado" msprop:Generator_UserColumnName="CodigoEmpleado" msprop:Generator_ColumnPropNameInRow="CodigoEmpleado" msprop:Generator_ColumnVarNameInTable="columnCodigoEmpleado" msprop:Generator_ColumnPropNameInTable="CodigoEmpleadoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiasTrabajados" msprop:Generator_UserColumnName="DiasTrabajados" msprop:Generator_ColumnPropNameInRow="DiasTrabajados" msprop:Generator_ColumnVarNameInTable="columnDiasTrabajados" msprop:Generator_ColumnPropNameInTable="DiasTrabajadosColumn" type="xs:decimal" default="0" />
+              <xs:element name="SueldoNormal" msprop:Generator_UserColumnName="SueldoNormal" msprop:Generator_ColumnPropNameInRow="SueldoNormal" msprop:Generator_ColumnVarNameInTable="columnSueldoNormal" msprop:Generator_ColumnPropNameInTable="SueldoNormalColumn" type="xs:decimal" default="0" />
+              <xs:element name="DiasFeriados" msprop:Generator_UserColumnName="DiasFeriados" msprop:Generator_ColumnPropNameInRow="DiasFeriados" msprop:Generator_ColumnVarNameInTable="columnDiasFeriados" msprop:Generator_ColumnPropNameInTable="DiasFeriadosColumn" type="xs:decimal" default="0" />
+              <xs:element name="SueldoAdicionalFeriados" msprop:Generator_UserColumnName="SueldoAdicionalFeriados" msprop:Generator_ColumnPropNameInRow="SueldoAdicionalFeriados" msprop:Generator_ColumnVarNameInTable="columnSueldoAdicionalFeriados" msprop:Generator_ColumnPropNameInTable="SueldoAdicionalFeriadosColumn" type="xs:decimal" default="0" />
+              <xs:element name="HorasTarde" msprop:Generator_UserColumnName="HorasTarde" msprop:Generator_ColumnPropNameInRow="HorasTarde" msprop:Generator_ColumnVarNameInTable="columnHorasTarde" msprop:Generator_ColumnPropNameInTable="HorasTardeColumn" type="xs:decimal" default="0" />
+              <xs:element name="ValorHorastarde" msprop:Generator_UserColumnName="ValorHorastarde" msprop:Generator_ColumnPropNameInRow="ValorHorastarde" msprop:Generator_ColumnVarNameInTable="columnValorHorastarde" msprop:Generator_ColumnPropNameInTable="ValorHorastardeColumn" type="xs:decimal" default="0" />
+              <xs:element name="HorasExtras25" msprop:Generator_UserColumnName="HorasExtras25" msprop:Generator_ColumnPropNameInRow="HorasExtras25" msprop:Generator_ColumnVarNameInTable="columnHorasExtras25" msprop:Generator_ColumnPropNameInTable="HorasExtras25Column" type="xs:decimal" default="0" />
+              <xs:element name="ValorHorasExtras25" msprop:Generator_UserColumnName="ValorHorasExtras25" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras25" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras25" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras25Column" type="xs:decimal" default="0" />
+              <xs:element name="HorasExtras50" msprop:Generator_UserColumnName="HorasExtras50" msprop:Generator_ColumnPropNameInRow="HorasExtras50" msprop:Generator_ColumnVarNameInTable="columnHorasExtras50" msprop:Generator_ColumnPropNameInTable="HorasExtras50Column" type="xs:decimal" default="0" />
+              <xs:element name="ValorHorasExtras50" msprop:Generator_UserColumnName="ValorHorasExtras50" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras50" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras50" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras50Column" type="xs:decimal" default="0" />
+              <xs:element name="HorasExtras75" msprop:Generator_UserColumnName="HorasExtras75" msprop:Generator_ColumnPropNameInRow="HorasExtras75" msprop:Generator_ColumnVarNameInTable="columnHorasExtras75" msprop:Generator_ColumnPropNameInTable="HorasExtras75Column" type="xs:decimal" default="0" />
+              <xs:element name="ValorHorasExtras75" msprop:Generator_UserColumnName="ValorHorasExtras75" msprop:Generator_ColumnPropNameInRow="ValorHorasExtras75" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtras75" msprop:Generator_ColumnPropNameInTable="ValorHorasExtras75Column" type="xs:decimal" default="0" />
+              <xs:element name="HorasExtrasDobles" msprop:Generator_UserColumnName="HorasExtrasDobles" msprop:Generator_ColumnPropNameInRow="HorasExtrasDobles" msprop:Generator_ColumnVarNameInTable="columnHorasExtrasDobles" msprop:Generator_ColumnPropNameInTable="HorasExtrasDoblesColumn" type="xs:decimal" default="0" />
+              <xs:element name="ValorHorasExtrasDobles" msprop:Generator_UserColumnName="ValorHorasExtrasDobles" msprop:Generator_ColumnPropNameInRow="ValorHorasExtrasDobles" msprop:Generator_ColumnVarNameInTable="columnValorHorasExtrasDobles" msprop:Generator_ColumnPropNameInTable="ValorHorasExtrasDoblesColumn" type="xs:decimal" default="0" />
+              <xs:element name="Comisiones" msprop:Generator_UserColumnName="Comisiones" msprop:Generator_ColumnPropNameInRow="Comisiones" msprop:Generator_ColumnVarNameInTable="columnComisiones" msprop:Generator_ColumnPropNameInTable="ComisionesColumn" type="xs:decimal" default="0" />
+              <xs:element name="Bonificaciones" msprop:Generator_UserColumnName="Bonificaciones" msprop:Generator_ColumnPropNameInRow="Bonificaciones" msprop:Generator_ColumnVarNameInTable="columnBonificaciones" msprop:Generator_ColumnPropNameInTable="BonificacionesColumn" type="xs:decimal" default="0" />
+              <xs:element name="Transporte" msprop:Generator_UserColumnName="Transporte" msprop:Generator_ColumnPropNameInRow="Transporte" msprop:Generator_ColumnVarNameInTable="columnTransporte" msprop:Generator_ColumnPropNameInTable="TransporteColumn" type="xs:decimal" default="0" />
+              <xs:element name="Combustible" msprop:Generator_UserColumnName="Combustible" msprop:Generator_ColumnPropNameInRow="Combustible" msprop:Generator_ColumnVarNameInTable="columnCombustible" msprop:Generator_ColumnPropNameInTable="CombustibleColumn" type="xs:decimal" default="0" />
+              <xs:element name="DepreciacionVehiculo" msprop:Generator_UserColumnName="DepreciacionVehiculo" msprop:Generator_ColumnPropNameInRow="DepreciacionVehiculo" msprop:Generator_ColumnVarNameInTable="columnDepreciacionVehiculo" msprop:Generator_ColumnPropNameInTable="DepreciacionVehiculoColumn" type="xs:decimal" default="0" />
+              <xs:element name="Vacaciones" msprop:Generator_UserColumnName="Vacaciones" msprop:Generator_ColumnPropNameInRow="Vacaciones" msprop:Generator_ColumnVarNameInTable="columnVacaciones" msprop:Generator_ColumnPropNameInTable="VacacionesColumn" type="xs:decimal" default="0" />
+              <xs:element name="IngresosAdicionales1" msprop:Generator_UserColumnName="IngresosAdicionales1" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales1" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales1" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales1Column" type="xs:decimal" default="0" />
+              <xs:element name="IngresosAdicionales2" msprop:Generator_UserColumnName="IngresosAdicionales2" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales2" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales2" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales2Column" type="xs:decimal" default="0" />
+              <xs:element name="IngresosAdicionales3" msprop:Generator_UserColumnName="IngresosAdicionales3" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales3" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales3" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales3Column" type="xs:decimal" default="0" />
+              <xs:element name="IngresosAdicionales4" msprop:Generator_UserColumnName="IngresosAdicionales4" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales4" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales4" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales4Column" type="xs:decimal" default="0" />
+              <xs:element name="IngresosAdicionales5" msprop:Generator_UserColumnName="IngresosAdicionales5" msprop:Generator_ColumnPropNameInRow="IngresosAdicionales5" msprop:Generator_ColumnVarNameInTable="columnIngresosAdicionales5" msprop:Generator_ColumnPropNameInTable="IngresosAdicionales5Column" type="xs:decimal" default="0" />
+              <xs:element name="SeguroSocial" msprop:Generator_UserColumnName="SeguroSocial" msprop:Generator_ColumnPropNameInRow="SeguroSocial" msprop:Generator_ColumnVarNameInTable="columnSeguroSocial" msprop:Generator_ColumnPropNameInTable="SeguroSocialColumn" type="xs:decimal" default="0" />
+              <xs:element name="RAP" msprop:Generator_UserColumnName="RAP" msprop:Generator_ColumnPropNameInRow="RAP" msprop:Generator_ColumnVarNameInTable="columnRAP" msprop:Generator_ColumnPropNameInTable="RAPColumn" type="xs:decimal" default="0" />
+              <xs:element name="ImpuestoVecinal" msprop:Generator_UserColumnName="ImpuestoVecinal" msprop:Generator_ColumnPropNameInRow="ImpuestoVecinal" msprop:Generator_ColumnVarNameInTable="columnImpuestoVecinal" msprop:Generator_ColumnPropNameInTable="ImpuestoVecinalColumn" type="xs:decimal" default="0" />
+              <xs:element name="ImpuestoSobreRenta" msprop:Generator_UserColumnName="ImpuestoSobreRenta" msprop:Generator_ColumnPropNameInRow="ImpuestoSobreRenta" msprop:Generator_ColumnVarNameInTable="columnImpuestoSobreRenta" msprop:Generator_ColumnPropNameInTable="ImpuestoSobreRentaColumn" type="xs:decimal" default="0" />
+              <xs:element name="INJUPEMP" msprop:Generator_UserColumnName="INJUPEMP" msprop:Generator_ColumnPropNameInRow="INJUPEMP" msprop:Generator_ColumnVarNameInTable="columnINJUPEMP" msprop:Generator_ColumnPropNameInTable="INJUPEMPColumn" type="xs:decimal" default="0" />
+              <xs:element name="INPREMA" msprop:Generator_UserColumnName="INPREMA" msprop:Generator_ColumnPropNameInRow="INPREMA" msprop:Generator_ColumnVarNameInTable="columnINPREMA" msprop:Generator_ColumnPropNameInTable="INPREMAColumn" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionFija1" msprop:Generator_UserColumnName="DeduccionFija1" msprop:Generator_ColumnPropNameInRow="DeduccionFija1" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija1" msprop:Generator_ColumnPropNameInTable="DeduccionFija1Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionFija2" msprop:Generator_UserColumnName="DeduccionFija2" msprop:Generator_ColumnPropNameInRow="DeduccionFija2" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija2" msprop:Generator_ColumnPropNameInTable="DeduccionFija2Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionFija3" msprop:Generator_UserColumnName="DeduccionFija3" msprop:Generator_ColumnPropNameInRow="DeduccionFija3" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija3" msprop:Generator_ColumnPropNameInTable="DeduccionFija3Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionFija4" msprop:Generator_UserColumnName="DeduccionFija4" msprop:Generator_ColumnPropNameInRow="DeduccionFija4" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija4" msprop:Generator_ColumnPropNameInTable="DeduccionFija4Column" type="xs:decimal" default="0" />
+              <xs:element name="DeduccionFija5" msprop:Generator_UserColumnName="DeduccionFija5" msprop:Generator_ColumnPropNameInRow="DeduccionFija5" msprop:Generator_ColumnVarNameInTable="columnDeduccionFija5" msprop:Generator_ColumnPropNameInTable="DeduccionFija5Column" type="xs:decimal" default="0" />
+              <xs:element name="OtrasDeducciones" msprop:Generator_UserColumnName="OtrasDeducciones" msprop:Generator_ColumnPropNameInRow="OtrasDeducciones" msprop:Generator_ColumnVarNameInTable="columnOtrasDeducciones" msprop:Generator_ColumnPropNameInTable="OtrasDeduccionesColumn" type="xs:decimal" default="0" />
+              <xs:element name="Banco" msprop:Generator_UserColumnName="Banco" msprop:Generator_ColumnPropNameInRow="Banco" msprop:Generator_ColumnVarNameInTable="columnBanco" msprop:Generator_ColumnPropNameInTable="BancoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cerrado" msprop:Generator_UserColumnName="Cerrado" msprop:Generator_ColumnPropNameInRow="Cerrado" msprop:Generator_ColumnVarNameInTable="columnCerrado" msprop:Generator_ColumnPropNameInTable="CerradoColumn" type="xs:boolean" default="false" />
+              <xs:element name="DatosRevisados" msprop:Generator_UserColumnName="DatosRevisados" msprop:Generator_ColumnVarNameInTable="columnDatosRevisados" msprop:Generator_ColumnPropNameInRow="DatosRevisados" msprop:Generator_ColumnPropNameInTable="DatosRevisadosColumn" type="xs:boolean" default="false" />
+              <xs:element name="Nombre1" msprop:Generator_UserColumnName="Nombre1" msprop:Generator_ColumnVarNameInTable="columnNombre1" msprop:Generator_ColumnPropNameInRow="Nombre1" msprop:Generator_ColumnPropNameInTable="Nombre1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre2" msprop:Generator_UserColumnName="Nombre2" msprop:Generator_ColumnVarNameInTable="columnNombre2" msprop:Generator_ColumnPropNameInRow="Nombre2" msprop:Generator_ColumnPropNameInTable="Nombre2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido1" msprop:Generator_UserColumnName="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido2" msprop:Generator_UserColumnName="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLSedes" msprop:Generator_UserTableName="PLSedes" msprop:Generator_RowDeletedName="PLSedesRowDeleted" msprop:Generator_RowChangedName="PLSedesRowChanged" msprop:Generator_RowClassName="PLSedesRow" msprop:Generator_RowChangingName="PLSedesRowChanging" msprop:Generator_RowEvArgName="PLSedesRowChangeEvent" msprop:Generator_RowEvHandlerName="PLSedesRowChangeEventHandler" msprop:Generator_TableClassName="PLSedesDataTable" msprop:Generator_TableVarName="tablePLSedes" msprop:Generator_RowDeletingName="PLSedesRowDeleting" msprop:Generator_TablePropName="PLSedes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescripcionSede" msprop:Generator_UserColumnName="DescripcionSede" msprop:Generator_ColumnPropNameInRow="DescripcionSede" msprop:Generator_ColumnVarNameInTable="columnDescripcionSede" msprop:Generator_ColumnPropNameInTable="DescripcionSedeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLDepartamentos" msprop:Generator_UserTableName="PLDepartamentos" msprop:Generator_RowDeletedName="PLDepartamentosRowDeleted" msprop:Generator_RowChangedName="PLDepartamentosRowChanged" msprop:Generator_RowClassName="PLDepartamentosRow" msprop:Generator_RowChangingName="PLDepartamentosRowChanging" msprop:Generator_RowEvArgName="PLDepartamentosRowChangeEvent" msprop:Generator_RowEvHandlerName="PLDepartamentosRowChangeEventHandler" msprop:Generator_TableClassName="PLDepartamentosDataTable" msprop:Generator_TableVarName="tablePLDepartamentos" msprop:Generator_RowDeletingName="PLDepartamentosRowDeleting" msprop:Generator_TablePropName="PLDepartamentos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDepartamento" msprop:Generator_UserColumnName="CodigoDepartamento" msprop:Generator_ColumnPropNameInRow="CodigoDepartamento" msprop:Generator_ColumnVarNameInTable="columnCodigoDepartamento" msprop:Generator_ColumnPropNameInTable="CodigoDepartamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescripcionDepartamento" msprop:Generator_UserColumnName="DescripcionDepartamento" msprop:Generator_ColumnPropNameInRow="DescripcionDepartamento" msprop:Generator_ColumnVarNameInTable="columnDescripcionDepartamento" msprop:Generator_ColumnPropNameInTable="DescripcionDepartamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLSecciones" msprop:Generator_UserTableName="PLSecciones" msprop:Generator_RowDeletedName="PLSeccionesRowDeleted" msprop:Generator_RowChangedName="PLSeccionesRowChanged" msprop:Generator_RowClassName="PLSeccionesRow" msprop:Generator_RowChangingName="PLSeccionesRowChanging" msprop:Generator_RowEvArgName="PLSeccionesRowChangeEvent" msprop:Generator_RowEvHandlerName="PLSeccionesRowChangeEventHandler" msprop:Generator_TableClassName="PLSeccionesDataTable" msprop:Generator_TableVarName="tablePLSecciones" msprop:Generator_RowDeletingName="PLSeccionesRowDeleting" msprop:Generator_TablePropName="PLSecciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDepartamento" msprop:Generator_UserColumnName="CodigoDepartamento" msprop:Generator_ColumnPropNameInRow="CodigoDepartamento" msprop:Generator_ColumnVarNameInTable="columnCodigoDepartamento" msprop:Generator_ColumnPropNameInTable="CodigoDepartamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoSeccion" msprop:Generator_UserColumnName="CodigoSeccion" msprop:Generator_ColumnPropNameInRow="CodigoSeccion" msprop:Generator_ColumnVarNameInTable="columnCodigoSeccion" msprop:Generator_ColumnPropNameInTable="CodigoSeccionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescripcionSeccion" msprop:Generator_UserColumnName="DescripcionSeccion" msprop:Generator_ColumnPropNameInRow="DescripcionSeccion" msprop:Generator_ColumnVarNameInTable="columnDescripcionSeccion" msprop:Generator_ColumnPropNameInTable="DescripcionSeccionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLBancos" msprop:Generator_UserTableName="PLBancos" msprop:Generator_RowDeletedName="PLBancosRowDeleted" msprop:Generator_RowChangedName="PLBancosRowChanged" msprop:Generator_RowClassName="PLBancosRow" msprop:Generator_RowChangingName="PLBancosRowChanging" msprop:Generator_RowEvArgName="PLBancosRowChangeEvent" msprop:Generator_RowEvHandlerName="PLBancosRowChangeEventHandler" msprop:Generator_TableClassName="PLBancosDataTable" msprop:Generator_TableVarName="tablePLBancos" msprop:Generator_RowDeletingName="PLBancosRowDeleting" msprop:Generator_TablePropName="PLBancos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Banco" msprop:Generator_UserColumnName="Banco" msprop:Generator_ColumnPropNameInRow="Banco" msprop:Generator_ColumnVarNameInTable="columnBanco" msprop:Generator_ColumnPropNameInTable="BancoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PLPlanillasOT" msprop:Generator_UserTableName="PLPlanillasOT" msprop:Generator_RowDeletedName="PLPlanillasOTRowDeleted" msprop:Generator_RowChangedName="PLPlanillasOTRowChanged" msprop:Generator_RowClassName="PLPlanillasOTRow" msprop:Generator_RowChangingName="PLPlanillasOTRowChanging" msprop:Generator_RowEvArgName="PLPlanillasOTRowChangeEvent" msprop:Generator_RowEvHandlerName="PLPlanillasOTRowChangeEventHandler" msprop:Generator_TableClassName="PLPlanillasOTDataTable" msprop:Generator_TableVarName="tablePLPlanillasOT" msprop:Generator_RowDeletingName="PLPlanillasOTRowDeleting" msprop:Generator_TablePropName="PLPlanillasOT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Año" msprop:Generator_UserColumnName="Año" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInTable="AñoColumn" type="xs:short" />
+              <xs:element name="Mes" msprop:Generator_UserColumnName="Mes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInTable="MesColumn" type="xs:short" />
+              <xs:element name="NoPlanilla" msprop:Generator_UserColumnName="NoPlanilla" msprop:Generator_ColumnPropNameInRow="NoPlanilla" msprop:Generator_ColumnVarNameInTable="columnNoPlanilla" msprop:Generator_ColumnPropNameInTable="NoPlanillaColumn" type="xs:short" />
+              <xs:element name="CodigoSede" msprop:Generator_UserColumnName="CodigoSede" msprop:Generator_ColumnPropNameInRow="CodigoSede" msprop:Generator_ColumnVarNameInTable="columnCodigoSede" msprop:Generator_ColumnPropNameInTable="CodigoSedeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDepartamento" msprop:Generator_UserColumnName="CodigoDepartamento" msprop:Generator_ColumnPropNameInRow="CodigoDepartamento" msprop:Generator_ColumnVarNameInTable="columnCodigoDepartamento" msprop:Generator_ColumnPropNameInTable="CodigoDepartamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoSeccion" msprop:Generator_UserColumnName="CodigoSeccion" msprop:Generator_ColumnPropNameInRow="CodigoSeccion" msprop:Generator_ColumnVarNameInTable="columnCodigoSeccion" msprop:Generator_ColumnPropNameInTable="CodigoSeccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoEmpleado" msprop:Generator_UserColumnName="CodigoEmpleado" msprop:Generator_ColumnPropNameInRow="CodigoEmpleado" msprop:Generator_ColumnVarNameInTable="columnCodigoEmpleado" msprop:Generator_ColumnPropNameInTable="CodigoEmpleadoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoDeduccion" msprop:Generator_UserColumnName="CodigoDeduccion" msprop:Generator_ColumnPropNameInRow="CodigoDeduccion" msprop:Generator_ColumnVarNameInTable="columnCodigoDeduccion" msprop:Generator_ColumnPropNameInTable="CodigoDeduccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Correlativo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Correlativo" msprop:Generator_ColumnPropNameInRow="Correlativo" msprop:Generator_ColumnVarNameInTable="columnCorrelativo" msprop:Generator_ColumnPropNameInTable="CorrelativoColumn" type="xs:long" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TipoDeduccion" msprop:Generator_UserColumnName="TipoDeduccion" msprop:Generator_ColumnPropNameInRow="TipoDeduccion" msprop:Generator_ColumnVarNameInTable="columnTipoDeduccion" msprop:Generator_ColumnPropNameInTable="TipoDeduccionColumn" type="xs:unsignedByte" default="1" />
+              <xs:element name="NoDocumento" msprop:Generator_UserColumnName="NoDocumento" msprop:Generator_ColumnPropNameInRow="NoDocumento" msprop:Generator_ColumnVarNameInTable="columnNoDocumento" msprop:Generator_ColumnPropNameInTable="NoDocumentoColumn" type="xs:long" />
+              <xs:element name="Valor" msprop:Generator_UserColumnName="Valor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInTable="ValorColumn" type="xs:decimal" default="0" />
+              <xs:element name="Aplicada" msprop:Generator_UserColumnName="Aplicada" msprop:Generator_ColumnPropNameInRow="Aplicada" msprop:Generator_ColumnVarNameInTable="columnAplicada" msprop:Generator_ColumnPropNameInTable="AplicadaColumn" type="xs:boolean" default="false" />
+              <xs:element name="Referencia" msprop:Generator_UserColumnName="Referencia" msprop:Generator_ColumnPropNameInRow="Referencia" msprop:Generator_ColumnVarNameInTable="columnReferencia" msprop:Generator_ColumnPropNameInTable="ReferenciaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescripcionDeduccion" msprop:Generator_UserColumnName="DescripcionDeduccion" msprop:Generator_ColumnVarNameInTable="columnDescripcionDeduccion" msprop:Generator_ColumnPropNameInRow="DescripcionDeduccion" msprop:Generator_ColumnPropNameInTable="DescripcionDeduccionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLPlanillas" />
+      <xs:field xpath="mstns:Año" />
+      <xs:field xpath="mstns:Mes" />
+      <xs:field xpath="mstns:NoPlanilla" />
+      <xs:field xpath="mstns:CodigoEmpleado" />
+    </xs:unique>
+    <xs:unique name="PLSedes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLSedes" />
+      <xs:field xpath="mstns:CodigoSede" />
+    </xs:unique>
+    <xs:unique name="PLDepartamentos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLDepartamentos" />
+      <xs:field xpath="mstns:CodigoSede" />
+      <xs:field xpath="mstns:CodigoDepartamento" />
+    </xs:unique>
+    <xs:unique name="PLSecciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLSecciones" />
+      <xs:field xpath="mstns:CodigoSede" />
+      <xs:field xpath="mstns:CodigoDepartamento" />
+      <xs:field xpath="mstns:CodigoSeccion" />
+    </xs:unique>
+    <xs:unique name="PLBancos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLBancos" />
+      <xs:field xpath="mstns:Banco" />
+    </xs:unique>
+    <xs:unique name="PLPlanillasOT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLPlanillasOT" />
+      <xs:field xpath="mstns:Correlativo" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="PLPlanillas_PLSedes" msdata:parent="PLPlanillas" msdata:child="PLSedes" msdata:parentkey="CodigoSede" msdata:childkey="CodigoSede" msprop:Generator_UserRelationName="PLPlanillas_PLSedes" msprop:Generator_RelationVarName="relationPLPlanillas_PLSedes" msprop:Generator_UserChildTable="PLSedes" msprop:Generator_UserParentTable="PLPlanillas" msprop:Generator_ParentPropName="PLPlanillasRow" msprop:Generator_ChildPropName="GetPLSedesRows" />
+      <msdata:Relationship name="PLPlanillas_PLDepartamentos" msdata:parent="PLPlanillas" msdata:child="PLDepartamentos" msdata:parentkey="CodigoSede CodigoDepartamento" msdata:childkey="CodigoSede CodigoDepartamento" msprop:Generator_UserRelationName="PLPlanillas_PLDepartamentos" msprop:Generator_RelationVarName="relationPLPlanillas_PLDepartamentos" msprop:Generator_UserChildTable="PLDepartamentos" msprop:Generator_UserParentTable="PLPlanillas" msprop:Generator_ParentPropName="PLPlanillasRowParent" msprop:Generator_ChildPropName="GetPLDepartamentosRows" />
+      <msdata:Relationship name="PLPlanillas_PLSecciones" msdata:parent="PLPlanillas" msdata:child="PLSecciones" msdata:parentkey="CodigoSede CodigoDepartamento CodigoSeccion" msdata:childkey="CodigoSede CodigoDepartamento CodigoSeccion" msprop:Generator_UserRelationName="PLPlanillas_PLSecciones" msprop:Generator_RelationVarName="relationPLPlanillas_PLSecciones" msprop:Generator_UserChildTable="PLSecciones" msprop:Generator_UserParentTable="PLPlanillas" msprop:Generator_ParentPropName="PLPlanillasRowParent" msprop:Generator_ChildPropName="GetPLSeccionesRows" />
+      <msdata:Relationship name="PLPlanillas_PLBancos" msdata:parent="PLPlanillas" msdata:child="PLBancos" msdata:parentkey="Banco" msdata:childkey="Banco" msprop:Generator_UserRelationName="PLPlanillas_PLBancos" msprop:Generator_RelationVarName="relationPLPlanillas_PLBancos" msprop:Generator_UserChildTable="PLBancos" msprop:Generator_UserParentTable="PLPlanillas" msprop:Generator_ParentPropName="PLPlanillasRow" msprop:Generator_ChildPropName="GetPLBancosRows" />
+      <msdata:Relationship name="FK_PLPlanillasOT_PLPlanillas" msdata:parent="PLPlanillas" msdata:child="PLPlanillasOT" msdata:parentkey="Año Mes NoPlanilla CodigoEmpleado" msdata:childkey="Año Mes NoPlanilla CodigoEmpleado" msprop:Generator_UserRelationName="FK_PLPlanillasOT_PLPlanillas" msprop:Generator_RelationVarName="relationFK_PLPlanillasOT_PLPlanillas" msprop:Generator_UserChildTable="PLPlanillasOT" msprop:Generator_UserParentTable="PLPlanillas" msprop:Generator_ParentPropName="PLPlanillasRowParent" msprop:Generator_ChildPropName="GetPLPlanillasOTRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

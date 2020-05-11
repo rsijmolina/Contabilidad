@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RSIRPTCLS</RootNamespace>
+    <AssemblyName>RSIRPTCLS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RSIRPTCLS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RSIRPTCLS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContabilidadRpt\CTBalanceComprobPresRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTBalanceComprobPresRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTBalanceComprobRpt.vb">
+      <DependentUpon>CTBalanceComprobRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTBalGenRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTBalGenRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTCatalogoRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTCatalogoRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTLibroMayorRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTLibroMayorRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTMovCtaDetRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTMovCtaDetRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTMovCtaResRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTMovCtaResRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTPartidaCierreRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPartidaCierreRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTPresupEjecucionAnualRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPresupEjecucionAnualRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTTransaccionDocRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTTransaccionDocRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\CTTransaccionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTTransaccionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContabilidadRpt\DataSets\CTEstFinanDataSet.Designer.vb">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ContabilidadRpt\DataSets\CTEstFinanDataSet.vb">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContabilidadRpt\DataSets\CTLibMayDataSet.Designer.vb">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ContabilidadRpt\DataSets\CTLibMayDataSet.vb">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLVacacionesResumenRpt2.vb">
+      <DependentUpon>PLVacacionesResumenRpt2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLCuadroVacacionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLCuadroVacacionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDeducciones3Rpt.vb">
+      <DependentUpon>PLDeducciones3Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLEmpSelRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEmpSelRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLHistorial2Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLHistorial2Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLHistorialRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLHistorialRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLISRRpt.vb">
+      <DependentUpon>PLISRRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLPrestacionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPrestacionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLRecibos2Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLRecibos2Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLResumenGenRpt.vb">
+      <DependentUpon>PLResumenGenRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDedDelMesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDedDelMesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDeducciones2Rpt.vb">
+      <DependentUpon>PLDeducciones2Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLBancosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLBancosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDedMenRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDedMenRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDeducciones1Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeducciones1Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDeduccionesGenRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeduccionesGenRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDeparamentosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeparamentosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLDonacionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDonacionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLEmpIngRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEmpIngRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLEmpleadosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEmpleadosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLImpVecinalRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLImpVecinalRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLPlanilla1Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPlanilla1Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLProfesionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLProfesionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLPuestosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPuestosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLRAPRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLRAPRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLRecibos1Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLRecibos1Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLRepIngresosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLRepIngresosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLResumenRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLResumenRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLSalPendEmp1Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSalPendEmp1Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLSalPendEmp2Rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSalPendEmp2Rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLSeccionesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSeccionesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLSedesRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSedesRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLSeguroSocialRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSeguroSocialRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLTiposEmpleadosRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLTiposEmpleadosRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlanillasRpt\PLVacacionesResumenRpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLVacacionesResumenRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptCls.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VisorRepFrm.Designer.vb">
+      <DependentUpon>VisorRepFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisorRepFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContabilidadRpt\CTBalanceComprobPresRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTBalanceComprobPresRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTBalanceComprobRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTBalanceComprobRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTBalGenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTBalGenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTCatalogoRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTCatalogoRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTLibroMayorRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTLibroMayorRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTMovCtaDetRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTMovCtaDetRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTMovCtaResRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTMovCtaResRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTPartidaCierreRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTPartidaCierreRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTPresupEjecucionAnualRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTPresupEjecucionAnualRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTTransaccionDocRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTTransaccionDocRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContabilidadRpt\CTTransaccionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CTTransaccionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLVacacionesResumenRpt2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLVacacionesResumenRpt2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLCuadroVacacionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLCuadroVacacionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDeducciones3Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDeducciones3Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLEmpSelRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLEmpSelRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLHistorial2Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLHistorial2Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLHistorialRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLHistorialRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLISRRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLISRRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLPrestacionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLPrestacionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLRecibos2Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLRecibos2Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLResumenGenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLResumenGenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDedDelMesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDedDelMesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDeducciones2Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDeducciones2Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLBancosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLBancosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDedMenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDedMenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDeducciones1Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDeducciones1Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDeduccionesGenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDeduccionesGenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDeparamentosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDeparamentosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLDonacionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLDonacionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLEmpIngRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLEmpIngRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLEmpleadosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLEmpleadosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLImpVecinalRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLImpVecinalRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLPlanilla1Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLPlanilla1Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLProfesionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLProfesionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLPuestosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLPuestosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLRAPRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLRAPRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLRecibos1Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLRecibos1Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLRepIngresosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLRepIngresosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLResumenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLResumenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLSalPendEmp1Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLSalPendEmp1Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLSalPendEmp2Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLSalPendEmp2Rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLSeccionesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLSeccionesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLSedesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLSedesRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLSeguroSocialRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLSeguroSocialRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLTiposEmpleadosRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLTiposEmpleadosRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanillasRpt\PLVacacionesResumenRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PLVacacionesResumenRpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisorRepFrm.resx">
+      <DependentUpon>VisorRepFrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContabilidadRpt\DataSets\CTEstFinanDataSet.xsc">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ContabilidadRpt\DataSets\CTEstFinanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTEstFinanDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContabilidadRpt\DataSets\CTEstFinanDataSet.xss">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ContabilidadRpt\DataSets\CTLibMayDataSet.xsc">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ContabilidadRpt\DataSets\CTLibMayDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTLibMayDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContabilidadRpt\DataSets\CTLibMayDataSet.xss">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
