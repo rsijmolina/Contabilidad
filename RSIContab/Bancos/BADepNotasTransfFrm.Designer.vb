@@ -24,7 +24,6 @@ Partial Class BADepNotasTransfFrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BADepNotasTransfFrm))
-        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
         Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BATransaccionesListaDataSet = New RSIContab.BATransaccionesListaDataSet()
         Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
@@ -44,6 +43,7 @@ Partial Class BADepNotasTransfFrm
         Me.BABancosTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BABancosTableAdapter()
         Me.BAConfBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BAConfTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BAConfTableAdapter()
+        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,14 +53,6 @@ Partial Class BADepNotasTransfFrm
         CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BAConfBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ListaDataNavBarPrin
-        '
-        Me.ListaDataNavBarPrin.BindingSourcePrincipal = Me.PrincipalBindingSource
-        Me.ListaDataNavBarPrin.Location = New System.Drawing.Point(0, 66)
-        Me.ListaDataNavBarPrin.Name = "ListaDataNavBarPrin"
-        Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(1106, 69)
-        Me.ListaDataNavBarPrin.TabIndex = 6
         '
         'PrincipalBindingSource
         '
@@ -254,6 +246,14 @@ Partial Class BADepNotasTransfFrm
         'BAConfTableAdapter
         '
         Me.BAConfTableAdapter.ClearBeforeFill = True
+        '
+        'ListaDataNavBarPrin
+        '
+        Me.ListaDataNavBarPrin.BindingSourcePrincipal = Me.PrincipalBindingSource
+        Me.ListaDataNavBarPrin.Location = New System.Drawing.Point(0, 66)
+        Me.ListaDataNavBarPrin.Name = "ListaDataNavBarPrin"
+        Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(1106, 69)
+        Me.ListaDataNavBarPrin.TabIndex = 6
         '
         'BADepNotasTransfFrm
         '

@@ -528,7 +528,6 @@ C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Release\C1.Win.C1TrueDBGrid.2.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Release\Rsierpgencl.pdb
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Release\Rsierpgencl.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Release\Interop.DAO.dll
-C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbprojResolveAssemblyReference.cache
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\Interop.DAO.dll
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbproj.ResolveComReference.cache
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BABancosEdicionFrm.resources
@@ -1110,11 +1109,9 @@ C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\C1.Win.C1Input.2.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\C1.Win.C1List.2.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\C1.Win.C1Report.2.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\C1.Win.C1TrueDBGrid.2.xml
-C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\Microsoft.Office.Interop.Excel.xml
-C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\Microsoft.Office.Interop.Word.xml
-C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\Rsierpgencl.pdb
-C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\Rsierpgencl.xml
 C:\Desarrollo\ContabJJ\Contab\RSIContab\bin\Debug\Interop.DAO.dll
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BADepNotasTransEdicionFrm.resources
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BADepNotasTransfFrm.resources
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BAListaBancosFrm.resources
+C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbprojAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbproj.CopyComplete

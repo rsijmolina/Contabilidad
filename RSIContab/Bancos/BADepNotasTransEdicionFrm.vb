@@ -128,7 +128,6 @@
             Me.BATransaccionesDetalleTableAdapter.Fill(Me.BATransaccionesEdicionDataSet.BATransaccionesDetalle, intBanco, TipoDocumento, Año, Mes)
             Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BATransaccionesEdicionDataSet.BATransaccionesEncabezado, intBanco, TipoDocumento, Año, Mes)
             Me.BATransaccionesDocumentacionTableAdapter.Fill(Me.BATransaccionesEdicionDataSet.BATransaccionesDocumentacion, intBanco)
-            'HOLA MUNDO
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
         End Try

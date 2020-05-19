@@ -8,3 +8,13 @@ C:\Desarrollo\ColiNET2013.5\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.vbpr
 C:\Desarrollo\ColiNET2013.5\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.dll
 C:\Desarrollo\ColiNET2013.5\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.xml
 C:\Desarrollo\ColiNET2013.5\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Release\BAClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Release\BAClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Release\BAClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.vbprojAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.Resources.resources
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.vbproj.GenerateResource.cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.vbproj.CoreCompileInputs.cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Release\BAClassLib.pdb

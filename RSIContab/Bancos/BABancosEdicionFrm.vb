@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing.Printing
+'Imports C1.Win.C1TrueDBGrid
 
 Public Class BABancosEdicionFrm
     Private _FormularioPrincipal As BABancosFrm
@@ -105,7 +106,9 @@ Public Class BABancosEdicionFrm
             CargarDatos()
             'Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BABancosEdicionDataSet.BATransaccionesEncabezado, _intBanco, _Año, _Mes)
         End If
+        Me.EditDataNavBarPrin.Modalidad = Modalidad
         Me.EditDataNavBarPrin.HabilitarBotones(Me)
+
         Dim strImpInstaladas As String
         For i As Int16 = 0 To PrinterSettings.InstalledPrinters.Count - 1
             strImpInstaladas = PrinterSettings.InstalledPrinters.Item(i)
@@ -268,4 +271,5 @@ Public Class BABancosEdicionFrm
         Me.C1NumericEditSaldoActual.Value = decTotDepositos + decTotCreditos - decTotCheques - decTotDebitos
         Me.C1NumericEditSaldoActual.Value = decTotDepositosEq + decTotCreditosEq - decTotChequesEq - decTotDebitosEq
     End Sub
+
 End Class

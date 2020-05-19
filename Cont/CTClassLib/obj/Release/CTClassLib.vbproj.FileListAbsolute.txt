@@ -33,7 +33,6 @@ C:\Desarrollo\ColiNET2013.5\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbproj
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Release\CTClassLib.dll
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Release\CTClassLib.pdb
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Release\CTClassLib.xml
-C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbprojResolveAssemblyReference.cache
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.Resources.resources
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbproj.GenerateResource.Cache
 C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbproj.CoreCompileInputs.cache
@@ -50,3 +49,5 @@ C:\Desarrollo\ContabJJ\Contab\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbpr
 C:\Desarrollo\ContabJJ\Contab\Contab\Cont\CTClassLib\obj\Release\CTClassLib.dll
 C:\Desarrollo\ContabJJ\Contab\Contab\Cont\CTClassLib\obj\Release\CTClassLib.xml
 C:\Desarrollo\ContabJJ\Contab\Contab\Cont\CTClassLib\obj\Release\CTClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbprojAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Release\CTClassLib.vbproj.CopyComplete

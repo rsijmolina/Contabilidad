@@ -1,0 +1,2433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6588878B-7778-4BB0-921A-DCD6C2E5C239}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RSIContab.My.MyApplication</StartupObject>
+    <RootNamespace>RSIContab</RootNamespace>
+    <AssemblyName>RSIContab</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>5A4F8A55CB4BC18B006DE2AF81AE304A19A25931</ManifestCertificateThumbprint>
+    <ManifestKeyFile>RSIContab_4_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>C:\Desarrollo\ColiNET2010\Contab\Instalacion\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RSIContab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RSIContab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1DataExtender.2, Version=2.0.20113.81, Culture=neutral, PublicKeyToken=7c4b5683f80b910e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.C1Report.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne Studio.NET\bin\C1.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1List.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\WinForms Edition\bin\v2.0\C1.Win.C1List.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.2, Version=2.0.20171.248, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20172.271, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\WinForms Edition\bin\v2.0\C1.Win.C1TrueDBGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0" />
+    <Reference Include="MySql.Data, Version=6.2.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Rsierpgencl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Coliseum\RSIERPClassGen\Rsierpgencl\bin\Release\Rsierpgencl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Bancos\BABancosFrm.Designer.vb">
+      <DependentUpon>BABancosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BABancosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\BABancosEdicionFrm.Designer.vb">
+      <DependentUpon>BABancosEdicionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BABancosEdicionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\BAConfFrm.Designer.vb">
+      <DependentUpon>BAConfFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BAConfFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\BADepNotasTransEdicionFrm.Designer.vb">
+      <DependentUpon>BADepNotasTransEdicionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BADepNotasTransEdicionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\BADepNotasTransfFrm.Designer.vb">
+      <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BADepNotasTransfFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\BAListaBancosFrm.Designer.vb">
+      <DependentUpon>BAListaBancosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BAListaBancosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTAgregarCuentaFrm.designer.vb">
+      <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTAgregarCuentaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTBalGenFrm.Designer.vb">
+      <DependentUpon>CTBalGenFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTBalGenFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupAnualFrm.Designer.vb">
+      <DependentUpon>CTCapturaPresupAnualFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupAnualFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupMensualFrm.Designer.vb">
+      <DependentUpon>CTCapturaPresupMensualFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupMensualFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupTrimFrm.Designer.vb">
+      <DependentUpon>CTCapturaPresupTrimFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTCapturaPresupTrimFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTCatalogoFrm.Designer.vb">
+      <DependentUpon>CTCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTCierreAnualFrm.Designer.vb">
+      <DependentUpon>CTCierreAnualFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTCierreAnualFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTConfiguracion.Designer.vb">
+      <DependentUpon>CTConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionEmpComunFrm.Designer.vb">
+      <DependentUpon>CTConsolidacionEmpComunFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionEmpComunFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionEmpIni.Designer.vb">
+      <DependentUpon>CTConsolidacionEmpIni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionEmpIni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionExpImpFrm.Designer.vb">
+      <DependentUpon>CTConsolidacionExpImpFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTConsolidacionExpImpFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTExpCatalogoFrm.Designer.vb">
+      <DependentUpon>CTExpCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTExpCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTExpImpCatalogoFrm.Designer.vb">
+      <DependentUpon>CTExpImpCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTExpImpCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTImpCatalogoFrm.Designer.vb">
+      <DependentUpon>CTImpCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTImpCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTInicializacionPresupuestoFrm.Designer.vb">
+      <DependentUpon>CTInicializacionPresupuestoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTInicializacionPresupuestoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTListaCatalogoFrm.Designer.vb">
+      <DependentUpon>CTListaCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTListaCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CtListaCatGenFrm.Designer.vb">
+      <DependentUpon>CtListaCatGenFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CtListaCatGenFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTListaTransaccionesFrm.Designer.vb">
+      <DependentUpon>CTListaTransaccionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTListaTransaccionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepBalComprobFrm.Designer.vb">
+      <DependentUpon>CTRepBalComprobFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepBalComprobFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepCatalogoFrm.Designer.vb">
+      <DependentUpon>CTRepCatalogoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepCatalogoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepEstFinanAñosFrm.Designer.vb">
+      <DependentUpon>CTRepEstFinanAñosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepEstFinanAñosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepEstFinancierosFrm.Designer.vb">
+      <DependentUpon>CTRepEstFinancierosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepEstFinancierosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepLibroMayorFrm.Designer.vb">
+      <DependentUpon>CTRepLibroMayorFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepLibroMayorFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepMovCuentasFrm.Designer.vb">
+      <DependentUpon>CTRepMovCuentasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepMovCuentasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepTransFrm.Designer.vb">
+      <DependentUpon>CTRepTransFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTRepTransFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTSaldosCuentasAnualesFrm.Designer.vb">
+      <DependentUpon>CTSaldosCuentasAnualesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTSaldosCuentasAnualesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTSaldosMensualesFrm.Designer.vb">
+      <DependentUpon>CTSaldosMensualesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTSaldosMensualesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTTipoPartidasFrm.Designer.vb">
+      <DependentUpon>CTTipoPartidasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTTipoPartidasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTTmpFrm.Designer.vb">
+      <DependentUpon>CTTmpFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTTmpFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTTransaccionesComentariosFrm.Designer.vb">
+      <DependentUpon>CTTransaccionesComentariosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTTransaccionesComentariosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CTTransaccionesContFrm.Designer.vb">
+      <DependentUpon>CTTransaccionesContFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTTransaccionesContFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTConsolidacionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTConsolidacionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTEmpresasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTEmpresasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTEmpresasDataSet.vb">
+      <DependentUpon>CTEmpresasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTEstFinanDataSet.Designer.vb">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTEstFinanDataSet.vb">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTCatalogoCuentasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTCatalogoCuentasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTComentariosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTComentariosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTConfDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTConfDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTConfDataSet.vb">
+      <DependentUpon>CTConfDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTLibMayDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTLibMayDataSet.vb">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTListaCatalogoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTListaCatalogoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTListaTransaccionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTListaTransaccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTMayorizacionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTMayorizacionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTMayorizacionDataSet.vb">
+      <DependentUpon>CTMayorizacionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTMayorizacionFrm.Designer.vb">
+      <DependentUpon>CTMayorizacionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTMayorizacionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTPartidasCierresDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPartidasCierresDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTPlantillasCatDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPlantillasCatDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTPresupMensualDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPresupMensualDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTSaldosIniDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTSaldosIniDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTSaldosMensualesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTSaldosMensualesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTTipoPartidasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTTipoPartidasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTTransaccionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTTransaccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\DataSets\CTTransaccionesDataSet.vb">
+      <DependentUpon>CTTransaccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuarios\BotonBuscar.designer.vb">
+      <DependentUpon>BotonBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuarios\BotonBuscar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuarios\ControlComentarios.Designer.vb">
+      <DependentUpon>ControlComentarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuarios\ControlComentarios.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuarios\EditDataNavBar.designer.vb">
+      <DependentUpon>EditDataNavBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuarios\EditDataNavBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuarios\ListaDataNavBar.designer.vb">
+      <DependentUpon>ListaDataNavBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuarios\ListaDataNavBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataNavBar.Designer.vb">
+      <DependentUpon>DataNavBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataNavBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListasFrm.Designer.vb">
+      <DependentUpon>ListasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\AseguradorasFrm.Designer.vb">
+      <DependentUpon>AseguradorasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\AseguradorasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\BancosFrm.Designer.vb">
+      <DependentUpon>BancosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\BancosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\CapturaPlanillaFrm.Designer.vb">
+      <DependentUpon>CapturaPlanillaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\CapturaPlanillaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\CargarDatosPlanillaFrm.Designer.vb">
+      <DependentUpon>CargarDatosPlanillaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\CargarDatosPlanillaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bancos\DataSets\BABancosEdicionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BABancosEdicionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\DataSets\BABancosListaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BABancosListaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\DataSets\BABancosTablaSelDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BABancosTablaSelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\DataSets\BATransaccionesEdicionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BATransaccionesEdicionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\DataSets\BATransaccionesListaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BATransaccionesListaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\CapturaPlanillaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CapturaPlanillaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLActualizarOtrasDedDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLActualizarOtrasDedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLAseguradorasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLAseguradorasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLBancosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLBancosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLCargarDatosPlanillaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLCargarDatosPlanillaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLCierrePlanillaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLCierrePlanillaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLConfDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLConfDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLConstanciasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLConstanciasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLDeduccionesExcepcionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeduccionesExcepcionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLDeduccionesMesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeduccionesMesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLDeduccionISRDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDeduccionISRDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLDefDeduccionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDefDeduccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLDepartamentosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLDepartamentosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLEdicionDeduccionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEdicionDeduccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLEmpleadosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEmpleadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLEmpleadosDataSet.vb">
+      <DependentUpon>PLEmpleadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLEmpleadosExcelDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLEmpleadosExcelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLEmpleadosExcelDataSet.vb">
+      <DependentUpon>PLEmpleadosExcelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLExportarHistorialDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLExportarHistorialDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLListaDedEmpDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLListaDedEmpDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLListaEmpleadosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLListaEmpleadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLPlaniActDatosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPlaniActDatosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLPlanillaBancosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPlanillaBancosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLPrestacionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPrestacionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLPrestacionesDataSet.vb">
+      <DependentUpon>PLPrestacionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLProcDeducDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLProcDeducDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLProcDeducDataSet.vb">
+      <DependentUpon>PLProcDeducDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLProfesionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLProfesionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLPuestosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLPuestosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLRepRecibosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLRepRecibosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLSeccionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSeccionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLSedesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLSedesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLTablasDedDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLTablasDedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLTablasPrestacionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLTablasPrestacionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLTiposEmpleadosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLTiposEmpleadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLVacacionesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLVacacionesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSets\PLVacResumenDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PLVacResumenDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DeduccionesEdicionFrm.Designer.vb">
+      <DependentUpon>DeduccionesEdicionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DeduccionesEdicionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\DeduccionesMesFrm.Designer.vb">
+      <DependentUpon>DeduccionesMesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DeduccionesMesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\DeduccionISRFrm.Designer.vb">
+      <DependentUpon>DeduccionISRFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DeduccionISRFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\DepartamentosFrm.Designer.vb">
+      <DependentUpon>DepartamentosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DepartamentosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\EditarTextoFrm.Designer.vb">
+      <DependentUpon>EditarTextoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\EditarTextoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\EmpleadosFrm.Designer.vb">
+      <DependentUpon>EmpleadosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\EmpleadosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\IniDeduccionISR.Designer.vb">
+      <DependentUpon>IniDeduccionISR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\IniDeduccionISR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\ListaEmpleadosFom.Designer.vb">
+      <DependentUpon>ListaEmpleadosFom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\ListaEmpleadosFom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\MantDeduccionesFrm.Designer.vb">
+      <DependentUpon>MantDeduccionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\MantDeduccionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\OpcionesCalculoDedFrm.Designer.vb">
+      <DependentUpon>OpcionesCalculoDedFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\OpcionesCalculoDedFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PlCambioCodigoFrm.Designer.vb">
+      <DependentUpon>PlCambioCodigoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PlCambioCodigoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLCierrePlanillaFrm.Designer.vb">
+      <DependentUpon>PLCierrePlanillaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLCierrePlanillaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLConfFrm.Designer.vb">
+      <DependentUpon>PLConfFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLConfFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLConstanciasFrm.Designer.vb">
+      <DependentUpon>PLConstanciasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLConstanciasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLDeduccionesExcepcionesFrm.Designer.vb">
+      <DependentUpon>PLDeduccionesExcepcionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLDeduccionesExcepcionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLEdicionDeduccionesFrm.Designer.vb">
+      <DependentUpon>PLEdicionDeduccionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLEdicionDeduccionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLGenerarBancosFrm.Designer.vb">
+      <DependentUpon>PLGenerarBancosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLGenerarBancosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLImportarDatosDeAccessFrm.Designer.vb">
+      <DependentUpon>PLImportarDatosDeAccessFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLImportarDatosDeAccessFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLListaDedEmpFrm.Designer.vb">
+      <DependentUpon>PLListaDedEmpFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLListaDedEmpFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLListadoEmpleadosFrm.Designer.vb">
+      <DependentUpon>PLListadoEmpleadosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLListadoEmpleadosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLMantAtlantidaFrm.Designer.vb">
+      <DependentUpon>PLMantAtlantidaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLMantAtlantidaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLPrestacionesFrm.Designer.vb">
+      <DependentUpon>PLPrestacionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLPrestacionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLProcDeduccionesFrm.Designer.vb">
+      <DependentUpon>PLProcDeduccionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLProcDeduccionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepAnualDedSocExcelFrm.Designer.vb">
+      <DependentUpon>PLRepAnualDedSocExcelFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepAnualDedSocExcelFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepDeducciones.Designer.vb">
+      <DependentUpon>PLRepDeducciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepDeducciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepEmpSelFrm.Designer.vb">
+      <DependentUpon>PLRepEmpSelFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepEmpSelFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepIngEgFrm.Designer.vb">
+      <DependentUpon>PLRepIngEgFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepIngEgFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepOtrasDedFrm.Designer.vb">
+      <DependentUpon>PLRepOtrasDedFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepOtrasDedFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaDetIVAFrm.Designer.vb">
+      <DependentUpon>PLRepPlaDetIVAFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaDetIVAFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaHistorialFrm.Designer.vb">
+      <DependentUpon>PLRepPlaHistorialFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaHistorialFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaReci1Frm.Designer.vb">
+      <DependentUpon>PLRepPlaReci1Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepPlaReci1Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepSaldosEmpleadosFrm.Designer.vb">
+      <DependentUpon>PLRepSaldosEmpleadosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepSaldosEmpleadosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLRepVacacionesFrm.Designer.vb">
+      <DependentUpon>PLRepVacacionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLRepVacacionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLTablasVariasFrm.Designer.vb">
+      <DependentUpon>PLTablasVariasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLTablasVariasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PLVacacionesFrm.Designer.vb">
+      <DependentUpon>PLVacacionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PLVacacionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\ProfesionesFrm.Designer.vb">
+      <DependentUpon>ProfesionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\ProfesionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\PuestosFrm.Designer.vb">
+      <DependentUpon>PuestosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\PuestosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\SeccionesFrm.Designer.vb">
+      <DependentUpon>SeccionesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\SeccionesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\SedesFrm.Designer.vb">
+      <DependentUpon>SedesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\SedesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planillas\TiposEmpleadosFrm.Designer.vb">
+      <DependentUpon>TiposEmpleadosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\TiposEmpleadosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEmpFrm.Designer.vb">
+      <DependentUpon>RegEmpFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegEmpFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\ConfBaseDatosFrm.Designer.vb">
+      <DependentUpon>ConfBaseDatosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\ConfBaseDatosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\ConfEstacionFrm.Designer.vb">
+      <DependentUpon>ConfEstacionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\ConfEstacionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\DataSets\SisEmpresasEditDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SisEmpresasEditDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\DataSets\SisEmpresasListaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SisEmpresasListaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\MantenimientoEmpresasFrm.Designer.vb">
+      <DependentUpon>MantenimientoEmpresasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\MantenimientoEmpresasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\SisEmpresasEditFrm.Designer.vb">
+      <DependentUpon>SisEmpresasEditFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\SisEmpresasEditFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\SisEmpresasFrm.Designer.vb">
+      <DependentUpon>SisEmpresasFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\SisEmpresasFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilidades\CTTrasladarDatosFrm.Designer.vb">
+      <DependentUpon>CTTrasladarDatosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\CTTrasladarDatosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\DataSets\BaseDatosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\DataSets\CTDatosAccessDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTDatosAccessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\DataSets\CTTrasladoDatosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTTrasladoDatosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\DataSets\ElegirEmpresaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElegirEmpresaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\DataSets\UsrNivelesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsrNivelesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\DataSets\UsuariosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\ElegirEmpresaFrm.Designer.vb">
+      <DependentUpon>ElegirEmpresaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\ElegirEmpresaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.vb">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Principal.vb" />
+    <Compile Include="Sistema\UsrNivelesFrm.Designer.vb">
+      <DependentUpon>UsrNivelesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\UsrNivelesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\UsuariosFrm.Designer.vb">
+      <DependentUpon>UsuariosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\UsuariosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilidades\UtilCambiarPeriodoFrm.Designer.vb">
+      <DependentUpon>UtilCambiarPeriodoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\UtilCambiarPeriodoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilidades\UtilConexionDBFrm.designer.vb">
+      <DependentUpon>UtilConexionDBFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\UtilConexionDBFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\UtilRespaldoBD.designer.vb">
+      <DependentUpon>UtilRespaldoBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\UtilRespaldoBD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bancos\BABancosEdicionFrm.resx">
+      <DependentUpon>BABancosEdicionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BABancosFrm.resx">
+      <DependentUpon>BABancosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BAConfFrm.resx">
+      <DependentUpon>BAConfFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BADepNotasTransEdicionFrm.resx">
+      <DependentUpon>BADepNotasTransEdicionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BADepNotasTransfFrm.resx">
+      <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BAListaBancosFrm.resx">
+      <DependentUpon>BAListaBancosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTAgregarCuentaFrm.resx">
+      <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTBalGenFrm.resx">
+      <DependentUpon>CTBalGenFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTCapturaPresupAnualFrm.resx">
+      <DependentUpon>CTCapturaPresupAnualFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTCapturaPresupMensualFrm.resx">
+      <DependentUpon>CTCapturaPresupMensualFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTCapturaPresupTrimFrm.resx">
+      <DependentUpon>CTCapturaPresupTrimFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTCatalogoFrm.resx">
+      <DependentUpon>CTCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTCierreAnualFrm.resx">
+      <DependentUpon>CTCierreAnualFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTConfiguracion.resx">
+      <DependentUpon>CTConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTConsolidacionEmpComunFrm.resx">
+      <DependentUpon>CTConsolidacionEmpComunFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTConsolidacionEmpIni.resx">
+      <DependentUpon>CTConsolidacionEmpIni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTConsolidacionExpImpFrm.resx">
+      <DependentUpon>CTConsolidacionExpImpFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTExpCatalogoFrm.resx">
+      <DependentUpon>CTExpCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTExpImpCatalogoFrm.resx">
+      <DependentUpon>CTExpImpCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTImpCatalogoFrm.resx">
+      <DependentUpon>CTImpCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTInicializacionPresupuestoFrm.resx">
+      <DependentUpon>CTInicializacionPresupuestoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTListaCatalogoFrm.resx">
+      <DependentUpon>CTListaCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CtListaCatGenFrm.resx">
+      <DependentUpon>CtListaCatGenFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTListaTransaccionesFrm.resx">
+      <DependentUpon>CTListaTransaccionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepBalComprobFrm.resx">
+      <DependentUpon>CTRepBalComprobFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepCatalogoFrm.resx">
+      <DependentUpon>CTRepCatalogoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepEstFinanAñosFrm.resx">
+      <DependentUpon>CTRepEstFinanAñosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepEstFinancierosFrm.resx">
+      <DependentUpon>CTRepEstFinancierosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepLibroMayorFrm.resx">
+      <DependentUpon>CTRepLibroMayorFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepMovCuentasFrm.resx">
+      <DependentUpon>CTRepMovCuentasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTRepTransFrm.resx">
+      <DependentUpon>CTRepTransFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTSaldosCuentasAnualesFrm.resx">
+      <DependentUpon>CTSaldosCuentasAnualesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTSaldosMensualesFrm.resx">
+      <DependentUpon>CTSaldosMensualesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTTipoPartidasFrm.resx">
+      <DependentUpon>CTTipoPartidasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTTmpFrm.resx">
+      <DependentUpon>CTTmpFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTTransaccionesComentariosFrm.resx">
+      <DependentUpon>CTTransaccionesComentariosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTTransaccionesContFrm.resx">
+      <DependentUpon>CTTransaccionesContFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTMayorizacionFrm.resx">
+      <DependentUpon>CTMayorizacionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuarios\BotonBuscar.resx">
+      <DependentUpon>BotonBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuarios\ControlComentarios.resx">
+      <DependentUpon>ControlComentarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuarios\EditDataNavBar.resx">
+      <DependentUpon>EditDataNavBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuarios\ListaDataNavBar.resx">
+      <DependentUpon>ListaDataNavBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataNavBar.resx">
+      <DependentUpon>DataNavBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListasFrm.resx">
+      <DependentUpon>ListasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\AseguradorasFrm.resx">
+      <DependentUpon>AseguradorasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\BancosFrm.resx">
+      <DependentUpon>BancosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\CapturaPlanillaFrm.resx">
+      <DependentUpon>CapturaPlanillaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\CargarDatosPlanillaFrm.resx">
+      <DependentUpon>CargarDatosPlanillaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\DeduccionesEdicionFrm.resx">
+      <DependentUpon>DeduccionesEdicionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\DeduccionesMesFrm.resx">
+      <DependentUpon>DeduccionesMesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\DeduccionISRFrm.resx">
+      <DependentUpon>DeduccionISRFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\DepartamentosFrm.resx">
+      <DependentUpon>DepartamentosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\EditarTextoFrm.resx">
+      <DependentUpon>EditarTextoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\EmpleadosFrm.resx">
+      <DependentUpon>EmpleadosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\IniDeduccionISR.resx">
+      <DependentUpon>IniDeduccionISR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\ListaEmpleadosFom.resx">
+      <DependentUpon>ListaEmpleadosFom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\MantDeduccionesFrm.resx">
+      <DependentUpon>MantDeduccionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\OpcionesCalculoDedFrm.resx">
+      <DependentUpon>OpcionesCalculoDedFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PlCambioCodigoFrm.resx">
+      <DependentUpon>PlCambioCodigoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLCierrePlanillaFrm.resx">
+      <DependentUpon>PLCierrePlanillaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLConfFrm.resx">
+      <DependentUpon>PLConfFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLConstanciasFrm.resx">
+      <DependentUpon>PLConstanciasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLDeduccionesExcepcionesFrm.resx">
+      <DependentUpon>PLDeduccionesExcepcionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLEdicionDeduccionesFrm.resx">
+      <DependentUpon>PLEdicionDeduccionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLGenerarBancosFrm.resx">
+      <DependentUpon>PLGenerarBancosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLImportarDatosDeAccessFrm.resx">
+      <DependentUpon>PLImportarDatosDeAccessFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLListaDedEmpFrm.resx">
+      <DependentUpon>PLListaDedEmpFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLListadoEmpleadosFrm.resx">
+      <DependentUpon>PLListadoEmpleadosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLMantAtlantidaFrm.resx">
+      <DependentUpon>PLMantAtlantidaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLPrestacionesFrm.resx">
+      <DependentUpon>PLPrestacionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLProcDeduccionesFrm.resx">
+      <DependentUpon>PLProcDeduccionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepAnualDedSocExcelFrm.resx">
+      <DependentUpon>PLRepAnualDedSocExcelFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepDeducciones.resx">
+      <DependentUpon>PLRepDeducciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepEmpSelFrm.resx">
+      <DependentUpon>PLRepEmpSelFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepIngEgFrm.resx">
+      <DependentUpon>PLRepIngEgFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepOtrasDedFrm.resx">
+      <DependentUpon>PLRepOtrasDedFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepPlaDetIVAFrm.resx">
+      <DependentUpon>PLRepPlaDetIVAFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepPlaHistorialFrm.resx">
+      <DependentUpon>PLRepPlaHistorialFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepPlaReci1Frm.resx">
+      <DependentUpon>PLRepPlaReci1Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepSaldosEmpleadosFrm.resx">
+      <DependentUpon>PLRepSaldosEmpleadosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLRepVacacionesFrm.resx">
+      <DependentUpon>PLRepVacacionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLTablasVariasFrm.resx">
+      <DependentUpon>PLTablasVariasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PLVacacionesFrm.resx">
+      <DependentUpon>PLVacacionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\ProfesionesFrm.resx">
+      <DependentUpon>ProfesionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\PuestosFrm.resx">
+      <DependentUpon>PuestosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\SeccionesFrm.resx">
+      <DependentUpon>SeccionesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\SedesFrm.resx">
+      <DependentUpon>SedesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\TiposEmpleadosFrm.resx">
+      <DependentUpon>TiposEmpleadosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEmpFrm.resx">
+      <DependentUpon>RegEmpFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\ConfBaseDatosFrm.resx">
+      <DependentUpon>ConfBaseDatosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\ConfEstacionFrm.resx">
+      <DependentUpon>ConfEstacionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\MantenimientoEmpresasFrm.resx">
+      <DependentUpon>MantenimientoEmpresasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\SisEmpresasEditFrm.resx">
+      <DependentUpon>SisEmpresasEditFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\SisEmpresasFrm.resx">
+      <DependentUpon>SisEmpresasFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilidades\CTTrasladarDatosFrm.resx">
+      <DependentUpon>CTTrasladarDatosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\ElegirEmpresaFrm.resx">
+      <DependentUpon>ElegirEmpresaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\UsrNivelesFrm.resx">
+      <DependentUpon>UsrNivelesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\UsuariosFrm.resx">
+      <DependentUpon>UsuariosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilidades\UtilCambiarPeriodoFrm.resx">
+      <DependentUpon>UtilCambiarPeriodoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilidades\UtilConexionDBFrm.resx">
+      <DependentUpon>UtilConexionDBFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\UtilRespaldoBD.resx">
+      <DependentUpon>UtilRespaldoBD.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contabilidad\DataSets\CTConsolidacionDataSet.xsc">
+      <DependentUpon>CTConsolidacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTConsolidacionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTConsolidacionDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTConsolidacionDataSet.xss">
+      <DependentUpon>CTConsolidacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEmpresasDataSet.xsc">
+      <DependentUpon>CTEmpresasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEmpresasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTEmpresasDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEmpresasDataSet.xss">
+      <DependentUpon>CTEmpresasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEstFinanDataSet.xsc">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEstFinanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTEstFinanDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contabilidad\DataSets\CTEstFinanDataSet.xss">
+      <DependentUpon>CTEstFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTCatalogoCuentasDataSet.xsc">
+      <DependentUpon>CTCatalogoCuentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTCatalogoCuentasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTCatalogoCuentasDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTCatalogoCuentasDataSet.xss">
+      <DependentUpon>CTCatalogoCuentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTComentariosDataSet.xsc">
+      <DependentUpon>CTComentariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTComentariosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTComentariosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTComentariosDataSet.xss">
+      <DependentUpon>CTComentariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTConfDataSet.xsc">
+      <DependentUpon>CTConfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTConfDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTConfDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTConfDataSet.xss">
+      <DependentUpon>CTConfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTLibMayDataSet.xsc">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTLibMayDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTLibMayDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTLibMayDataSet.xss">
+      <DependentUpon>CTLibMayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaCatalogoDataSet.xsc">
+      <DependentUpon>CTListaCatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaCatalogoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTListaCatalogoDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaCatalogoDataSet.xss">
+      <DependentUpon>CTListaCatalogoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaTransaccionesDataSet.xsc">
+      <DependentUpon>CTListaTransaccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaTransaccionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTListaTransaccionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTListaTransaccionesDataSet.xss">
+      <DependentUpon>CTListaTransaccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTMayorizacionDataSet.xsc">
+      <DependentUpon>CTMayorizacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTMayorizacionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTMayorizacionDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTMayorizacionDataSet.xss">
+      <DependentUpon>CTMayorizacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPartidasCierresDataSet.xsc">
+      <DependentUpon>CTPartidasCierresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPartidasCierresDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPartidasCierresDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPartidasCierresDataSet.xss">
+      <DependentUpon>CTPartidasCierresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPlantillasCatDataSet.xsc">
+      <DependentUpon>CTPlantillasCatDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPlantillasCatDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPlantillasCatDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPlantillasCatDataSet.xss">
+      <DependentUpon>CTPlantillasCatDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPresupMensualDataSet.xsc">
+      <DependentUpon>CTPresupMensualDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPresupMensualDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPresupMensualDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTPresupMensualDataSet.xss">
+      <DependentUpon>CTPresupMensualDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosIniDataSet.xsc">
+      <DependentUpon>CTSaldosIniDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosIniDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTSaldosIniDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosIniDataSet.xss">
+      <DependentUpon>CTSaldosIniDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosMensualesDataSet.xsc">
+      <DependentUpon>CTSaldosMensualesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosMensualesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTSaldosMensualesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTSaldosMensualesDataSet.xss">
+      <DependentUpon>CTSaldosMensualesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTipoPartidasDataSet.xsc">
+      <DependentUpon>CTTipoPartidasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTipoPartidasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTTipoPartidasDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTipoPartidasDataSet.xss">
+      <DependentUpon>CTTipoPartidasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTransaccionesDataSet.xsc">
+      <DependentUpon>CTTransaccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTransaccionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTTransaccionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Contabilidad\DataSets\CTTransaccionesDataSet.xss">
+      <DependentUpon>CTTransaccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bancos\DataSets\BABancosEdicionDataSet.xsc">
+      <DependentUpon>BABancosEdicionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BABancosEdicionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BABancosEdicionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bancos\DataSets\BABancosEdicionDataSet.xss">
+      <DependentUpon>BABancosEdicionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BABancosListaDataSet.xsc">
+      <DependentUpon>BABancosListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BABancosListaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BABancosListaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bancos\DataSets\BABancosListaDataSet.xss">
+      <DependentUpon>BABancosListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BABancosTablaSelDataSet.xsc">
+      <DependentUpon>BABancosTablaSelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BABancosTablaSelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BABancosTablaSelDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bancos\DataSets\BABancosTablaSelDataSet.xss">
+      <DependentUpon>BABancosTablaSelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesEdicionDataSet.xsc">
+      <DependentUpon>BATransaccionesEdicionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesEdicionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BATransaccionesEdicionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesEdicionDataSet.xss">
+      <DependentUpon>BATransaccionesEdicionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesListaDataSet.xsc">
+      <DependentUpon>BATransaccionesListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesListaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BATransaccionesListaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bancos\DataSets\BATransaccionesListaDataSet.xss">
+      <DependentUpon>BATransaccionesListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesExcepcionesDataSet.xsc">
+      <DependentUpon>PLDeduccionesExcepcionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesExcepcionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLDeduccionesExcepcionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesExcepcionesDataSet.xss">
+      <DependentUpon>PLDeduccionesExcepcionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLVacResumenDataSet.xsc">
+      <DependentUpon>PLVacResumenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLVacResumenDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLVacResumenDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLVacResumenDataSet.xss">
+      <DependentUpon>PLVacResumenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\ZoomHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abgav.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abgav1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_reportHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashreg.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashreg1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSpellingHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CriticalError.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CutHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveFirsHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveFirstHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveLastHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveNextHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MovePreviousHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_NewRecordHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_RedoHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditInformationHS.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter2HS.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoLtrHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoColi3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewMessageHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDocViewHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestartHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightsRestrictedHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSISis.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XPfolder_closed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Planillas\DataSets\CapturaPlanillaDataSet.xsc">
+      <DependentUpon>CapturaPlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\CapturaPlanillaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CapturaPlanillaDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\CapturaPlanillaDataSet.xss">
+      <DependentUpon>CapturaPlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLActualizarOtrasDedDataSet.xsc">
+      <DependentUpon>PLActualizarOtrasDedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLActualizarOtrasDedDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLActualizarOtrasDedDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLActualizarOtrasDedDataSet.xss">
+      <DependentUpon>PLActualizarOtrasDedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLAseguradorasDataSet.xsc">
+      <DependentUpon>PLAseguradorasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLAseguradorasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLAseguradorasDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLAseguradorasDataSet.xss">
+      <DependentUpon>PLAseguradorasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLBancosDataSet.xsc">
+      <DependentUpon>PLBancosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLBancosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLBancosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLBancosDataSet.xss">
+      <DependentUpon>PLBancosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLCargarDatosPlanillaDataSet.xsc">
+      <DependentUpon>PLCargarDatosPlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLCargarDatosPlanillaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLCargarDatosPlanillaDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLCargarDatosPlanillaDataSet.xss">
+      <DependentUpon>PLCargarDatosPlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLConfDataSet.xsc">
+      <DependentUpon>PLConfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLConfDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLConfDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLConfDataSet.xss">
+      <DependentUpon>PLConfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesMesDataSet.xsc">
+      <DependentUpon>PLDeduccionesMesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesMesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLDeduccionesMesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionesMesDataSet.xss">
+      <DependentUpon>PLDeduccionesMesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionISRDataSet.xsc">
+      <DependentUpon>PLDeduccionISRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionISRDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLDeduccionISRDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLDeduccionISRDataSet.xss">
+      <DependentUpon>PLDeduccionISRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDefDeduccionesDataSet.xsc">
+      <DependentUpon>PLDefDeduccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDefDeduccionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLDefDeduccionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLDefDeduccionesDataSet.xss">
+      <DependentUpon>PLDefDeduccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDepartamentosDataSet.xsc">
+      <DependentUpon>PLDepartamentosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLDepartamentosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLDepartamentosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLDepartamentosDataSet.xss">
+      <DependentUpon>PLDepartamentosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLEdicionDeduccionesDataSet.xsc">
+      <DependentUpon>PLEdicionDeduccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLEdicionDeduccionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLEdicionDeduccionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLEdicionDeduccionesDataSet.xss">
+      <DependentUpon>PLEdicionDeduccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLEmpleadosDataSet.xsc">
+      <DependentUpon>PLEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLEmpleadosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLEmpleadosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLEmpleadosDataSet.xss">
+      <DependentUpon>PLEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLExportarHistorialDataSet.xsc">
+      <DependentUpon>PLExportarHistorialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLExportarHistorialDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLExportarHistorialDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLExportarHistorialDataSet.xss">
+      <DependentUpon>PLExportarHistorialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLListaDedEmpDataSet.xsc">
+      <DependentUpon>PLListaDedEmpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLListaDedEmpDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLListaDedEmpDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLListaDedEmpDataSet.xss">
+      <DependentUpon>PLListaDedEmpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLListaEmpleadosDataSet.xsc">
+      <DependentUpon>PLListaEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLListaEmpleadosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLListaEmpleadosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLListaEmpleadosDataSet.xss">
+      <DependentUpon>PLListaEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPlaniActDatosDataSet.xsc">
+      <DependentUpon>PLPlaniActDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPlaniActDatosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLPlaniActDatosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLPlaniActDatosDataSet.xss">
+      <DependentUpon>PLPlaniActDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPlanillaBancosDataSet.xsc">
+      <DependentUpon>PLPlanillaBancosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPlanillaBancosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLPlanillaBancosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLPlanillaBancosDataSet.xss">
+      <DependentUpon>PLPlanillaBancosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLProcDeducDataSet.xsc">
+      <DependentUpon>PLProcDeducDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLProcDeducDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLProcDeducDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLProcDeducDataSet.xss">
+      <DependentUpon>PLProcDeducDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLProfesionesDataSet.xsc">
+      <DependentUpon>PLProfesionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLProfesionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLProfesionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLProfesionesDataSet.xss">
+      <DependentUpon>PLProfesionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPuestosDataSet.xsc">
+      <DependentUpon>PLPuestosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPuestosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLPuestosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLPuestosDataSet.xss">
+      <DependentUpon>PLPuestosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLRepRecibosDataSet.xsc">
+      <DependentUpon>PLRepRecibosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLRepRecibosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLRepRecibosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLRepRecibosDataSet.xss">
+      <DependentUpon>PLRepRecibosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLSeccionesDataSet.xsc">
+      <DependentUpon>PLSeccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLSeccionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLSeccionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLSeccionesDataSet.xss">
+      <DependentUpon>PLSeccionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLSedesDataSet.xsc">
+      <DependentUpon>PLSedesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLSedesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLSedesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLSedesDataSet.xss">
+      <DependentUpon>PLSedesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasDedDataSet.xsc">
+      <DependentUpon>PLTablasDedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasDedDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLTablasDedDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasDedDataSet.xss">
+      <DependentUpon>PLTablasDedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTiposEmpleadosDataSet.xsc">
+      <DependentUpon>PLTiposEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTiposEmpleadosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLTiposEmpleadosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLTiposEmpleadosDataSet.xss">
+      <DependentUpon>PLTiposEmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLVacacionesDataSet.xsc">
+      <DependentUpon>PLVacacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLVacacionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLVacacionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLVacacionesDataSet.xss">
+      <DependentUpon>PLVacacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\zoom2.bmp" />
+    <None Include="RSIContab_1_TemporaryKey.pfx" />
+    <None Include="RSIContab_3_TemporaryKey.pfx" />
+    <None Include="RSIContab_4_TemporaryKey.pfx" />
+    <None Include="RSIContab_TemporaryKey.pfx" />
+    <None Include="Sistema\DataSets\BaseDatosDataSet.xsc">
+      <DependentUpon>BaseDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\BaseDatosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDatosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema\DataSets\BaseDatosDataSet.xss">
+      <DependentUpon>BaseDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasEditDataSet.xsc">
+      <DependentUpon>SisEmpresasEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasEditDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SisEmpresasEditDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasEditDataSet.xss">
+      <DependentUpon>SisEmpresasEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasListaDataSet.xsc">
+      <DependentUpon>SisEmpresasListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasListaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SisEmpresasListaDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sistema\DataSets\SisEmpresasListaDataSet.xss">
+      <DependentUpon>SisEmpresasListaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Utilidades\DataSets\CTDatosAccessDataSet.xsc">
+      <DependentUpon>CTDatosAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Utilidades\DataSets\CTDatosAccessDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTDatosAccessDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Utilidades\DataSets\CTDatosAccessDataSet.xss">
+      <DependentUpon>CTDatosAccessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Utilidades\DataSets\CTTrasladoDatosDataSet.xsc">
+      <DependentUpon>CTTrasladoDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Utilidades\DataSets\CTTrasladoDatosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTTrasladoDatosDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Utilidades\DataSets\CTTrasladoDatosDataSet.xss">
+      <DependentUpon>CTTrasladoDatosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\ElegirEmpresaDataSet.xsc">
+      <DependentUpon>ElegirEmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\ElegirEmpresaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElegirEmpresaDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sistema\DataSets\ElegirEmpresaDataSet.xss">
+      <DependentUpon>ElegirEmpresaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\UsrNivelesDataSet.xsc">
+      <DependentUpon>UsrNivelesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\UsrNivelesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsrNivelesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sistema\DataSets\UsrNivelesDataSet.xss">
+      <DependentUpon>UsrNivelesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\UsuariosDataSet.xsc">
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema\DataSets\UsuariosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuariosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema\DataSets\UsuariosDataSet.xss">
+      <DependentUpon>UsuariosDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bancos\BAClassLib\BAClassLib.vbproj">
+      <Project>{86782b9b-e63f-4560-8b9e-6b7da6a7cdaa}</Project>
+      <Name>BAClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cont\CTClassLib\CTClassLib.vbproj">
+      <Project>{8D578DB2-D9B4-4AAD-8DF7-DF6E90B0D636}</Project>
+      <Name>CTClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plani\PLClassLib\PLClassLib.vbproj">
+      <Project>{EABC2047-25D4-44AD-BAD3-36E6A91CFFF5}</Project>
+      <Name>PLClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RSRPTCLS\RSIRPTCLS\RSIRPTCLS.vbproj">
+      <Project>{D3D0CF13-3B72-4183-9DD9-5B8167CD482D}</Project>
+      <Name>RSIRPTCLS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Planillas\DataSets\PLCierrePlanillaDataSet.xsc">
+      <DependentUpon>PLCierrePlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLCierrePlanillaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLCierrePlanillaDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLCierrePlanillaDataSet.xss">
+      <DependentUpon>PLCierrePlanillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLConstanciasDataSet.xsc">
+      <DependentUpon>PLConstanciasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLConstanciasDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLConstanciasDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLConstanciasDataSet.xss">
+      <DependentUpon>PLConstanciasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPrestacionesDataSet.xsc">
+      <DependentUpon>PLPrestacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLPrestacionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLPrestacionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLPrestacionesDataSet.xss">
+      <DependentUpon>PLPrestacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasPrestacionesDataSet.xsc">
+      <DependentUpon>PLTablasPrestacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasPrestacionesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLTablasPrestacionesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLTablasPrestacionesDataSet.xss">
+      <DependentUpon>PLTablasPrestacionesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Control_MenuStrip.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gears_Cogs_Services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Planillas\DataSets\PLEmpleadosExcelDataSet.xsc">
+      <DependentUpon>PLEmpleadosExcelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Planillas\DataSets\PLEmpleadosExcelDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PLEmpleadosExcelDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planillas\DataSets\PLEmpleadosExcelDataSet.xss">
+      <DependentUpon>PLEmpleadosExcelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\gear_32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageQueuing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\performance.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webcontrol_Catalogzone.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EntityDataModel_association_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112_Tick_Green_32x32_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1385_Disable_24x24_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mayori.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextboxHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowAllCommentsHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DAO">
+      <Guid>{00025E01-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base_calendar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393662113_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393538844_tick_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425432924_Magnifier2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425432963_Magnifier2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393551019_Log Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393539203_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393539332_Document_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393539549_gtk-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393539679_04_Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393551019_Log Out1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393551525_DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1421885802_filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1421885829_filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393113806_Doc_single.png" />
+    <None Include="Resources\1393292018_gear_48.png" />
+    <None Include="Resources\1393538728_Zoom.png" />
+    <None Include="Resources\1393538785_Zoom.png" />
+    <None Include="Resources\1393538860_tick_32.png" />
+    <None Include="Resources\1393538975_tick_48.png" />
+    <None Include="Resources\1421198824_gear_32.png" />
+    <Content Include="Sis.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sis_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Sis.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

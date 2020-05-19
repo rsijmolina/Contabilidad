@@ -58,7 +58,6 @@
 
     Private Sub CargarForma(strModalidad As String)
         If strModalidad = "NUEVO" Then
-            MsgBox("Entro en NUEVO")
             Dim EditFormaFrm As New BABancosEdicionFrm
             EditFormaFrm.FormularioPrincipal = Me
             EditFormaFrm.MdiParent = Me.MdiParent

@@ -88,6 +88,7 @@
         Dim mC1NumericEdit As C1.Win.C1Input.C1NumericEdit
         Dim mC1DateEdit As C1.Win.C1Input.C1DateEdit
         Dim mC1Combo As C1.Win.C1List.C1Combo
+        Dim mC1ComboBox As C1.Win.C1Input.C1ComboBox
         'Dim dsData As DataSet
         'Dim i As Int16
 
@@ -113,7 +114,7 @@
             If mControl.GetType.FullName = "System.Windows.Forms.ComboBox" Or mControl.GetType.FullName = "C1.Win.C1List.C1Combo" _
                 Or mControl.GetType.FullName = "System.Windows.Forms.TextBox" Or mControl.GetType.FullName = "System.Windows.Forms.RichTextBox" _
                 Or mControl.GetType.FullName = "C1.Win.C1Input.C1TextBox" Or mControl.GetType.FullName = "C1.Win.C1Input.C1NumericEdit" _
-                Or mControl.GetType.FullName = "C1.Win.C1Input.C1DateEdit" Then
+                Or mControl.GetType.FullName = "C1.Win.C1Input.C1DateEdit" Or mControl.GetType.FullName = "C1.Win.C1Input.C1ComboBox" Then
                 Select Case mControl.GetType.FullName
                     Case "System.Windows.Forms.TextBox"
                         mTextBox = mControl
@@ -157,6 +158,14 @@
                         mC1DateEdit = mControl
                     Case "System.Windows.Forms.ComboBox"
                         mComboBox = mControl
+                    Case "C1.Win.C1Input.C1ComboBox"
+                        mC1ComboBox = mControl
+                        If InStr(mC1ComboBox.Tag, "O") > 0 Then
+                            If String.IsNullOrEmpty(mC1ComboBox.Text) Then
+                                'ResultadoValidacion = ResultadoValidacion & "Debe ingresar el dato: " & mC1ComboBox. & vbCrLf
+                                'ValidacionCorrecta = False
+                            End If
+                        End If
                     Case "C1.Win.C1List.C1Combo"
                         mC1Combo = mControl
                         If InStr(mC1Combo.Tag, "O") > 0 Then
@@ -206,12 +215,14 @@
         Dim mTextBox As Windows.Forms.TextBox
         Dim mRichTextBox As Windows.Forms.RichTextBox
         Dim mButton As Windows.Forms.Button
+        Dim mc1button As C1.Win.C1Input.C1Button
         'Dim mColiseumBotonBuscar As RSIContab.BotonBuscar
         Dim mColiseumBotonBuscar As Windows.Forms.Button
         Dim mC1TextBox As C1.Win.C1Input.C1TextBox
         Dim mC1NumericEdit As C1.Win.C1Input.C1NumericEdit
         Dim mC1DateEdit As C1.Win.C1Input.C1DateEdit
         Dim mC1Combo As C1.Win.C1List.C1Combo
+        Dim mC1ComboBox As C1.Win.C1Input.C1ComboBox
         Dim mc1dbgrd As C1.Win.C1TrueDBGrid.C1TrueDBGrid
         'Dim strA As String
 
@@ -273,6 +284,20 @@
                             mC1Combo.ReadOnly = Bloquear
                         End If
                     End If
+                Case "C1.Win.C1Input.C1ComboBox"
+                    mC1ComboBox = mControl
+                    If mC1ComboBox.Tag <> "" Then
+                        If (InStr(mC1ComboBox.Tag, "C") > 0 And _NuevoRegistro) Or (InStr(mC1ComboBox.Tag, "M") > 0 And _ModificarRegistro) Then
+                            mC1ComboBox.ReadOnly = Bloquear
+                        End If
+                    End If
+                Case "C1.Win.C1Input.C1Button"
+                    mc1button = mControl
+                    If mc1button.Tag = "HABILITARNOEDIT" Then
+                        mc1button.Enabled = Bloquear
+                    Else
+                        mc1button.Enabled = Not Bloquear
+                    End If
                 Case "System.Windows.Forms.Button"
                     mButton = mControl
                     If mButton.Tag = "HABILITARNOEDIT" Then
@@ -319,6 +344,7 @@
         Dim mC1NumericEdit As C1.Win.C1Input.C1NumericEdit
         Dim mC1DateEdit As C1.Win.C1Input.C1DateEdit
         Dim mC1Combo As C1.Win.C1List.C1Combo
+        Dim mC1ComboBox As C1.Win.C1Input.C1ComboBox
         Dim mc1dbgrd As C1.Win.C1TrueDBGrid.C1TrueDBGrid
 
         For Each mControl In mParent.Controls
@@ -358,6 +384,9 @@
                 Case "C1.Win.C1List.C1Combo"
                     mC1Combo = mControl
                     mC1Combo.ReadOnly = True
+                Case "C1.Win.C1Input.C1ComboBox"
+                    mC1ComboBox = mControl
+                    mC1ComboBox.ReadOnly = True
                 Case "System.Windows.Forms.Button"
                     mButton = mControl
                     mButton.Enabled = False

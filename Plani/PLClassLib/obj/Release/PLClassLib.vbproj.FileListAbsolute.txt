@@ -50,9 +50,6 @@ C:\Desarrollo\ColiNET2013.5\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbpro
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\bin\Release\PLClassLib.dll
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\bin\Release\PLClassLib.pdb
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\bin\Release\PLClassLib.xml
-C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\bin\Release\Rsierpgencl.pdb
-C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\bin\Release\Rsierpgencl.xml
-C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbprojResolveAssemblyReference.cache
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.Resources.resources
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbproj.GenerateResource.Cache
 C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbproj.CoreCompileInputs.cache
@@ -71,3 +68,5 @@ C:\Desarrollo\ContabJJ\Contab\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbp
 C:\Desarrollo\ContabJJ\Contab\Contab\Plani\PLClassLib\obj\Release\PLClassLib.dll
 C:\Desarrollo\ContabJJ\Contab\Contab\Plani\PLClassLib\obj\Release\PLClassLib.xml
 C:\Desarrollo\ContabJJ\Contab\Contab\Plani\PLClassLib\obj\Release\PLClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbprojAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\Plani\PLClassLib\obj\Release\PLClassLib.vbproj.CopyComplete
