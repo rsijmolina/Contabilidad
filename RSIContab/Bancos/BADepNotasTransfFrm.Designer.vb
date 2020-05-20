@@ -24,6 +24,7 @@ Partial Class BADepNotasTransfFrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BADepNotasTransfFrm))
+        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
         Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BATransaccionesListaDataSet = New RSIContab.BATransaccionesListaDataSet()
         Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
@@ -43,7 +44,6 @@ Partial Class BADepNotasTransfFrm
         Me.BABancosTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BABancosTableAdapter()
         Me.BAConfBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BAConfTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BAConfTableAdapter()
-        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +53,14 @@ Partial Class BADepNotasTransfFrm
         CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BAConfBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ListaDataNavBarPrin
+        '
+        Me.ListaDataNavBarPrin.BindingSourcePrincipal = Me.PrincipalBindingSource
+        Me.ListaDataNavBarPrin.Location = New System.Drawing.Point(0, 66)
+        Me.ListaDataNavBarPrin.Name = "ListaDataNavBarPrin"
+        Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(1106, 69)
+        Me.ListaDataNavBarPrin.TabIndex = 6
         '
         'PrincipalBindingSource
         '
@@ -67,9 +75,8 @@ Partial Class BADepNotasTransfFrm
         'c1dbgrdNiveles
         '
         Me.c1dbgrdNiveles.AllowUpdate = False
-        Me.c1dbgrdNiveles.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.c1dbgrdNiveles.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.c1dbgrdNiveles.BorderColor = System.Drawing.SystemColors.WindowFrame
         Me.c1dbgrdNiveles.DataSource = Me.PrincipalBindingSource
         Me.c1dbgrdNiveles.FilterBar = True
@@ -83,7 +90,7 @@ Partial Class BADepNotasTransfFrm
         Me.c1dbgrdNiveles.PreviewInfo.ZoomFactor = 75.0R
         Me.c1dbgrdNiveles.PrintInfo.PageSettings = CType(resources.GetObject("c1dbgrdNiveles.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
         Me.c1dbgrdNiveles.RowHeight = 18
-        Me.c1dbgrdNiveles.Size = New System.Drawing.Size(1096, 413)
+        Me.c1dbgrdNiveles.Size = New System.Drawing.Size(1097, 423)
         Me.c1dbgrdNiveles.TabIndex = 7
         Me.c1dbgrdNiveles.Text = "C1TrueDBGrid1"
         Me.c1dbgrdNiveles.UseCompatibleTextRendering = False
@@ -104,7 +111,7 @@ Partial Class BADepNotasTransfFrm
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1106, 63)
+        Me.GroupBox1.Size = New System.Drawing.Size(1107, 63)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -158,7 +165,7 @@ Partial Class BADepNotasTransfFrm
         '
         'lblMes
         '
-        Me.lblMes.Location = New System.Drawing.Point(491, 23)
+        Me.lblMes.Location = New System.Drawing.Point(491, 16)
         Me.lblMes.Name = "lblMes"
         Me.lblMes.Size = New System.Drawing.Size(105, 16)
         Me.lblMes.TabIndex = 5
@@ -166,7 +173,7 @@ Partial Class BADepNotasTransfFrm
         '
         'lblAño
         '
-        Me.lblAño.Location = New System.Drawing.Point(400, 23)
+        Me.lblAño.Location = New System.Drawing.Point(409, 15)
         Me.lblAño.Name = "lblAño"
         Me.lblAño.Size = New System.Drawing.Size(49, 16)
         Me.lblAño.TabIndex = 4
@@ -175,7 +182,7 @@ Partial Class BADepNotasTransfFrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(455, 22)
+        Me.Label3.Location = New System.Drawing.Point(455, 15)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(30, 13)
         Me.Label3.TabIndex = 3
@@ -184,7 +191,7 @@ Partial Class BADepNotasTransfFrm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(374, 22)
+        Me.Label2.Location = New System.Drawing.Point(383, 14)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 2
@@ -247,19 +254,11 @@ Partial Class BADepNotasTransfFrm
         '
         Me.BAConfTableAdapter.ClearBeforeFill = True
         '
-        'ListaDataNavBarPrin
-        '
-        Me.ListaDataNavBarPrin.BindingSourcePrincipal = Me.PrincipalBindingSource
-        Me.ListaDataNavBarPrin.Location = New System.Drawing.Point(0, 66)
-        Me.ListaDataNavBarPrin.Name = "ListaDataNavBarPrin"
-        Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(1106, 69)
-        Me.ListaDataNavBarPrin.TabIndex = 6
-        '
         'BADepNotasTransfFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1106, 569)
+        Me.ClientSize = New System.Drawing.Size(1107, 579)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.c1dbgrdNiveles)
         Me.Controls.Add(Me.ListaDataNavBarPrin)

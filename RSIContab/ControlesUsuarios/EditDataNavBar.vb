@@ -5,6 +5,7 @@
     Private _ValidacionCorrecta As Boolean
     Private _NuevoRegistro As Boolean
     Private _ModificarRegistro As Boolean
+    Private _BotonCerrarVisible As Boolean
     Public Property ModificarRegistro() As Boolean
         Get
             Return _ModificarRegistro
@@ -58,10 +59,19 @@
             _BindingSourcePrincipal = value
         End Set
     End Property
+    Public Property BotonCerrarVisible() As Boolean
+        Get
+            Return _BotonCerrarVisible
+        End Get
+        Set(ByVal value As Boolean)
+            _BotonCerrarVisible = value
+            Me.ToolStripButCerrarDocumento.Visible = value
+        End Set
+    End Property
     Public Event EliminarRegistroClick(ByVal sender As Object, ByVal e As EventArgs)
     Public Event GuardarClick(ByVal sender As Object, ByVal e As EventArgs)
     Public Event SalirClick(ByVal sender As Object, ByVal e As EventArgs)
-
+    Public Event CerrarDocumentoClick(ByVal sender As Object, ByVal e As EventArgs)
     Private Sub EditDataNavBar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 
@@ -76,6 +86,10 @@
     Private Sub ToolStripButtonSalir_Click(sender As Object, e As EventArgs) Handles ToolStripButtonSalir.Click
         RaiseEvent SalirClick(Me, e)
     End Sub
+    Private Sub ToolStripButCerrarDocumento_Click(sender As Object, e As EventArgs) Handles ToolStripButCerrarDocumento.Click
+        RaiseEvent CerrarDocumentoClick(Me, e)
+    End Sub
+
     Public Sub ValidarInfo(ByVal mParent As Control)
         Dim mControl As Windows.Forms.Control
         Dim mTabPage As Windows.Forms.TabPage

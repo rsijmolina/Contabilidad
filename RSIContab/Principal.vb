@@ -13,6 +13,7 @@ Module Principal
     Public NombreUsuarioActual As String
     Public NivelUsuarioActual As Int16
     Public DescripcionNivelUsuarioActual As String
+    Public UsuarioActual As String
     'Configuracion de estación
     'Inventarios
     Public MostrarListaInvPermanenteTrans As Boolean    'Muestra la lista del inventario en la captura de transacciones
@@ -64,6 +65,9 @@ Module Principal
                 My.Settings.RSINombreUsuario = drUsuarios("Nombre")
                 My.Settings.RSINivelUsuario = drUsuarios("Nivel")
                 My.Settings.RSIEsAdministrador = drUsuarios("EsAdministrador")
+                UsuarioActual = drUsuarios("Usuario")
+                NivelUsuarioActual = drUsuarios("Nivel")
+                NombreUsuarioActual = drUsuarios("Nombre")
             Else
                 My.Settings.RSIUsuarioActual = ""
                 My.Settings.RSINombreUsuario = ""

@@ -489,6 +489,12 @@
     <Compile Include="ControlesUsuarios\ListaDataNavBar.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Contabilidad\CTDocumentosFrm.designer.vb">
+      <DependentUpon>CTDocumentosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CTDocumentosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataNavBar.Designer.vb">
       <DependentUpon>DataNavBar.vb</DependentUpon>
     </Compile>
@@ -1247,6 +1253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuarios\ListaDataNavBar.resx">
       <DependentUpon>ListaDataNavBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CTDocumentosFrm.resx">
+      <DependentUpon>CTDocumentosFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataNavBar.resx">
       <DependentUpon>DataNavBar.vb</DependentUpon>
@@ -2414,6 +2423,12 @@
     <None Include="Resources\1393538860_tick_32.png" />
     <None Include="Resources\1393538975_tick_48.png" />
     <None Include="Resources\1421198824_gear_32.png" />
+    <None Include="Resources\checklist-icon3.png" />
+    <None Include="Resources\math-add-icon2.png" />
+    <None Include="Resources\iconfinder_Open_file_132300.png" />
+    <None Include="Resources\iconfinder_Open_v2_131829.png" />
+    <None Include="Resources\application-form-icon 3.png" />
+    <None Include="Resources\application-form-icon 2.png" />
     <Content Include="Sis.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

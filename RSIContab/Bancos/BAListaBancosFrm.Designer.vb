@@ -25,20 +25,18 @@ Partial Class BAListaBancosFrm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BAListaBancosFrm))
         Me.C1TrueDBGrid1 = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
+        Me.BAListaBancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BABancosListaDataSet = New RSIContab.BABancosListaDataSet()
         Me.toolstripListas = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabelTipo = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripComboBoxTipo = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.toolstripbutRefrescar = New System.Windows.Forms.ToolStripButton()
         Me.butAceptar = New System.Windows.Forms.Button()
-        Me.BAListaBancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.butCancelar = New System.Windows.Forms.Button()
-        Me.BABancosListaDataSet = New RSIContab.BABancosListaDataSet()
         Me.BABancosTableAdapter = New RSIContab.BABancosListaDataSetTableAdapters.BABancosTableAdapter()
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.toolstripListas.SuspendLayout()
         CType(Me.BAListaBancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BABancosListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.toolstripListas.SuspendLayout()
         Me.SuspendLayout()
         '
         'C1TrueDBGrid1
@@ -47,37 +45,36 @@ Partial Class BAListaBancosFrm
         Me.C1TrueDBGrid1.DataSource = Me.BAListaBancosBindingSource
         Me.C1TrueDBGrid1.GroupByCaption = "Drag a column header here to group by that column"
         Me.C1TrueDBGrid1.Images.Add(CType(resources.GetObject("C1TrueDBGrid1.Images"), System.Drawing.Image))
-        Me.C1TrueDBGrid1.Location = New System.Drawing.Point(43, 36)
+        Me.C1TrueDBGrid1.Location = New System.Drawing.Point(12, 36)
         Me.C1TrueDBGrid1.Name = "C1TrueDBGrid1"
         Me.C1TrueDBGrid1.PreviewInfo.Location = New System.Drawing.Point(0, 0)
         Me.C1TrueDBGrid1.PreviewInfo.Size = New System.Drawing.Size(0, 0)
         Me.C1TrueDBGrid1.PreviewInfo.ZoomFactor = 75.0R
         Me.C1TrueDBGrid1.PrintInfo.PageSettings = CType(resources.GetObject("C1TrueDBGrid1.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
-        Me.C1TrueDBGrid1.Size = New System.Drawing.Size(342, 296)
+        Me.C1TrueDBGrid1.Size = New System.Drawing.Size(463, 323)
         Me.C1TrueDBGrid1.TabIndex = 2
         Me.C1TrueDBGrid1.UseCompatibleTextRendering = False
         Me.C1TrueDBGrid1.PropBag = resources.GetString("C1TrueDBGrid1.PropBag")
         '
+        'BAListaBancosBindingSource
+        '
+        Me.BAListaBancosBindingSource.DataMember = "BABancos"
+        Me.BAListaBancosBindingSource.DataSource = Me.BABancosListaDataSet
+        '
+        'BABancosListaDataSet
+        '
+        Me.BABancosListaDataSet.DataSetName = "BABancosListaDataSet"
+        Me.BABancosListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'toolstripListas
         '
         Me.toolstripListas.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.toolstripListas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabelTipo, Me.ToolStripComboBoxTipo, Me.ToolStripSeparator1, Me.toolstripbutRefrescar})
+        Me.toolstripListas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.toolstripbutRefrescar})
         Me.toolstripListas.Location = New System.Drawing.Point(0, 0)
         Me.toolstripListas.Name = "toolstripListas"
-        Me.toolstripListas.Size = New System.Drawing.Size(424, 25)
+        Me.toolstripListas.Size = New System.Drawing.Size(490, 25)
         Me.toolstripListas.TabIndex = 15
         Me.toolstripListas.Text = "ToolStrip1"
-        '
-        'ToolStripLabelTipo
-        '
-        Me.ToolStripLabelTipo.Name = "ToolStripLabelTipo"
-        Me.ToolStripLabelTipo.Size = New System.Drawing.Size(33, 22)
-        Me.ToolStripLabelTipo.Text = "Tipo:"
-        '
-        'ToolStripComboBoxTipo
-        '
-        Me.ToolStripComboBoxTipo.Name = "ToolStripComboBoxTipo"
-        Me.ToolStripComboBoxTipo.Size = New System.Drawing.Size(121, 25)
         '
         'ToolStripSeparator1
         '
@@ -97,7 +94,7 @@ Partial Class BAListaBancosFrm
         Me.butAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.butAceptar.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.butAceptar.Image = Global.RSIContab.My.Resources.Resources._1393538844_tick_16
-        Me.butAceptar.Location = New System.Drawing.Point(43, 338)
+        Me.butAceptar.Location = New System.Drawing.Point(12, 374)
         Me.butAceptar.Name = "butAceptar"
         Me.butAceptar.Size = New System.Drawing.Size(107, 33)
         Me.butAceptar.TabIndex = 58
@@ -105,28 +102,18 @@ Partial Class BAListaBancosFrm
         Me.butAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.butAceptar.UseVisualStyleBackColor = True
         '
-        'BAListaBancosBindingSource
-        '
-        Me.BAListaBancosBindingSource.DataMember = "BABancos"
-        Me.BAListaBancosBindingSource.DataSource = Me.BABancosListaDataSet
-        '
         'butCancelar
         '
         Me.butCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.butCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.butCancelar.Image = Global.RSIContab.My.Resources.Resources._1393662113_cancel
-        Me.butCancelar.Location = New System.Drawing.Point(278, 338)
+        Me.butCancelar.Location = New System.Drawing.Point(368, 374)
         Me.butCancelar.Name = "butCancelar"
         Me.butCancelar.Size = New System.Drawing.Size(107, 33)
         Me.butCancelar.TabIndex = 59
         Me.butCancelar.Text = "&Cancelar"
         Me.butCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.butCancelar.UseVisualStyleBackColor = True
-        '
-        'BABancosListaDataSet
-        '
-        Me.BABancosListaDataSet.DataSetName = "BABancosListaDataSet"
-        Me.BABancosListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BABancosTableAdapter
         '
@@ -136,7 +123,7 @@ Partial Class BAListaBancosFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(424, 394)
+        Me.ClientSize = New System.Drawing.Size(490, 430)
         Me.Controls.Add(Me.butCancelar)
         Me.Controls.Add(Me.butAceptar)
         Me.Controls.Add(Me.toolstripListas)
@@ -144,18 +131,16 @@ Partial Class BAListaBancosFrm
         Me.Name = "BAListaBancosFrm"
         Me.Text = "  "
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.toolstripListas.ResumeLayout(False)
-        Me.toolstripListas.PerformLayout()
         CType(Me.BAListaBancosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BABancosListaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.toolstripListas.ResumeLayout(False)
+        Me.toolstripListas.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents C1TrueDBGrid1 As C1.Win.C1TrueDBGrid.C1TrueDBGrid
     Friend WithEvents toolstripListas As ToolStrip
-    Friend WithEvents ToolStripLabelTipo As ToolStripLabel
-    Friend WithEvents ToolStripComboBoxTipo As ToolStripComboBox
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents toolstripbutRefrescar As ToolStripButton
     Friend WithEvents butAceptar As Button

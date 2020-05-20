@@ -375,6 +375,7 @@
                 If (mLoginFrm.UsernameTextBox.Text = "admin" And mLoginFrm.PasswordTextBox.Text = "rsi94128") Then
                     My.Settings.RSIUsuarioActual = "admin"
                     Me.statuslblUsuario.Text = "Usuario: " & My.Settings.RSIUsuarioActual
+                    UsuarioActual = "admin"
                     mLoginFrm.Close()
                     HabilitarMenu(False, True)
                     DatosEmpresa(Me)

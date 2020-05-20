@@ -1115,3 +1115,4 @@ C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BADepNotasTransfFr
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.BAListaBancosFrm.resources
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbprojAssemblyReference.cache
 C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.vbproj.CopyComplete
+C:\Desarrollo\ContabJJ\Contab\RSIContab\obj\Release\RSIContab.CTDocumentosFrm.resources

@@ -89,5 +89,71 @@
         drBan.Close()
         cnSQLConexion.Close()
     End Function
+    Public Function UltimoNoDoc(ByVal intBanco As Int16, intTipoDoc As Int32) As Int32
+        Dim cnSQLConexion As Data.SqlClient.SqlConnection
+        Dim cmdInComando As SqlClient.SqlCommand
+        Dim drBan As SqlClient.SqlDataReader
+
+        cnSQLConexion = New SqlClient.SqlConnection(DBconStr)
+        cnSQLConexion.Open()
+        cmdInComando = cnSQLConexion.CreateCommand
+        cmdInComando.CommandType = CommandType.Text
+        cmdInComando.CommandText = "SELECT UltimoCheque,UltimoDeposito,UltimaNotaDebito,UltimaNotaCredito,UltimaTransferencia FROM BABancos WHERE CodigoBanco=" & intBanco
+        drBan = cmdInComando.ExecuteReader
+        drBan.Read()
+        If drBan.HasRows Then
+            Select Case intTipoDoc
+                Case 1
+                    UltimoNoDoc = drBan("UltimoDeposito")
+                Case 2
+                    UltimoNoDoc = drBan("UltimocHEQUE")
+                Case 3
+                    UltimoNoDoc = drBan("UltimaNotaCredito")
+                Case 4
+                    UltimoNoDoc = drBan("UltimaNotaDebito")
+                Case 6
+                    UltimoNoDoc = drBan("UltimaTransferencia")
+            End Select
+        Else
+            UltimoNoDoc = 0
+        End If
+        drBan.Close()
+        cnSQLConexion.Close()
+    End Function
+
+    Public Sub ActualizarUltimoDoc(ByVal intBanco As Int16, intTipoDoc As Int32)
+        Dim cnSQLConexion As Data.SqlClient.SqlConnection
+        Dim cmdInComando As SqlClient.SqlCommand
+
+        cnSQLConexion = New SqlClient.SqlConnection(DBconStr)
+        cnSQLConexion.Open()
+        cmdInComando = cnSQLConexion.CreateCommand
+        Select Case intTipoDoc
+            Case 1
+                cmdInComando.CommandText = "UPDATE BABancos SET UltimoDeposito=UltimoDeposito+1 WHERE CodigoBanco=" & intBanco
+            Case 3
+                cmdInComando.CommandText = "UPDATE BABancos SET UltimaNotaCredito=UltimaNotaCredito+1 WHERE CodigoBanco=" & intBanco
+            Case 4
+                cmdInComando.CommandText = "UPDATE BABancos SET UltimaNotaDebito=UltimaNotaDebito+1 WHERE CodigoBanco=" & intBanco
+            Case 6
+                cmdInComando.CommandText = "UPDATE BABancos SET UltimaTransferencia=UltimaTransferencia+1 WHERE CodigoBanco=" & intBanco
+        End Select
+        cmdInComando.ExecuteNonQuery()
+        cnSQLConexion.Close()
+
+    End Sub
+
+    Public Function drConf() As SqlClient.SqlDataReader
+        Dim cnSQLConexion As Data.SqlClient.SqlConnection
+        Dim cmdInComando As SqlClient.SqlCommand
+
+        cnSQLConexion = New SqlClient.SqlConnection(DBconStr)
+        cnSQLConexion.Open()
+        cmdInComando = cnSQLConexion.CreateCommand
+        cmdInComando.CommandType = CommandType.Text
+        cmdInComando.CommandText = "SELECT * FROM BAConf"
+        drConf = cmdInComando.ExecuteReader
+        drConf.Read()
+    End Function
 
 End Class
