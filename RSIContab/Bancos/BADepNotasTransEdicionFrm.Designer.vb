@@ -36,8 +36,6 @@ Partial Class BADepNotasTransEdicionFrm
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.C1NumericEditFactorCambio = New C1.Win.C1Input.C1NumericEdit()
-        Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BATransaccionesEdicionDataSet = New RSIContab.BATransaccionesEdicionDataSet()
         Me.C1NumericEditValor = New C1.Win.C1Input.C1NumericEdit()
         Me.CheckBoxTransCuenta = New System.Windows.Forms.CheckBox()
         Me.groupTransferencia = New System.Windows.Forms.GroupBox()
@@ -58,17 +56,8 @@ Partial Class BADepNotasTransEdicionFrm
         Me.ButtonVerDetalleDocumento = New C1.Win.C1Input.C1Button()
         Me.ButtonVerDocumento = New System.Windows.Forms.Button()
         Me.ButtonAgregarDocumento = New System.Windows.Forms.Button()
-        Me.C1TrueDBGrid2 = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
-        Me.CTBATransDocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1TrueDBGridDocumentacion = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
         Me.C1TrueDBGridDetalleTrans = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
-        Me.BADetalleTransBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BATransaccionesDetalleTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter()
-        Me.BATransaccionesEncabezadoTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter()
-        Me.CTBATransaccionesDocumentacionTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTBATransaccionesDocumentacionTableAdapter()
-        Me.BancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BABancosTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BABancosTableAdapter()
-        Me.BASaldosMensualesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BASaldosMensualesTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter()
         Me.statusstripPrincipal = New System.Windows.Forms.StatusStrip()
         Me.statusCerrado = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusImpreso = New System.Windows.Forms.ToolStripStatusLabel()
@@ -77,9 +66,27 @@ Partial Class BADepNotasTransEdicionFrm
         Me.statuslblAñoMes = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusElaboradoPor = New System.Windows.Forms.ToolStripStatusLabel()
         Me.EditDataNavBar1 = New RSIContab.EditDataNavBar()
+        Me.lblTotalHaber = New System.Windows.Forms.Label()
+        Me.lblTotalDebe = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.BADetalleTransBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BATransaccionesEdicionDataSet = New RSIContab.BATransaccionesEdicionDataSet()
+        Me.CTBATransDocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BATransaccionesDetalleTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter()
+        Me.BATransaccionesEncabezadoTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter()
+        Me.CTBATransaccionesDocumentacionTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTBATransaccionesDocumentacionTableAdapter()
+        Me.BancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BABancosTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BABancosTableAdapter()
+        Me.BASaldosMensualesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BASaldosMensualesTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter()
+        Me.CatalogoCuentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CTCatalogoCuentasTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter()
+        Me.CTTransEncBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CTTransaccionesEncabezadoTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesEncabezadoTableAdapter()
+        Me.CTTransDetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CTTransaccionesDetalleTableAdapter = New RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesDetalleTableAdapter()
         CType(Me.C1NumericEditFactorCambio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BATransaccionesEdicionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditValor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupTransferencia.SuspendLayout()
         CType(Me.C1TextBoxDescripcion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,13 +99,18 @@ Partial Class BADepNotasTransEdicionFrm
         CType(Me.C1ButtonContabilizadoAnulado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.ButtonVerDetalleDocumento, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1TrueDBGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CTBATransDocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1TrueDBGridDocumentacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TrueDBGridDetalleTrans, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.statusstripPrincipal.SuspendLayout()
         CType(Me.BADetalleTransBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BATransaccionesEdicionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CTBATransDocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BASaldosMensualesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.statusstripPrincipal.SuspendLayout()
+        CType(Me.CatalogoCuentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CTTransEncBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CTTransDetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -149,7 +161,7 @@ Partial Class BADepNotasTransEdicionFrm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(173, 138)
+        Me.Label6.Location = New System.Drawing.Point(184, 138)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(37, 13)
         Me.Label6.TabIndex = 5
@@ -212,16 +224,6 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1NumericEditFactorCambio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.C1NumericEditFactorCambio.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
-        'PrincipalBindingSource
-        '
-        Me.PrincipalBindingSource.DataMember = "BATransaccionesEncabezado"
-        Me.PrincipalBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
-        '
-        'BATransaccionesEdicionDataSet
-        '
-        Me.BATransaccionesEdicionDataSet.DataSetName = "BATransaccionesEdicionDataSet"
-        Me.BATransaccionesEdicionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'C1NumericEditValor
         '
         Me.C1NumericEditValor.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "Monto", True))
@@ -229,7 +231,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1NumericEditValor.Location = New System.Drawing.Point(401, 135)
         Me.C1NumericEditValor.Name = "C1NumericEditValor"
         Me.C1NumericEditValor.Size = New System.Drawing.Size(89, 18)
-        Me.C1NumericEditValor.TabIndex = 12
+        Me.C1NumericEditValor.TabIndex = 7
         Me.C1NumericEditValor.Tag = Nothing
         Me.C1NumericEditValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.C1NumericEditValor.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
@@ -241,7 +243,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.CheckBoxTransCuenta.Location = New System.Drawing.Point(10, 17)
         Me.CheckBoxTransCuenta.Name = "CheckBoxTransCuenta"
         Me.CheckBoxTransCuenta.Size = New System.Drawing.Size(161, 17)
-        Me.CheckBoxTransCuenta.TabIndex = 13
+        Me.CheckBoxTransCuenta.TabIndex = 1
         Me.CheckBoxTransCuenta.Text = "Transferencia Entre Cuentas"
         Me.CheckBoxTransCuenta.UseVisualStyleBackColor = True
         '
@@ -266,7 +268,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.ButtonAlBanco.Location = New System.Drawing.Point(114, 38)
         Me.ButtonAlBanco.Name = "ButtonAlBanco"
         Me.ButtonAlBanco.Size = New System.Drawing.Size(32, 23)
-        Me.ButtonAlBanco.TabIndex = 30
+        Me.ButtonAlBanco.TabIndex = 3
         Me.ButtonAlBanco.UseVisualStyleBackColor = True
         '
         'C1TextBoxDescripcion
@@ -274,7 +276,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxDescripcion.Location = New System.Drawing.Point(154, 43)
         Me.C1TextBoxDescripcion.Name = "C1TextBoxDescripcion"
         Me.C1TextBoxDescripcion.Size = New System.Drawing.Size(263, 18)
-        Me.C1TextBoxDescripcion.TabIndex = 15
+        Me.C1TextBoxDescripcion.TabIndex = 4
         Me.C1TextBoxDescripcion.Tag = Nothing
         '
         'C1TextBoxCodigo
@@ -285,7 +287,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxCodigo.Location = New System.Drawing.Point(59, 43)
         Me.C1TextBoxCodigo.Name = "C1TextBoxCodigo"
         Me.C1TextBoxCodigo.Size = New System.Drawing.Size(54, 18)
-        Me.C1TextBoxCodigo.TabIndex = 14
+        Me.C1TextBoxCodigo.TabIndex = 2
         Me.C1TextBoxCodigo.Tag = Nothing
         '
         'C1TextBoxNoTransaccion
@@ -295,7 +297,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxNoTransaccion.Location = New System.Drawing.Point(65, 135)
         Me.C1TextBoxNoTransaccion.Name = "C1TextBoxNoTransaccion"
         Me.C1TextBoxNoTransaccion.Size = New System.Drawing.Size(100, 18)
-        Me.C1TextBoxNoTransaccion.TabIndex = 16
+        Me.C1TextBoxNoTransaccion.TabIndex = 5
         Me.C1TextBoxNoTransaccion.Tag = Nothing
         '
         'C1TextBoxConcepto
@@ -305,7 +307,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxConcepto.Multiline = True
         Me.C1TextBoxConcepto.Name = "C1TextBoxConcepto"
         Me.C1TextBoxConcepto.Size = New System.Drawing.Size(431, 48)
-        Me.C1TextBoxConcepto.TabIndex = 17
+        Me.C1TextBoxConcepto.TabIndex = 8
         Me.C1TextBoxConcepto.Tag = Nothing
         '
         'C1TextBoxBeneficiario
@@ -314,7 +316,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxBeneficiario.Location = New System.Drawing.Point(65, 216)
         Me.C1TextBoxBeneficiario.Name = "C1TextBoxBeneficiario"
         Me.C1TextBoxBeneficiario.Size = New System.Drawing.Size(431, 18)
-        Me.C1TextBoxBeneficiario.TabIndex = 18
+        Me.C1TextBoxBeneficiario.TabIndex = 9
         Me.C1TextBoxBeneficiario.Tag = Nothing
         '
         'C1TextBoxNoPartida
@@ -323,7 +325,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TextBoxNoPartida.Location = New System.Drawing.Point(65, 240)
         Me.C1TextBoxNoPartida.Name = "C1TextBoxNoPartida"
         Me.C1TextBoxNoPartida.Size = New System.Drawing.Size(88, 18)
-        Me.C1TextBoxNoPartida.TabIndex = 19
+        Me.C1TextBoxNoPartida.TabIndex = 10
         Me.C1TextBoxNoPartida.Tag = Nothing
         '
         'C1DateEditFecha
@@ -334,12 +336,19 @@ Partial Class BADepNotasTransEdicionFrm
         '
         Me.C1DateEditFecha.Calendar.DayNameLength = 1
         Me.C1DateEditFecha.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "Fecha", True))
+        Me.C1DateEditFecha.DisplayFormat.FormatType = C1.Win.C1Input.FormatTypeEnum.ShortDate
+        Me.C1DateEditFecha.DisplayFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.CustomFormat Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
         Me.C1DateEditFecha.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.C1DateEditFecha.Location = New System.Drawing.Point(216, 135)
+        Me.C1DateEditFecha.Location = New System.Drawing.Point(227, 135)
         Me.C1DateEditFecha.Name = "C1DateEditFecha"
-        Me.C1DateEditFecha.Size = New System.Drawing.Size(135, 18)
-        Me.C1DateEditFecha.TabIndex = 20
-        Me.C1DateEditFecha.Tag = Nothing
+        Me.C1DateEditFecha.Size = New System.Drawing.Size(109, 18)
+        Me.C1DateEditFecha.TabIndex = 6
+        Me.C1DateEditFecha.Tag = "CO"
+        Me.C1DateEditFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.C1DateEditFecha.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.DropDown
         '
         'C1ButtonContabilizadoAnulado
@@ -395,7 +404,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.GroupBox2.Controls.Add(Me.ButtonVerDetalleDocumento)
         Me.GroupBox2.Controls.Add(Me.ButtonVerDocumento)
         Me.GroupBox2.Controls.Add(Me.ButtonAgregarDocumento)
-        Me.GroupBox2.Controls.Add(Me.C1TrueDBGrid2)
+        Me.GroupBox2.Controls.Add(Me.C1TrueDBGridDocumentacion)
         Me.GroupBox2.Controls.Add(Me.lblCuenta)
         Me.GroupBox2.Controls.Add(Me.C1ButtonContabilizadoAnulado)
         Me.GroupBox2.Controls.Add(Me.Label1)
@@ -431,7 +440,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.ButtonVerDetalleDocumento.Location = New System.Drawing.Point(581, 62)
         Me.ButtonVerDetalleDocumento.Name = "ButtonVerDetalleDocumento"
         Me.ButtonVerDetalleDocumento.Size = New System.Drawing.Size(33, 31)
-        Me.ButtonVerDetalleDocumento.TabIndex = 30
+        Me.ButtonVerDetalleDocumento.TabIndex = 14
         Me.ButtonVerDetalleDocumento.UseVisualStyleBackColor = True
         '
         'ButtonVerDocumento
@@ -440,7 +449,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.ButtonVerDocumento.Location = New System.Drawing.Point(542, 62)
         Me.ButtonVerDocumento.Name = "ButtonVerDocumento"
         Me.ButtonVerDocumento.Size = New System.Drawing.Size(33, 31)
-        Me.ButtonVerDocumento.TabIndex = 29
+        Me.ButtonVerDocumento.TabIndex = 13
         Me.ButtonVerDocumento.UseVisualStyleBackColor = True
         '
         'ButtonAgregarDocumento
@@ -450,31 +459,26 @@ Partial Class BADepNotasTransEdicionFrm
         Me.ButtonAgregarDocumento.Location = New System.Drawing.Point(503, 62)
         Me.ButtonAgregarDocumento.Name = "ButtonAgregarDocumento"
         Me.ButtonAgregarDocumento.Size = New System.Drawing.Size(33, 31)
-        Me.ButtonAgregarDocumento.TabIndex = 28
+        Me.ButtonAgregarDocumento.TabIndex = 12
         Me.ButtonAgregarDocumento.UseVisualStyleBackColor = True
         '
-        'C1TrueDBGrid2
+        'C1TrueDBGridDocumentacion
         '
-        Me.C1TrueDBGrid2.BorderColor = System.Drawing.SystemColors.WindowFrame
-        Me.C1TrueDBGrid2.Caption = "Documentación"
-        Me.C1TrueDBGrid2.DataSource = Me.CTBATransDocBindingSource
-        Me.C1TrueDBGrid2.GroupByCaption = "Drag a column header here to group by that column"
-        Me.C1TrueDBGrid2.Images.Add(CType(resources.GetObject("C1TrueDBGrid2.Images"), System.Drawing.Image))
-        Me.C1TrueDBGrid2.Location = New System.Drawing.Point(502, 96)
-        Me.C1TrueDBGrid2.Name = "C1TrueDBGrid2"
-        Me.C1TrueDBGrid2.PreviewInfo.Location = New System.Drawing.Point(0, 0)
-        Me.C1TrueDBGrid2.PreviewInfo.Size = New System.Drawing.Size(0, 0)
-        Me.C1TrueDBGrid2.PreviewInfo.ZoomFactor = 75.0R
-        Me.C1TrueDBGrid2.PrintInfo.PageSettings = CType(resources.GetObject("C1TrueDBGrid2.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
-        Me.C1TrueDBGrid2.Size = New System.Drawing.Size(234, 165)
-        Me.C1TrueDBGrid2.TabIndex = 27
-        Me.C1TrueDBGrid2.UseCompatibleTextRendering = False
-        Me.C1TrueDBGrid2.PropBag = resources.GetString("C1TrueDBGrid2.PropBag")
-        '
-        'CTBATransDocBindingSource
-        '
-        Me.CTBATransDocBindingSource.DataMember = "CTBATransaccionesDocumentacion"
-        Me.CTBATransDocBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        Me.C1TrueDBGridDocumentacion.BorderColor = System.Drawing.SystemColors.WindowFrame
+        Me.C1TrueDBGridDocumentacion.Caption = "Documentación"
+        Me.C1TrueDBGridDocumentacion.DataSource = Me.CTBATransDocBindingSource
+        Me.C1TrueDBGridDocumentacion.GroupByCaption = "Drag a column header here to group by that column"
+        Me.C1TrueDBGridDocumentacion.Images.Add(CType(resources.GetObject("C1TrueDBGridDocumentacion.Images"), System.Drawing.Image))
+        Me.C1TrueDBGridDocumentacion.Location = New System.Drawing.Point(502, 96)
+        Me.C1TrueDBGridDocumentacion.Name = "C1TrueDBGridDocumentacion"
+        Me.C1TrueDBGridDocumentacion.PreviewInfo.Location = New System.Drawing.Point(0, 0)
+        Me.C1TrueDBGridDocumentacion.PreviewInfo.Size = New System.Drawing.Size(0, 0)
+        Me.C1TrueDBGridDocumentacion.PreviewInfo.ZoomFactor = 75.0R
+        Me.C1TrueDBGridDocumentacion.PrintInfo.PageSettings = CType(resources.GetObject("C1TrueDBGridDocumentacion.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
+        Me.C1TrueDBGridDocumentacion.Size = New System.Drawing.Size(234, 165)
+        Me.C1TrueDBGridDocumentacion.TabIndex = 15
+        Me.C1TrueDBGridDocumentacion.UseCompatibleTextRendering = False
+        Me.C1TrueDBGridDocumentacion.PropBag = resources.GetString("C1TrueDBGridDocumentacion.PropBag")
         '
         'C1TrueDBGridDetalleTrans
         '
@@ -483,6 +487,7 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TrueDBGridDetalleTrans.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.C1TrueDBGridDetalleTrans.BorderColor = System.Drawing.SystemColors.WindowFrame
+        Me.C1TrueDBGridDetalleTrans.Caption = "Detalle de Partida Contable"
         Me.C1TrueDBGridDetalleTrans.DataSource = Me.BADetalleTransBindingSource
         Me.C1TrueDBGridDetalleTrans.GroupByCaption = "Drag a column header here to group by that column"
         Me.C1TrueDBGridDetalleTrans.Images.Add(CType(resources.GetObject("C1TrueDBGridDetalleTrans.Images"), System.Drawing.Image))
@@ -492,50 +497,15 @@ Partial Class BADepNotasTransEdicionFrm
         Me.C1TrueDBGridDetalleTrans.PreviewInfo.Size = New System.Drawing.Size(0, 0)
         Me.C1TrueDBGridDetalleTrans.PreviewInfo.ZoomFactor = 75.0R
         Me.C1TrueDBGridDetalleTrans.PrintInfo.PageSettings = CType(resources.GetObject("C1TrueDBGridDetalleTrans.PrintInfo.PageSettings"), System.Drawing.Printing.PageSettings)
-        Me.C1TrueDBGridDetalleTrans.Size = New System.Drawing.Size(742, 154)
-        Me.C1TrueDBGridDetalleTrans.TabIndex = 28
+        Me.C1TrueDBGridDetalleTrans.Size = New System.Drawing.Size(742, 139)
+        Me.C1TrueDBGridDetalleTrans.TabIndex = 16
         Me.C1TrueDBGridDetalleTrans.UseCompatibleTextRendering = False
         Me.C1TrueDBGridDetalleTrans.PropBag = resources.GetString("C1TrueDBGridDetalleTrans.PropBag")
-        '
-        'BADetalleTransBindingSource
-        '
-        Me.BADetalleTransBindingSource.DataMember = "BATransaccionesDetalle"
-        Me.BADetalleTransBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
-        '
-        'BATransaccionesDetalleTableAdapter
-        '
-        Me.BATransaccionesDetalleTableAdapter.ClearBeforeFill = True
-        '
-        'BATransaccionesEncabezadoTableAdapter
-        '
-        Me.BATransaccionesEncabezadoTableAdapter.ClearBeforeFill = True
-        '
-        'CTBATransaccionesDocumentacionTableAdapter
-        '
-        Me.CTBATransaccionesDocumentacionTableAdapter.ClearBeforeFill = True
-        '
-        'BancosBindingSource
-        '
-        Me.BancosBindingSource.DataMember = "BABancos"
-        Me.BancosBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
-        '
-        'BABancosTableAdapter
-        '
-        Me.BABancosTableAdapter.ClearBeforeFill = True
-        '
-        'BASaldosMensualesBindingSource
-        '
-        Me.BASaldosMensualesBindingSource.DataMember = "BASaldosMensuales"
-        Me.BASaldosMensualesBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
-        '
-        'BASaldosMensualesTableAdapter
-        '
-        Me.BASaldosMensualesTableAdapter.ClearBeforeFill = True
         '
         'statusstripPrincipal
         '
         Me.statusstripPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.statusCerrado, Me.statusImpreso, Me.statusContabilizado, Me.statusAnulado, Me.statuslblAñoMes, Me.statusElaboradoPor})
-        Me.statusstripPrincipal.Location = New System.Drawing.Point(0, 494)
+        Me.statusstripPrincipal.Location = New System.Drawing.Point(0, 505)
         Me.statusstripPrincipal.Name = "statusstripPrincipal"
         Me.statusstripPrincipal.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode
         Me.statusstripPrincipal.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -615,11 +585,125 @@ Partial Class BADepNotasTransEdicionFrm
         Me.EditDataNavBar1.TabIndex = 29
         Me.EditDataNavBar1.ValidacionCorrecta = False
         '
+        'lblTotalHaber
+        '
+        Me.lblTotalHaber.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalHaber.BackColor = System.Drawing.Color.White
+        Me.lblTotalHaber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTotalHaber.Location = New System.Drawing.Point(521, 480)
+        Me.lblTotalHaber.Name = "lblTotalHaber"
+        Me.lblTotalHaber.Size = New System.Drawing.Size(105, 18)
+        Me.lblTotalHaber.TabIndex = 33
+        Me.lblTotalHaber.Text = "0.00"
+        Me.lblTotalHaber.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTotalDebe
+        '
+        Me.lblTotalDebe.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalDebe.BackColor = System.Drawing.Color.White
+        Me.lblTotalDebe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTotalDebe.Location = New System.Drawing.Point(415, 480)
+        Me.lblTotalDebe.Name = "lblTotalDebe"
+        Me.lblTotalDebe.Size = New System.Drawing.Size(100, 18)
+        Me.lblTotalDebe.TabIndex = 32
+        Me.lblTotalDebe.Text = "0.00"
+        Me.lblTotalDebe.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(364, 480)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
+        Me.Label12.TabIndex = 31
+        Me.Label12.Text = "Totales:"
+        '
+        'BADetalleTransBindingSource
+        '
+        Me.BADetalleTransBindingSource.DataMember = "BATransaccionesDetalle"
+        Me.BADetalleTransBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'BATransaccionesEdicionDataSet
+        '
+        Me.BATransaccionesEdicionDataSet.DataSetName = "BATransaccionesEdicionDataSet"
+        Me.BATransaccionesEdicionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CTBATransDocBindingSource
+        '
+        Me.CTBATransDocBindingSource.DataMember = "CTBATransaccionesDocumentacion"
+        Me.CTBATransDocBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'PrincipalBindingSource
+        '
+        Me.PrincipalBindingSource.DataMember = "BATransaccionesEncabezado"
+        Me.PrincipalBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'BATransaccionesDetalleTableAdapter
+        '
+        Me.BATransaccionesDetalleTableAdapter.ClearBeforeFill = True
+        '
+        'BATransaccionesEncabezadoTableAdapter
+        '
+        Me.BATransaccionesEncabezadoTableAdapter.ClearBeforeFill = True
+        '
+        'CTBATransaccionesDocumentacionTableAdapter
+        '
+        Me.CTBATransaccionesDocumentacionTableAdapter.ClearBeforeFill = True
+        '
+        'BancosBindingSource
+        '
+        Me.BancosBindingSource.DataMember = "BABancos"
+        Me.BancosBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'BABancosTableAdapter
+        '
+        Me.BABancosTableAdapter.ClearBeforeFill = True
+        '
+        'BASaldosMensualesBindingSource
+        '
+        Me.BASaldosMensualesBindingSource.DataMember = "BASaldosMensuales"
+        Me.BASaldosMensualesBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'BASaldosMensualesTableAdapter
+        '
+        Me.BASaldosMensualesTableAdapter.ClearBeforeFill = True
+        '
+        'CatalogoCuentasBindingSource
+        '
+        Me.CatalogoCuentasBindingSource.DataMember = "CTCatalogoCuentas"
+        Me.CatalogoCuentasBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'CTCatalogoCuentasTableAdapter
+        '
+        Me.CTCatalogoCuentasTableAdapter.ClearBeforeFill = True
+        '
+        'CTTransEncBindingSource
+        '
+        Me.CTTransEncBindingSource.DataMember = "CTTransaccionesEncabezado"
+        Me.CTTransEncBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'CTTransaccionesEncabezadoTableAdapter
+        '
+        Me.CTTransaccionesEncabezadoTableAdapter.ClearBeforeFill = True
+        '
+        'CTTransDetBindingSource
+        '
+        Me.CTTransDetBindingSource.DataMember = "CTTransaccionesDetalle"
+        Me.CTTransDetBindingSource.DataSource = Me.BATransaccionesEdicionDataSet
+        '
+        'CTTransaccionesDetalleTableAdapter
+        '
+        Me.CTTransaccionesDetalleTableAdapter.ClearBeforeFill = True
+        '
         'BADepNotasTransEdicionFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(766, 516)
+        Me.ClientSize = New System.Drawing.Size(766, 527)
+        Me.Controls.Add(Me.lblTotalHaber)
+        Me.Controls.Add(Me.lblTotalDebe)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.statusstripPrincipal)
         Me.Controls.Add(Me.EditDataNavBar1)
         Me.Controls.Add(Me.C1TrueDBGridDetalleTrans)
@@ -627,8 +711,6 @@ Partial Class BADepNotasTransEdicionFrm
         Me.Name = "BADepNotasTransEdicionFrm"
         Me.Text = "BADepNotasTransEdicionFrm"
         CType(Me.C1NumericEditFactorCambio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BATransaccionesEdicionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditValor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupTransferencia.ResumeLayout(False)
         Me.groupTransferencia.PerformLayout()
@@ -643,14 +725,19 @@ Partial Class BADepNotasTransEdicionFrm
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.ButtonVerDetalleDocumento, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1TrueDBGrid2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CTBATransDocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1TrueDBGridDocumentacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TrueDBGridDetalleTrans, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BADetalleTransBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BancosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BASaldosMensualesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.statusstripPrincipal.ResumeLayout(False)
         Me.statusstripPrincipal.PerformLayout()
+        CType(Me.BADetalleTransBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BATransaccionesEdicionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CTBATransDocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BancosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BASaldosMensualesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CatalogoCuentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CTTransEncBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CTTransDetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -691,7 +778,7 @@ Partial Class BADepNotasTransEdicionFrm
     Friend WithEvents PrincipalBindingSource As BindingSource
     Friend WithEvents BATransaccionesDetalleTableAdapter As BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter
     Friend WithEvents BATransaccionesEncabezadoTableAdapter As BATransaccionesEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter
-    Friend WithEvents C1TrueDBGrid2 As C1.Win.C1TrueDBGrid.C1TrueDBGrid
+    Friend WithEvents C1TrueDBGridDocumentacion As C1.Win.C1TrueDBGrid.C1TrueDBGrid
     Friend WithEvents ButtonVerDocumento As Button
     Friend WithEvents ButtonAgregarDocumento As Button
     Friend WithEvents ButtonAlBanco As Button
@@ -709,4 +796,13 @@ Partial Class BADepNotasTransEdicionFrm
     Friend WithEvents statusAnulado As ToolStripStatusLabel
     Friend WithEvents statuslblAñoMes As ToolStripStatusLabel
     Friend WithEvents statusElaboradoPor As ToolStripStatusLabel
+    Friend WithEvents CatalogoCuentasBindingSource As BindingSource
+    Friend WithEvents CTCatalogoCuentasTableAdapter As BATransaccionesEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter
+    Friend WithEvents lblTotalHaber As Label
+    Friend WithEvents lblTotalDebe As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents CTTransEncBindingSource As BindingSource
+    Friend WithEvents CTTransaccionesEncabezadoTableAdapter As BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesEncabezadoTableAdapter
+    Friend WithEvents CTTransDetBindingSource As BindingSource
+    Friend WithEvents CTTransaccionesDetalleTableAdapter As BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesDetalleTableAdapter
 End Class

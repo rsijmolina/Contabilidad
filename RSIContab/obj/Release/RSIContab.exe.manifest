@@ -402,14 +402,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5660672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5735424">
       <assemblyIdentity name="RSIContab" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pnu8AQxYZsH8M2zBaIVvvC9CLGs=</dsig:DigestValue>
+        <dsig:DigestValue>5fcoVW/SHJKNSrNySGX/HJs3pbU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -473,13 +473,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="RSIContab.exe.config" size="6118">
+  <file name="RSIContab.exe.config" size="6445">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>+FXg72tDP6KLqWPmB/Zyea+fFhs=</dsig:DigestValue>
+      <dsig:DigestValue>JILBILAhkm/R1GROsSJGzaP9tds=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Sis.mdf" size="3211264" writeableType="applicationData">

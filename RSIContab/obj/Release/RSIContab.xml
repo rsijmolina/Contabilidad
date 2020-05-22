@@ -1942,6 +1942,21 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTCatalogoCuentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesEncabezadoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesDetalleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesDetalleRow">
 <summary>
 Represents strongly named DataRow class.
@@ -1963,6 +1978,21 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSet.CTBATransaccionesDocumentacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTCatalogoCuentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesEncabezadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesDetalleRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1992,6 +2022,21 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTCatalogoCuentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesEncabezadoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.CTTransaccionesDetalleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -2013,6 +2058,21 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTBATransaccionesDocumentacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesEncabezadoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.CTTransaccionesDetalleTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

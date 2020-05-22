@@ -119,17 +119,17 @@ Public Class BADepNotasTransfFrm
                 End If
             Else
                 Dim reg As DataRowView = PrincipalBindingSource.Current
-                If Not ListaRegistrosAbiertos.Contains(reg("NoDocumento")) Then
+                If Not ListaRegistrosAbiertos.Contains(reg("Id")) Then
                     'EditFormaFrm.drvBanco = Me.BABancosBindingSource.Current
-                    ListaRegistrosAbiertos.Add(reg("NoDocumento"), reg("NoDocumento"))
+                    ListaRegistrosAbiertos.Add(reg("Id"), reg("Id"))
                     EditFormaFrm.Show()
                 End If
             End If
         End If
     End Sub
 
-    Public Sub EliminarRegistroAbierto(strNoDocumento As String)
-        ListaRegistrosAbiertos.Remove(strNoDocumento)
+    Public Sub EliminarRegistroAbierto(strId As String)
+        ListaRegistrosAbiertos.Remove(strId)
     End Sub
 
     Private Sub RecargarDatos()

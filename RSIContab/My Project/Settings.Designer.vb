@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -90,16 +90,6 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSICNF;User ID=sa")>  _
-        Public ReadOnly Property RSICNF() As String
-            Get
-                Return CType(Me("RSICNF"),String)
-            End Get
-        End Property
-        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
@@ -124,16 +114,6 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LOCALHOST\SQLEXPRESS;Initial Catalog=RSISistema;User ID=sa")>  _
-        Public ReadOnly Property RSIERP_Conexion() As String
-            Get
-                Return CType(Me("RSIERP_Conexion"),String)
-            End Get
-        End Property
-        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
@@ -144,27 +124,6 @@ Namespace My
             Set
                 Me("RSIEmpresaInstalada") = value
             End Set
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSICNF;User ID=sa;Password=rsi"& _ 
-            "erp94128")>  _
-        Public ReadOnly Property RSICNFConnectionString() As String
-            Get
-                Return CType(Me("RSICNFConnectionString"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;database=rsisistema")>  _
-        Public ReadOnly Property rsisistemaConnectionString1() As String
-            Get
-                Return CType(Me("rsisistemaConnectionString1"),String)
-            End Get
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
@@ -249,39 +208,6 @@ Namespace My
             Set
                 Me("ClaveCarpetaEmpleados") = value
             End Set
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMESMOVIL\RSIERP;Initial Catalog=RSISistema;User ID=sa;Password=rsie"& _ 
-            "rp94128")>  _
-        Public ReadOnly Property RSISistemaConnectionString2() As String
-            Get
-                Return CType(Me("RSISistemaConnectionString2"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSISistema;User ID=sa;Password"& _ 
-            "=rsierp94128")>  _
-        Public ReadOnly Property RSISistemaConnectionString3() As String
-            Get
-                Return CType(Me("RSISistemaConnectionString3"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Desarrollo\Colivb\Ent99\Contab.m"& _ 
-            "db")>  _
-        Public ReadOnly Property ContabConnectionString() As String
-            Get
-                Return CType(Me("ContabConnectionString"),String)
-            End Get
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
@@ -372,9 +298,94 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LOCALHOST\SQLEXPRESS;Initial Catalog=RSISistema;User ID=sa")>  _
+        Public ReadOnly Property RSIERP_Conexion() As String
+            Get
+                Return CType(Me("RSIERP_Conexion"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LOCALHOST\SQLEXPRESS;Initial Catalog=RSISistema;User ID=sa")>  _
         Public ReadOnly Property RSISistemaConnectionString() As String
             Get
                 Return CType(Me("RSISistemaConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSICNF;User ID=sa;Password=rsi"& _ 
+            "erp94128")>  _
+        Public ReadOnly Property RSICNFConnectionString() As String
+            Get
+                Return CType(Me("RSICNFConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSICNF;User ID=sa")>  _
+        Public ReadOnly Property RSICNF() As String
+            Get
+                Return CType(Me("RSICNF"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;database=rsisistema")>  _
+        Public ReadOnly Property rsisistemaConnectionString1() As String
+            Get
+                Return CType(Me("rsisistemaConnectionString1"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMESMOVIL\RSIERP;Initial Catalog=RSISistema;User ID=sa;Password=rsie"& _ 
+            "rp94128")>  _
+        Public ReadOnly Property RSISistemaConnectionString2() As String
+            Get
+                Return CType(Me("RSISistemaConnectionString2"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JAMES-HOGAR\SQLEXPRESS;Initial Catalog=RSISistema;User ID=sa;Password"& _ 
+            "=rsierp94128")>  _
+        Public ReadOnly Property RSISistemaConnectionString3() As String
+            Get
+                Return CType(Me("RSISistemaConnectionString3"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Desarrollo\Colivb\Ent99\Contab.m"& _ 
+            "db")>  _
+        Public ReadOnly Property ContabConnectionString() As String
+            Get
+                Return CType(Me("ContabConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\sqlexpress;Initial Catalog=RSISistema;Integrated Security=T"& _ 
+            "rue")>  _
+        Public ReadOnly Property RSISistemaConnectionString4() As String
+            Get
+                Return CType(Me("RSISistemaConnectionString4"),String)
             End Get
         End Property
     End Class

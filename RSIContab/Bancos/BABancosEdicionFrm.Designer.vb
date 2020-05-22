@@ -904,6 +904,7 @@ Partial Class BABancosEdicionFrm
         'EditDataNavBarPrin
         '
         Me.EditDataNavBarPrin.BindingSourcePrincipal = Nothing
+        Me.EditDataNavBarPrin.BotonCerrarVisible = False
         Me.EditDataNavBarPrin.Dock = System.Windows.Forms.DockStyle.Top
         Me.EditDataNavBarPrin.Location = New System.Drawing.Point(0, 0)
         Me.EditDataNavBarPrin.Modalidad = Nothing
